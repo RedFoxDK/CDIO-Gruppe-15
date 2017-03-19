@@ -1,5 +1,11 @@
 FILE(REMOVE_RECURSE
-  "CMakeFiles/example1_a.dir/src/example1_a.cpp.o"
+  "../msg_gen"
+  "../srv_gen"
+  "../msg_gen"
+  "../srv_gen"
+  "../src/CDIO/msg"
+  "../src/CDIO/srv"
+  "CMakeFiles/example1_a.dir/src/exampler/example1_a.cpp.o"
   "../bin/example1_a.pdb"
   "../bin/example1_a"
 )

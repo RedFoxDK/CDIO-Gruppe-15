@@ -166,6 +166,19 @@ ROSBUILD_genmsg_lisp/fast:
 .PHONY : ROSBUILD_genmsg_lisp/fast
 
 #=============================================================================
+# Target rules for targets named ROSBUILD_genmsg_py
+
+# Build rule for target.
+ROSBUILD_genmsg_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ROSBUILD_genmsg_py
+.PHONY : ROSBUILD_genmsg_py
+
+# fast build rule for target.
+ROSBUILD_genmsg_py/fast:
+	$(MAKE) -f CMakeFiles/ROSBUILD_genmsg_py.dir/build.make CMakeFiles/ROSBUILD_genmsg_py.dir/build
+.PHONY : ROSBUILD_genmsg_py/fast
+
+#=============================================================================
 # Target rules for targets named ROSBUILD_gensrv_cpp
 
 # Build rule for target.
@@ -190,6 +203,19 @@ ROSBUILD_gensrv_lisp: cmake_check_build_system
 ROSBUILD_gensrv_lisp/fast:
 	$(MAKE) -f CMakeFiles/ROSBUILD_gensrv_lisp.dir/build.make CMakeFiles/ROSBUILD_gensrv_lisp.dir/build
 .PHONY : ROSBUILD_gensrv_lisp/fast
+
+#=============================================================================
+# Target rules for targets named ROSBUILD_gensrv_py
+
+# Build rule for target.
+ROSBUILD_gensrv_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ROSBUILD_gensrv_py
+.PHONY : ROSBUILD_gensrv_py
+
+# fast build rule for target.
+ROSBUILD_gensrv_py/fast:
+	$(MAKE) -f CMakeFiles/ROSBUILD_gensrv_py.dir/build.make CMakeFiles/ROSBUILD_gensrv_py.dir/build
+.PHONY : ROSBUILD_gensrv_py/fast
 
 #=============================================================================
 # Target rules for targets named _catkin_empty_exported_target
@@ -270,6 +296,32 @@ example1_b/fast:
 .PHONY : example1_b/fast
 
 #=============================================================================
+# Target rules for targets named example2_a
+
+# Build rule for target.
+example2_a: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 example2_a
+.PHONY : example2_a
+
+# fast build rule for target.
+example2_a/fast:
+	$(MAKE) -f CMakeFiles/example2_a.dir/build.make CMakeFiles/example2_a.dir/build
+.PHONY : example2_a/fast
+
+#=============================================================================
+# Target rules for targets named example2_b
+
+# Build rule for target.
+example2_b: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 example2_b
+.PHONY : example2_b
+
+# fast build rule for target.
+example2_b/fast:
+	$(MAKE) -f CMakeFiles/example2_b.dir/build.make CMakeFiles/example2_b.dir/build
+.PHONY : example2_b/fast
+
+#=============================================================================
 # Target rules for targets named rosbuild_clean-test-results
 
 # Build rule for target.
@@ -322,6 +374,19 @@ rospack_genmsg/fast:
 .PHONY : rospack_genmsg/fast
 
 #=============================================================================
+# Target rules for targets named rospack_genmsg_all
+
+# Build rule for target.
+rospack_genmsg_all: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rospack_genmsg_all
+.PHONY : rospack_genmsg_all
+
+# fast build rule for target.
+rospack_genmsg_all/fast:
+	$(MAKE) -f CMakeFiles/rospack_genmsg_all.dir/build.make CMakeFiles/rospack_genmsg_all.dir/build
+.PHONY : rospack_genmsg_all/fast
+
+#=============================================================================
 # Target rules for targets named rospack_genmsg_libexe
 
 # Build rule for target.
@@ -346,6 +411,19 @@ rospack_gensrv: cmake_check_build_system
 rospack_gensrv/fast:
 	$(MAKE) -f CMakeFiles/rospack_gensrv.dir/build.make CMakeFiles/rospack_gensrv.dir/build
 .PHONY : rospack_gensrv/fast
+
+#=============================================================================
+# Target rules for targets named rospack_gensrv_all
+
+# Build rule for target.
+rospack_gensrv_all: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rospack_gensrv_all
+.PHONY : rospack_gensrv_all
+
+# fast build rule for target.
+rospack_gensrv_all/fast:
+	$(MAKE) -f CMakeFiles/rospack_gensrv_all.dir/build.make CMakeFiles/rospack_gensrv_all.dir/build
+.PHONY : rospack_gensrv_all/fast
 
 #=============================================================================
 # Target rules for targets named run_tests
@@ -451,53 +529,101 @@ gtest_main/fast:
 	$(MAKE) -f gtest/CMakeFiles/gtest_main.dir/build.make gtest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
 
-src/example1_a.o: src/example1_a.cpp.o
-.PHONY : src/example1_a.o
+src/exampler/example1_a.o: src/exampler/example1_a.cpp.o
+.PHONY : src/exampler/example1_a.o
 
 # target to build an object file
-src/example1_a.cpp.o:
-	$(MAKE) -f CMakeFiles/example1_a.dir/build.make CMakeFiles/example1_a.dir/src/example1_a.cpp.o
-.PHONY : src/example1_a.cpp.o
+src/exampler/example1_a.cpp.o:
+	$(MAKE) -f CMakeFiles/example1_a.dir/build.make CMakeFiles/example1_a.dir/src/exampler/example1_a.cpp.o
+.PHONY : src/exampler/example1_a.cpp.o
 
-src/example1_a.i: src/example1_a.cpp.i
-.PHONY : src/example1_a.i
+src/exampler/example1_a.i: src/exampler/example1_a.cpp.i
+.PHONY : src/exampler/example1_a.i
 
 # target to preprocess a source file
-src/example1_a.cpp.i:
-	$(MAKE) -f CMakeFiles/example1_a.dir/build.make CMakeFiles/example1_a.dir/src/example1_a.cpp.i
-.PHONY : src/example1_a.cpp.i
+src/exampler/example1_a.cpp.i:
+	$(MAKE) -f CMakeFiles/example1_a.dir/build.make CMakeFiles/example1_a.dir/src/exampler/example1_a.cpp.i
+.PHONY : src/exampler/example1_a.cpp.i
 
-src/example1_a.s: src/example1_a.cpp.s
-.PHONY : src/example1_a.s
+src/exampler/example1_a.s: src/exampler/example1_a.cpp.s
+.PHONY : src/exampler/example1_a.s
 
 # target to generate assembly for a file
-src/example1_a.cpp.s:
-	$(MAKE) -f CMakeFiles/example1_a.dir/build.make CMakeFiles/example1_a.dir/src/example1_a.cpp.s
-.PHONY : src/example1_a.cpp.s
+src/exampler/example1_a.cpp.s:
+	$(MAKE) -f CMakeFiles/example1_a.dir/build.make CMakeFiles/example1_a.dir/src/exampler/example1_a.cpp.s
+.PHONY : src/exampler/example1_a.cpp.s
 
-src/example1_b.o: src/example1_b.cpp.o
-.PHONY : src/example1_b.o
+src/exampler/example1_b.o: src/exampler/example1_b.cpp.o
+.PHONY : src/exampler/example1_b.o
 
 # target to build an object file
-src/example1_b.cpp.o:
-	$(MAKE) -f CMakeFiles/example1_b.dir/build.make CMakeFiles/example1_b.dir/src/example1_b.cpp.o
-.PHONY : src/example1_b.cpp.o
+src/exampler/example1_b.cpp.o:
+	$(MAKE) -f CMakeFiles/example1_b.dir/build.make CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.o
+.PHONY : src/exampler/example1_b.cpp.o
 
-src/example1_b.i: src/example1_b.cpp.i
-.PHONY : src/example1_b.i
+src/exampler/example1_b.i: src/exampler/example1_b.cpp.i
+.PHONY : src/exampler/example1_b.i
 
 # target to preprocess a source file
-src/example1_b.cpp.i:
-	$(MAKE) -f CMakeFiles/example1_b.dir/build.make CMakeFiles/example1_b.dir/src/example1_b.cpp.i
-.PHONY : src/example1_b.cpp.i
+src/exampler/example1_b.cpp.i:
+	$(MAKE) -f CMakeFiles/example1_b.dir/build.make CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.i
+.PHONY : src/exampler/example1_b.cpp.i
 
-src/example1_b.s: src/example1_b.cpp.s
-.PHONY : src/example1_b.s
+src/exampler/example1_b.s: src/exampler/example1_b.cpp.s
+.PHONY : src/exampler/example1_b.s
 
 # target to generate assembly for a file
-src/example1_b.cpp.s:
-	$(MAKE) -f CMakeFiles/example1_b.dir/build.make CMakeFiles/example1_b.dir/src/example1_b.cpp.s
-.PHONY : src/example1_b.cpp.s
+src/exampler/example1_b.cpp.s:
+	$(MAKE) -f CMakeFiles/example1_b.dir/build.make CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.s
+.PHONY : src/exampler/example1_b.cpp.s
+
+src/exampler/example2_a.o: src/exampler/example2_a.cpp.o
+.PHONY : src/exampler/example2_a.o
+
+# target to build an object file
+src/exampler/example2_a.cpp.o:
+	$(MAKE) -f CMakeFiles/example2_a.dir/build.make CMakeFiles/example2_a.dir/src/exampler/example2_a.cpp.o
+.PHONY : src/exampler/example2_a.cpp.o
+
+src/exampler/example2_a.i: src/exampler/example2_a.cpp.i
+.PHONY : src/exampler/example2_a.i
+
+# target to preprocess a source file
+src/exampler/example2_a.cpp.i:
+	$(MAKE) -f CMakeFiles/example2_a.dir/build.make CMakeFiles/example2_a.dir/src/exampler/example2_a.cpp.i
+.PHONY : src/exampler/example2_a.cpp.i
+
+src/exampler/example2_a.s: src/exampler/example2_a.cpp.s
+.PHONY : src/exampler/example2_a.s
+
+# target to generate assembly for a file
+src/exampler/example2_a.cpp.s:
+	$(MAKE) -f CMakeFiles/example2_a.dir/build.make CMakeFiles/example2_a.dir/src/exampler/example2_a.cpp.s
+.PHONY : src/exampler/example2_a.cpp.s
+
+src/exampler/example2_b.o: src/exampler/example2_b.cpp.o
+.PHONY : src/exampler/example2_b.o
+
+# target to build an object file
+src/exampler/example2_b.cpp.o:
+	$(MAKE) -f CMakeFiles/example2_b.dir/build.make CMakeFiles/example2_b.dir/src/exampler/example2_b.cpp.o
+.PHONY : src/exampler/example2_b.cpp.o
+
+src/exampler/example2_b.i: src/exampler/example2_b.cpp.i
+.PHONY : src/exampler/example2_b.i
+
+# target to preprocess a source file
+src/exampler/example2_b.cpp.i:
+	$(MAKE) -f CMakeFiles/example2_b.dir/build.make CMakeFiles/example2_b.dir/src/exampler/example2_b.cpp.i
+.PHONY : src/exampler/example2_b.cpp.i
+
+src/exampler/example2_b.s: src/exampler/example2_b.cpp.s
+.PHONY : src/exampler/example2_b.s
+
+# target to generate assembly for a file
+src/exampler/example2_b.cpp.s:
+	$(MAKE) -f CMakeFiles/example2_b.dir/build.make CMakeFiles/example2_b.dir/src/exampler/example2_b.cpp.s
+.PHONY : src/exampler/example2_b.cpp.s
 
 # Help Target
 help:
@@ -507,8 +633,10 @@ help:
 	@echo "... depend"
 	@echo "... ROSBUILD_genmsg_cpp"
 	@echo "... ROSBUILD_genmsg_lisp"
+	@echo "... ROSBUILD_genmsg_py"
 	@echo "... ROSBUILD_gensrv_cpp"
 	@echo "... ROSBUILD_gensrv_lisp"
+	@echo "... ROSBUILD_gensrv_py"
 	@echo "... _catkin_empty_exported_target"
 	@echo "... clean_test_results"
 	@echo "... download_extra_data"
@@ -516,6 +644,8 @@ help:
 	@echo "... edit_cache"
 	@echo "... example1_a"
 	@echo "... example1_b"
+	@echo "... example2_a"
+	@echo "... example2_b"
 	@echo "... install"
 	@echo "... install/local"
 	@echo "... install/strip"
@@ -525,8 +655,10 @@ help:
 	@echo "... rosbuild_precompile"
 	@echo "... rosbuild_premsgsrvgen"
 	@echo "... rospack_genmsg"
+	@echo "... rospack_genmsg_all"
 	@echo "... rospack_genmsg_libexe"
 	@echo "... rospack_gensrv"
+	@echo "... rospack_gensrv_all"
 	@echo "... run_tests"
 	@echo "... test"
 	@echo "... test-future"
@@ -535,12 +667,18 @@ help:
 	@echo "... tests"
 	@echo "... gtest"
 	@echo "... gtest_main"
-	@echo "... src/example1_a.o"
-	@echo "... src/example1_a.i"
-	@echo "... src/example1_a.s"
-	@echo "... src/example1_b.o"
-	@echo "... src/example1_b.i"
-	@echo "... src/example1_b.s"
+	@echo "... src/exampler/example1_a.o"
+	@echo "... src/exampler/example1_a.i"
+	@echo "... src/exampler/example1_a.s"
+	@echo "... src/exampler/example1_b.o"
+	@echo "... src/exampler/example1_b.i"
+	@echo "... src/exampler/example1_b.s"
+	@echo "... src/exampler/example2_a.o"
+	@echo "... src/exampler/example2_a.i"
+	@echo "... src/exampler/example2_a.s"
+	@echo "... src/exampler/example2_b.o"
+	@echo "... src/exampler/example2_b.i"
+	@echo "... src/exampler/example2_b.s"
 .PHONY : help
 
 

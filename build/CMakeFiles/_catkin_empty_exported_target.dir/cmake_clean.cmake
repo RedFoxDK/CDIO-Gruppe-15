@@ -1,4 +1,10 @@
 FILE(REMOVE_RECURSE
+  "../msg_gen"
+  "../srv_gen"
+  "../msg_gen"
+  "../srv_gen"
+  "../src/CDIO/msg"
+  "../src/CDIO/srv"
   "CMakeFiles/_catkin_empty_exported_target"
 )
 

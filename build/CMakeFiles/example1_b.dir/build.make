@@ -49,56 +49,96 @@ include CMakeFiles/example1_b.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/example1_b.dir/flags.make
 
-CMakeFiles/example1_b.dir/src/example1_b.cpp.o: CMakeFiles/example1_b.dir/flags.make
-CMakeFiles/example1_b.dir/src/example1_b.cpp.o: ../src/example1_b.cpp
-CMakeFiles/example1_b.dir/src/example1_b.cpp.o: ../manifest.xml
-CMakeFiles/example1_b.dir/src/example1_b.cpp.o: /opt/ros/indigo/share/cpp_common/package.xml
-CMakeFiles/example1_b.dir/src/example1_b.cpp.o: /opt/ros/indigo/share/rostime/package.xml
-CMakeFiles/example1_b.dir/src/example1_b.cpp.o: /opt/ros/indigo/share/roscpp_traits/package.xml
-CMakeFiles/example1_b.dir/src/example1_b.cpp.o: /opt/ros/indigo/share/roscpp_serialization/package.xml
-CMakeFiles/example1_b.dir/src/example1_b.cpp.o: /opt/ros/indigo/share/catkin/package.xml
-CMakeFiles/example1_b.dir/src/example1_b.cpp.o: /opt/ros/indigo/share/genmsg/package.xml
-CMakeFiles/example1_b.dir/src/example1_b.cpp.o: /opt/ros/indigo/share/genpy/package.xml
-CMakeFiles/example1_b.dir/src/example1_b.cpp.o: /opt/ros/indigo/share/message_runtime/package.xml
-CMakeFiles/example1_b.dir/src/example1_b.cpp.o: /opt/ros/indigo/share/std_msgs/package.xml
-CMakeFiles/example1_b.dir/src/example1_b.cpp.o: /opt/ros/indigo/share/gencpp/package.xml
-CMakeFiles/example1_b.dir/src/example1_b.cpp.o: /opt/ros/indigo/share/genlisp/package.xml
-CMakeFiles/example1_b.dir/src/example1_b.cpp.o: /opt/ros/indigo/share/message_generation/package.xml
-CMakeFiles/example1_b.dir/src/example1_b.cpp.o: /opt/ros/indigo/share/rosbuild/package.xml
-CMakeFiles/example1_b.dir/src/example1_b.cpp.o: /opt/ros/indigo/share/rosconsole/package.xml
-CMakeFiles/example1_b.dir/src/example1_b.cpp.o: /opt/ros/indigo/share/rosgraph_msgs/package.xml
-CMakeFiles/example1_b.dir/src/example1_b.cpp.o: /opt/ros/indigo/share/xmlrpcpp/package.xml
-CMakeFiles/example1_b.dir/src/example1_b.cpp.o: /opt/ros/indigo/share/roscpp/package.xml
+CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.o: CMakeFiles/example1_b.dir/flags.make
+CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.o: ../src/exampler/example1_b.cpp
+CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.o: ../manifest.xml
+CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.o: /opt/ros/indigo/share/cpp_common/package.xml
+CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.o: /opt/ros/indigo/share/rostime/package.xml
+CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.o: /opt/ros/indigo/share/roscpp_traits/package.xml
+CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.o: /opt/ros/indigo/share/roscpp_serialization/package.xml
+CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.o: /opt/ros/indigo/share/catkin/package.xml
+CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.o: /opt/ros/indigo/share/genmsg/package.xml
+CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.o: /opt/ros/indigo/share/genpy/package.xml
+CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.o: /opt/ros/indigo/share/message_runtime/package.xml
+CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.o: /opt/ros/indigo/share/std_msgs/package.xml
+CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.o: /opt/ros/indigo/share/gencpp/package.xml
+CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.o: /opt/ros/indigo/share/genlisp/package.xml
+CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.o: /opt/ros/indigo/share/message_generation/package.xml
+CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.o: /opt/ros/indigo/share/rosbuild/package.xml
+CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.o: /opt/ros/indigo/share/rosconsole/package.xml
+CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.o: /opt/ros/indigo/share/rosgraph_msgs/package.xml
+CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.o: /opt/ros/indigo/share/xmlrpcpp/package.xml
+CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.o: /opt/ros/indigo/share/roscpp/package.xml
+CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.o: /opt/ros/indigo/share/message_filters/package.xml
+CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.o: /opt/ros/indigo/share/class_loader/package.xml
+CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.o: /opt/ros/indigo/share/rospack/package.xml
+CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.o: /opt/ros/indigo/share/roslib/package.xml
+CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.o: /opt/ros/indigo/share/pluginlib/package.xml
+CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.o: /opt/ros/indigo/share/geometry_msgs/package.xml
+CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.o: /opt/ros/indigo/share/sensor_msgs/package.xml
+CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.o: /opt/ros/indigo/share/image_transport/package.xml
+CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.o: /opt/ros/indigo/share/std_srvs/package.xml
+CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.o: /opt/ros/indigo/share/rosgraph/package.xml
+CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.o: /opt/ros/indigo/share/rosclean/package.xml
+CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.o: /opt/ros/indigo/share/rosmaster/package.xml
+CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.o: /opt/ros/indigo/share/rosout/package.xml
+CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.o: /opt/ros/indigo/share/rosparam/package.xml
+CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.o: /opt/ros/indigo/share/rosunit/package.xml
+CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.o: /opt/ros/indigo/share/roslaunch/package.xml
+CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.o: /opt/ros/indigo/share/roslz4/package.xml
+CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.o: /opt/ros/indigo/share/rosbag_storage/package.xml
+CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.o: /opt/ros/indigo/share/rospy/package.xml
+CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.o: /opt/ros/indigo/share/topic_tools/package.xml
+CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.o: /opt/ros/indigo/share/rosbag/package.xml
+CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.o: /opt/ros/indigo/share/rostopic/package.xml
+CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.o: /opt/ros/indigo/share/rosnode/package.xml
+CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.o: /opt/ros/indigo/share/rosmsg/package.xml
+CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.o: /opt/ros/indigo/share/rosservice/package.xml
+CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.o: /opt/ros/indigo/share/roswtf/package.xml
+CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.o: /opt/ros/indigo/share/actionlib_msgs/package.xml
+CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.o: /opt/ros/indigo/share/tf2_msgs/package.xml
+CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.o: /opt/ros/indigo/share/tf2/package.xml
+CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.o: /opt/ros/indigo/share/rostest/package.xml
+CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.o: /opt/ros/indigo/share/actionlib/package.xml
+CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.o: /opt/ros/indigo/share/tf2_py/package.xml
+CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.o: /opt/ros/indigo/share/tf2_ros/package.xml
+CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.o: /opt/ros/indigo/share/tf/package.xml
+CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.o: /opt/ros/indigo/share/camera_calibration_parsers/package.xml
+CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.o: /opt/ros/indigo/share/camera_info_manager/package.xml
+CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.o: /opt/ros/indigo/share/nav_msgs/package.xml
+CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.o: /opt/ros/indigo/share/ardrone_autonomy/package.xml
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/redfox/Desktop/CDIO/build/CMakeFiles $(CMAKE_PROGRESS_1)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/example1_b.dir/src/example1_b.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/example1_b.dir/src/example1_b.cpp.o -c /home/redfox/Desktop/CDIO/src/example1_b.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.o -c /home/redfox/Desktop/CDIO/src/exampler/example1_b.cpp
 
-CMakeFiles/example1_b.dir/src/example1_b.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/example1_b.dir/src/example1_b.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/redfox/Desktop/CDIO/src/example1_b.cpp > CMakeFiles/example1_b.dir/src/example1_b.cpp.i
+CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/redfox/Desktop/CDIO/src/exampler/example1_b.cpp > CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.i
 
-CMakeFiles/example1_b.dir/src/example1_b.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/example1_b.dir/src/example1_b.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/redfox/Desktop/CDIO/src/example1_b.cpp -o CMakeFiles/example1_b.dir/src/example1_b.cpp.s
+CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/redfox/Desktop/CDIO/src/exampler/example1_b.cpp -o CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.s
 
-CMakeFiles/example1_b.dir/src/example1_b.cpp.o.requires:
-.PHONY : CMakeFiles/example1_b.dir/src/example1_b.cpp.o.requires
+CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.o.requires:
+.PHONY : CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.o.requires
 
-CMakeFiles/example1_b.dir/src/example1_b.cpp.o.provides: CMakeFiles/example1_b.dir/src/example1_b.cpp.o.requires
-	$(MAKE) -f CMakeFiles/example1_b.dir/build.make CMakeFiles/example1_b.dir/src/example1_b.cpp.o.provides.build
-.PHONY : CMakeFiles/example1_b.dir/src/example1_b.cpp.o.provides
+CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.o.provides: CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.o.requires
+	$(MAKE) -f CMakeFiles/example1_b.dir/build.make CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.o.provides.build
+.PHONY : CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.o.provides
 
-CMakeFiles/example1_b.dir/src/example1_b.cpp.o.provides.build: CMakeFiles/example1_b.dir/src/example1_b.cpp.o
+CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.o.provides.build: CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.o
 
 # Object files for target example1_b
 example1_b_OBJECTS = \
-"CMakeFiles/example1_b.dir/src/example1_b.cpp.o"
+"CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.o"
 
 # External object files for target example1_b
 example1_b_EXTERNAL_OBJECTS =
 
-../bin/example1_b: CMakeFiles/example1_b.dir/src/example1_b.cpp.o
+../bin/example1_b: CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.o
 ../bin/example1_b: CMakeFiles/example1_b.dir/build.make
+../bin/example1_b: /usr/lib/x86_64-linux-gnu/libtinyxml.so
+../bin/example1_b: /usr/lib/libPocoFoundation.so
 ../bin/example1_b: /usr/lib/x86_64-linux-gnu/libboost_signals.so
 ../bin/example1_b: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
 ../bin/example1_b: /usr/lib/liblog4cxx.so
@@ -116,7 +156,7 @@ example1_b_EXTERNAL_OBJECTS =
 CMakeFiles/example1_b.dir/build: ../bin/example1_b
 .PHONY : CMakeFiles/example1_b.dir/build
 
-CMakeFiles/example1_b.dir/requires: CMakeFiles/example1_b.dir/src/example1_b.cpp.o.requires
+CMakeFiles/example1_b.dir/requires: CMakeFiles/example1_b.dir/src/exampler/example1_b.cpp.o.requires
 .PHONY : CMakeFiles/example1_b.dir/requires
 
 CMakeFiles/example1_b.dir/clean:

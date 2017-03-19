@@ -4,7 +4,7 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/home/redfox/Desktop/CDIO/src/example1_a.cpp" "/home/redfox/Desktop/CDIO/build/CMakeFiles/example1_a.dir/src/example1_a.cpp.o"
+  "/home/redfox/Desktop/CDIO/src/exampler/example1_a.cpp" "/home/redfox/Desktop/CDIO/build/CMakeFiles/example1_a.dir/src/exampler/example1_a.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -21,6 +21,8 @@ SET(CMAKE_TARGET_LINKED_INFO_FILES
 SET(CMAKE_C_TARGET_INCLUDE_PATH
   "../include"
   "/opt/ros/indigo/include"
+  "../msg_gen/cpp/include"
+  "../srv_gen/cpp/include"
   )
 SET(CMAKE_CXX_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})
 SET(CMAKE_Fortran_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})

@@ -1,5 +1,12 @@
 FILE(REMOVE_RECURSE
+  "../msg_gen"
+  "../srv_gen"
+  "../msg_gen"
+  "../srv_gen"
+  "../src/CDIO/msg"
+  "../src/CDIO/srv"
   "CMakeFiles/ROSBUILD_gensrv_cpp"
+  "../srv_gen/cpp/include/CDIO/chapter2_srv1.h"
 )
 
 # Per-language clean rules from dependency scanning.
