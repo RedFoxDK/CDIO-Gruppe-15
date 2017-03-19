@@ -4,13 +4,12 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/usr/src/gtest/src/gtest-all.cc" "/home/redfox/Desktop/CDIO/build/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o"
+  "/home/redfox/Desktop/CDIO/src/example1_b.cpp" "/home/redfox/Desktop/CDIO/build/CMakeFiles/example1_b.dir/src/example1_b.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
 SET(CMAKE_TARGET_DEFINITIONS
-  "GTEST_CREATE_SHARED_LIBRARY=1"
   "ROS_PACKAGE_NAME=\"CDIO\""
   )
 
@@ -20,10 +19,8 @@ SET(CMAKE_TARGET_LINKED_INFO_FILES
 
 # The include file search paths:
 SET(CMAKE_C_TARGET_INCLUDE_PATH
-  "/home/redfox/Desktop/CDIO/include"
+  "../include"
   "/opt/ros/indigo/include"
-  "/usr/src/gtest/include"
-  "/usr/src/gtest"
   )
 SET(CMAKE_CXX_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})
 SET(CMAKE_Fortran_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})

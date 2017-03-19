@@ -244,6 +244,32 @@ doxygen/fast:
 .PHONY : doxygen/fast
 
 #=============================================================================
+# Target rules for targets named example1_a
+
+# Build rule for target.
+example1_a: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 example1_a
+.PHONY : example1_a
+
+# fast build rule for target.
+example1_a/fast:
+	$(MAKE) -f CMakeFiles/example1_a.dir/build.make CMakeFiles/example1_a.dir/build
+.PHONY : example1_a/fast
+
+#=============================================================================
+# Target rules for targets named example1_b
+
+# Build rule for target.
+example1_b: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 example1_b
+.PHONY : example1_b
+
+# fast build rule for target.
+example1_b/fast:
+	$(MAKE) -f CMakeFiles/example1_b.dir/build.make CMakeFiles/example1_b.dir/build
+.PHONY : example1_b/fast
+
+#=============================================================================
 # Target rules for targets named rosbuild_clean-test-results
 
 # Build rule for target.
@@ -425,6 +451,54 @@ gtest_main/fast:
 	$(MAKE) -f gtest/CMakeFiles/gtest_main.dir/build.make gtest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
 
+src/example1_a.o: src/example1_a.cpp.o
+.PHONY : src/example1_a.o
+
+# target to build an object file
+src/example1_a.cpp.o:
+	$(MAKE) -f CMakeFiles/example1_a.dir/build.make CMakeFiles/example1_a.dir/src/example1_a.cpp.o
+.PHONY : src/example1_a.cpp.o
+
+src/example1_a.i: src/example1_a.cpp.i
+.PHONY : src/example1_a.i
+
+# target to preprocess a source file
+src/example1_a.cpp.i:
+	$(MAKE) -f CMakeFiles/example1_a.dir/build.make CMakeFiles/example1_a.dir/src/example1_a.cpp.i
+.PHONY : src/example1_a.cpp.i
+
+src/example1_a.s: src/example1_a.cpp.s
+.PHONY : src/example1_a.s
+
+# target to generate assembly for a file
+src/example1_a.cpp.s:
+	$(MAKE) -f CMakeFiles/example1_a.dir/build.make CMakeFiles/example1_a.dir/src/example1_a.cpp.s
+.PHONY : src/example1_a.cpp.s
+
+src/example1_b.o: src/example1_b.cpp.o
+.PHONY : src/example1_b.o
+
+# target to build an object file
+src/example1_b.cpp.o:
+	$(MAKE) -f CMakeFiles/example1_b.dir/build.make CMakeFiles/example1_b.dir/src/example1_b.cpp.o
+.PHONY : src/example1_b.cpp.o
+
+src/example1_b.i: src/example1_b.cpp.i
+.PHONY : src/example1_b.i
+
+# target to preprocess a source file
+src/example1_b.cpp.i:
+	$(MAKE) -f CMakeFiles/example1_b.dir/build.make CMakeFiles/example1_b.dir/src/example1_b.cpp.i
+.PHONY : src/example1_b.cpp.i
+
+src/example1_b.s: src/example1_b.cpp.s
+.PHONY : src/example1_b.s
+
+# target to generate assembly for a file
+src/example1_b.cpp.s:
+	$(MAKE) -f CMakeFiles/example1_b.dir/build.make CMakeFiles/example1_b.dir/src/example1_b.cpp.s
+.PHONY : src/example1_b.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -440,6 +514,8 @@ help:
 	@echo "... download_extra_data"
 	@echo "... doxygen"
 	@echo "... edit_cache"
+	@echo "... example1_a"
+	@echo "... example1_b"
 	@echo "... install"
 	@echo "... install/local"
 	@echo "... install/strip"
@@ -459,6 +535,12 @@ help:
 	@echo "... tests"
 	@echo "... gtest"
 	@echo "... gtest_main"
+	@echo "... src/example1_a.o"
+	@echo "... src/example1_a.i"
+	@echo "... src/example1_a.s"
+	@echo "... src/example1_b.o"
+	@echo "... src/example1_b.i"
+	@echo "... src/example1_b.s"
 .PHONY : help
 
 

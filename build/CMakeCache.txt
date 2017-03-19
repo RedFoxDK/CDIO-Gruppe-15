@@ -183,8 +183,8 @@ CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 //Path to a program.
 CMAKE_STRIP:FILEPATH=/usr/bin/strip
 
-//The CMake toolchain file
-CMAKE_TOOLCHAIN_FILE:FILEPATH=/opt/ros/indigo/share/ros/core/rosbuild/rostoolchain.cmake
+//No help, variable specified on the command line.
+CMAKE_TOOLCHAIN_FILE:UNINITIALIZED=/opt/ros/indigo/share/ros/core/rosbuild/rostoolchain.cmake
 
 //If true, cmake will use relative paths in makefiles and projects.
 CMAKE_USE_RELATIVE_PATHS:BOOL=OFF
@@ -275,6 +275,9 @@ _CATKIN_GTEST_INCLUDE:FILEPATH=/usr/include/gtest/gtest.h
 
 //Path to a file.
 _CATKIN_GTEST_SRC:FILEPATH=/usr/src/gtest/src/gtest.cc
+
+//Path to a file.
+_file_name:FILEPATH=/home/redfox/Desktop/CDIO/src/example1_b.cpp
 
 //The directory containing a CMake configuration file for catkin.
 catkin_DIR:PATH=/opt/ros/indigo/share/catkin/cmake
