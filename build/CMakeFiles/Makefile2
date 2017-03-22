@@ -152,13 +152,13 @@ clean: CMakeFiles/ROSBUILD_genmsg_py.dir/clean
 CMakeFiles/ROSBUILD_gensrv_cpp.dir/all: CMakeFiles/rosbuild_premsgsrvgen.dir/all
 	$(MAKE) -f CMakeFiles/ROSBUILD_gensrv_cpp.dir/build.make CMakeFiles/ROSBUILD_gensrv_cpp.dir/depend
 	$(MAKE) -f CMakeFiles/ROSBUILD_gensrv_cpp.dir/build.make CMakeFiles/ROSBUILD_gensrv_cpp.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/redfox/Desktop/CDIO/build/CMakeFiles  5
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/redfox/Desktop/CDIO/build/CMakeFiles  5 6
 	@echo "Built target ROSBUILD_gensrv_cpp"
 .PHONY : CMakeFiles/ROSBUILD_gensrv_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ROSBUILD_gensrv_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/redfox/Desktop/CDIO/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/redfox/Desktop/CDIO/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/ROSBUILD_gensrv_cpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/redfox/Desktop/CDIO/build/CMakeFiles 0
 .PHONY : CMakeFiles/ROSBUILD_gensrv_cpp.dir/rule
@@ -183,13 +183,13 @@ clean: CMakeFiles/ROSBUILD_gensrv_cpp.dir/clean
 CMakeFiles/ROSBUILD_gensrv_lisp.dir/all: CMakeFiles/rosbuild_premsgsrvgen.dir/all
 	$(MAKE) -f CMakeFiles/ROSBUILD_gensrv_lisp.dir/build.make CMakeFiles/ROSBUILD_gensrv_lisp.dir/depend
 	$(MAKE) -f CMakeFiles/ROSBUILD_gensrv_lisp.dir/build.make CMakeFiles/ROSBUILD_gensrv_lisp.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/redfox/Desktop/CDIO/build/CMakeFiles  6
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/redfox/Desktop/CDIO/build/CMakeFiles  7 8
 	@echo "Built target ROSBUILD_gensrv_lisp"
 .PHONY : CMakeFiles/ROSBUILD_gensrv_lisp.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ROSBUILD_gensrv_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/redfox/Desktop/CDIO/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/redfox/Desktop/CDIO/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/ROSBUILD_gensrv_lisp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/redfox/Desktop/CDIO/build/CMakeFiles 0
 .PHONY : CMakeFiles/ROSBUILD_gensrv_lisp.dir/rule
@@ -214,13 +214,13 @@ clean: CMakeFiles/ROSBUILD_gensrv_lisp.dir/clean
 CMakeFiles/ROSBUILD_gensrv_py.dir/all: CMakeFiles/rosbuild_premsgsrvgen.dir/all
 	$(MAKE) -f CMakeFiles/ROSBUILD_gensrv_py.dir/build.make CMakeFiles/ROSBUILD_gensrv_py.dir/depend
 	$(MAKE) -f CMakeFiles/ROSBUILD_gensrv_py.dir/build.make CMakeFiles/ROSBUILD_gensrv_py.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/redfox/Desktop/CDIO/build/CMakeFiles  7 8
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/redfox/Desktop/CDIO/build/CMakeFiles  9 10 11
 	@echo "Built target ROSBUILD_gensrv_py"
 .PHONY : CMakeFiles/ROSBUILD_gensrv_py.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ROSBUILD_gensrv_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/redfox/Desktop/CDIO/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/redfox/Desktop/CDIO/build/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/ROSBUILD_gensrv_py.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/redfox/Desktop/CDIO/build/CMakeFiles 0
 .PHONY : CMakeFiles/ROSBUILD_gensrv_py.dir/rule
@@ -369,7 +369,7 @@ clean: CMakeFiles/doxygen.dir/clean
 CMakeFiles/example1_a.dir/all: CMakeFiles/rosbuild_precompile.dir/all
 	$(MAKE) -f CMakeFiles/example1_a.dir/build.make CMakeFiles/example1_a.dir/depend
 	$(MAKE) -f CMakeFiles/example1_a.dir/build.make CMakeFiles/example1_a.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/redfox/Desktop/CDIO/build/CMakeFiles  9
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/redfox/Desktop/CDIO/build/CMakeFiles  12
 	@echo "Built target example1_a"
 .PHONY : CMakeFiles/example1_a.dir/all
 
@@ -379,7 +379,7 @@ all: CMakeFiles/example1_a.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/example1_a.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/redfox/Desktop/CDIO/build/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/redfox/Desktop/CDIO/build/CMakeFiles 12
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/example1_a.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/redfox/Desktop/CDIO/build/CMakeFiles 0
 .PHONY : CMakeFiles/example1_a.dir/rule
@@ -404,7 +404,7 @@ clean: CMakeFiles/example1_a.dir/clean
 CMakeFiles/example1_b.dir/all: CMakeFiles/rosbuild_precompile.dir/all
 	$(MAKE) -f CMakeFiles/example1_b.dir/build.make CMakeFiles/example1_b.dir/depend
 	$(MAKE) -f CMakeFiles/example1_b.dir/build.make CMakeFiles/example1_b.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/redfox/Desktop/CDIO/build/CMakeFiles  10
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/redfox/Desktop/CDIO/build/CMakeFiles  13
 	@echo "Built target example1_b"
 .PHONY : CMakeFiles/example1_b.dir/all
 
@@ -414,7 +414,7 @@ all: CMakeFiles/example1_b.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/example1_b.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/redfox/Desktop/CDIO/build/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/redfox/Desktop/CDIO/build/CMakeFiles 12
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/example1_b.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/redfox/Desktop/CDIO/build/CMakeFiles 0
 .PHONY : CMakeFiles/example1_b.dir/rule
@@ -439,7 +439,7 @@ clean: CMakeFiles/example1_b.dir/clean
 CMakeFiles/example2_a.dir/all: CMakeFiles/rosbuild_precompile.dir/all
 	$(MAKE) -f CMakeFiles/example2_a.dir/build.make CMakeFiles/example2_a.dir/depend
 	$(MAKE) -f CMakeFiles/example2_a.dir/build.make CMakeFiles/example2_a.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/redfox/Desktop/CDIO/build/CMakeFiles  11
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/redfox/Desktop/CDIO/build/CMakeFiles  14
 	@echo "Built target example2_a"
 .PHONY : CMakeFiles/example2_a.dir/all
 
@@ -449,7 +449,7 @@ all: CMakeFiles/example2_a.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/example2_a.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/redfox/Desktop/CDIO/build/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/redfox/Desktop/CDIO/build/CMakeFiles 12
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/example2_a.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/redfox/Desktop/CDIO/build/CMakeFiles 0
 .PHONY : CMakeFiles/example2_a.dir/rule
@@ -474,7 +474,7 @@ clean: CMakeFiles/example2_a.dir/clean
 CMakeFiles/example2_b.dir/all: CMakeFiles/rosbuild_precompile.dir/all
 	$(MAKE) -f CMakeFiles/example2_b.dir/build.make CMakeFiles/example2_b.dir/depend
 	$(MAKE) -f CMakeFiles/example2_b.dir/build.make CMakeFiles/example2_b.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/redfox/Desktop/CDIO/build/CMakeFiles  12
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/redfox/Desktop/CDIO/build/CMakeFiles  15
 	@echo "Built target example2_b"
 .PHONY : CMakeFiles/example2_b.dir/all
 
@@ -484,7 +484,7 @@ all: CMakeFiles/example2_b.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/example2_b.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/redfox/Desktop/CDIO/build/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/redfox/Desktop/CDIO/build/CMakeFiles 12
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/example2_b.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/redfox/Desktop/CDIO/build/CMakeFiles 0
 .PHONY : CMakeFiles/example2_b.dir/rule
@@ -500,6 +500,111 @@ CMakeFiles/example2_b.dir/clean:
 
 # clean rule for target.
 clean: CMakeFiles/example2_b.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/example3_a.dir
+
+# All Build rule for target.
+CMakeFiles/example3_a.dir/all: CMakeFiles/rosbuild_precompile.dir/all
+	$(MAKE) -f CMakeFiles/example3_a.dir/build.make CMakeFiles/example3_a.dir/depend
+	$(MAKE) -f CMakeFiles/example3_a.dir/build.make CMakeFiles/example3_a.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/redfox/Desktop/CDIO/build/CMakeFiles  16
+	@echo "Built target example3_a"
+.PHONY : CMakeFiles/example3_a.dir/all
+
+# Include target in all.
+all: CMakeFiles/example3_a.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/example3_a.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/redfox/Desktop/CDIO/build/CMakeFiles 12
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/example3_a.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/redfox/Desktop/CDIO/build/CMakeFiles 0
+.PHONY : CMakeFiles/example3_a.dir/rule
+
+# Convenience name for target.
+example3_a: CMakeFiles/example3_a.dir/rule
+.PHONY : example3_a
+
+# clean rule for target.
+CMakeFiles/example3_a.dir/clean:
+	$(MAKE) -f CMakeFiles/example3_a.dir/build.make CMakeFiles/example3_a.dir/clean
+.PHONY : CMakeFiles/example3_a.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/example3_a.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/example3_b.dir
+
+# All Build rule for target.
+CMakeFiles/example3_b.dir/all: CMakeFiles/rosbuild_precompile.dir/all
+	$(MAKE) -f CMakeFiles/example3_b.dir/build.make CMakeFiles/example3_b.dir/depend
+	$(MAKE) -f CMakeFiles/example3_b.dir/build.make CMakeFiles/example3_b.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/redfox/Desktop/CDIO/build/CMakeFiles  17
+	@echo "Built target example3_b"
+.PHONY : CMakeFiles/example3_b.dir/all
+
+# Include target in all.
+all: CMakeFiles/example3_b.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/example3_b.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/redfox/Desktop/CDIO/build/CMakeFiles 12
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/example3_b.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/redfox/Desktop/CDIO/build/CMakeFiles 0
+.PHONY : CMakeFiles/example3_b.dir/rule
+
+# Convenience name for target.
+example3_b: CMakeFiles/example3_b.dir/rule
+.PHONY : example3_b
+
+# clean rule for target.
+CMakeFiles/example3_b.dir/clean:
+	$(MAKE) -f CMakeFiles/example3_b.dir/build.make CMakeFiles/example3_b.dir/clean
+.PHONY : CMakeFiles/example3_b.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/example3_b.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/get_battery.dir
+
+# All Build rule for target.
+CMakeFiles/get_battery.dir/all: CMakeFiles/rosbuild_precompile.dir/all
+	$(MAKE) -f CMakeFiles/get_battery.dir/build.make CMakeFiles/get_battery.dir/depend
+	$(MAKE) -f CMakeFiles/get_battery.dir/build.make CMakeFiles/get_battery.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/redfox/Desktop/CDIO/build/CMakeFiles  18
+	@echo "Built target get_battery"
+.PHONY : CMakeFiles/get_battery.dir/all
+
+# Include target in all.
+all: CMakeFiles/get_battery.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/get_battery.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/redfox/Desktop/CDIO/build/CMakeFiles 12
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/get_battery.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/redfox/Desktop/CDIO/build/CMakeFiles 0
+.PHONY : CMakeFiles/get_battery.dir/rule
+
+# Convenience name for target.
+get_battery: CMakeFiles/get_battery.dir/rule
+.PHONY : get_battery
+
+# clean rule for target.
+CMakeFiles/get_battery.dir/clean:
+	$(MAKE) -f CMakeFiles/get_battery.dir/build.make CMakeFiles/get_battery.dir/clean
+.PHONY : CMakeFiles/get_battery.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/get_battery.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -548,7 +653,7 @@ CMakeFiles/rosbuild_precompile.dir/all: CMakeFiles/rospack_gensrv.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/rosbuild_precompile.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/redfox/Desktop/CDIO/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/redfox/Desktop/CDIO/build/CMakeFiles 11
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/rosbuild_precompile.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/redfox/Desktop/CDIO/build/CMakeFiles 0
 .PHONY : CMakeFiles/rosbuild_precompile.dir/rule
@@ -711,7 +816,7 @@ CMakeFiles/rospack_gensrv.dir/all: CMakeFiles/ROSBUILD_gensrv_py.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/rospack_gensrv.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/redfox/Desktop/CDIO/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/redfox/Desktop/CDIO/build/CMakeFiles 7
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/rospack_gensrv.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/redfox/Desktop/CDIO/build/CMakeFiles 0
 .PHONY : CMakeFiles/rospack_gensrv.dir/rule
@@ -746,7 +851,7 @@ all: CMakeFiles/rospack_gensrv_all.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/rospack_gensrv_all.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/redfox/Desktop/CDIO/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/redfox/Desktop/CDIO/build/CMakeFiles 7
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/rospack_gensrv_all.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/redfox/Desktop/CDIO/build/CMakeFiles 0
 .PHONY : CMakeFiles/rospack_gensrv_all.dir/rule
@@ -973,7 +1078,7 @@ gtest/preinstall:
 gtest/CMakeFiles/gtest.dir/all:
 	$(MAKE) -f gtest/CMakeFiles/gtest.dir/build.make gtest/CMakeFiles/gtest.dir/depend
 	$(MAKE) -f gtest/CMakeFiles/gtest.dir/build.make gtest/CMakeFiles/gtest.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/redfox/Desktop/CDIO/build/CMakeFiles  13
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/redfox/Desktop/CDIO/build/CMakeFiles  19
 	@echo "Built target gtest"
 .PHONY : gtest/CMakeFiles/gtest.dir/all
 
@@ -1004,7 +1109,7 @@ clean: gtest/CMakeFiles/gtest.dir/clean
 gtest/CMakeFiles/gtest_main.dir/all: gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f gtest/CMakeFiles/gtest_main.dir/build.make gtest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) -f gtest/CMakeFiles/gtest_main.dir/build.make gtest/CMakeFiles/gtest_main.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/redfox/Desktop/CDIO/build/CMakeFiles  14
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/redfox/Desktop/CDIO/build/CMakeFiles  20
 	@echo "Built target gtest_main"
 .PHONY : gtest/CMakeFiles/gtest_main.dir/all
 

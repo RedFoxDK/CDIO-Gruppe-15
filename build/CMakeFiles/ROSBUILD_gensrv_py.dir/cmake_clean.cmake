@@ -8,6 +8,7 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/ROSBUILD_gensrv_py"
   "../src/CDIO/srv/__init__.py"
   "../src/CDIO/srv/_chapter2_srv1.py"
+  "../src/CDIO/srv/_Get_battery_srv.py"
 )
 
 # Per-language clean rules from dependency scanning.

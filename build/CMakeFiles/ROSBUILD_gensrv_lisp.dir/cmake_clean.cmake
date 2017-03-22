@@ -9,6 +9,9 @@ FILE(REMOVE_RECURSE
   "../srv_gen/lisp/chapter2_srv1.lisp"
   "../srv_gen/lisp/_package.lisp"
   "../srv_gen/lisp/_package_chapter2_srv1.lisp"
+  "../srv_gen/lisp/Get_battery_srv.lisp"
+  "../srv_gen/lisp/_package.lisp"
+  "../srv_gen/lisp/_package_Get_battery_srv.lisp"
 )
 
 # Per-language clean rules from dependency scanning.

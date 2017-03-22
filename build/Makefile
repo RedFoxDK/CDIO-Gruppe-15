@@ -322,6 +322,45 @@ example2_b/fast:
 .PHONY : example2_b/fast
 
 #=============================================================================
+# Target rules for targets named example3_a
+
+# Build rule for target.
+example3_a: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 example3_a
+.PHONY : example3_a
+
+# fast build rule for target.
+example3_a/fast:
+	$(MAKE) -f CMakeFiles/example3_a.dir/build.make CMakeFiles/example3_a.dir/build
+.PHONY : example3_a/fast
+
+#=============================================================================
+# Target rules for targets named example3_b
+
+# Build rule for target.
+example3_b: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 example3_b
+.PHONY : example3_b
+
+# fast build rule for target.
+example3_b/fast:
+	$(MAKE) -f CMakeFiles/example3_b.dir/build.make CMakeFiles/example3_b.dir/build
+.PHONY : example3_b/fast
+
+#=============================================================================
+# Target rules for targets named get_battery
+
+# Build rule for target.
+get_battery: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 get_battery
+.PHONY : get_battery
+
+# fast build rule for target.
+get_battery/fast:
+	$(MAKE) -f CMakeFiles/get_battery.dir/build.make CMakeFiles/get_battery.dir/build
+.PHONY : get_battery/fast
+
+#=============================================================================
 # Target rules for targets named rosbuild_clean-test-results
 
 # Build rule for target.
@@ -529,6 +568,30 @@ gtest_main/fast:
 	$(MAKE) -f gtest/CMakeFiles/gtest_main.dir/build.make gtest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
 
+src/Get_Battery/get_battery.o: src/Get_Battery/get_battery.cpp.o
+.PHONY : src/Get_Battery/get_battery.o
+
+# target to build an object file
+src/Get_Battery/get_battery.cpp.o:
+	$(MAKE) -f CMakeFiles/get_battery.dir/build.make CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.o
+.PHONY : src/Get_Battery/get_battery.cpp.o
+
+src/Get_Battery/get_battery.i: src/Get_Battery/get_battery.cpp.i
+.PHONY : src/Get_Battery/get_battery.i
+
+# target to preprocess a source file
+src/Get_Battery/get_battery.cpp.i:
+	$(MAKE) -f CMakeFiles/get_battery.dir/build.make CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.i
+.PHONY : src/Get_Battery/get_battery.cpp.i
+
+src/Get_Battery/get_battery.s: src/Get_Battery/get_battery.cpp.s
+.PHONY : src/Get_Battery/get_battery.s
+
+# target to generate assembly for a file
+src/Get_Battery/get_battery.cpp.s:
+	$(MAKE) -f CMakeFiles/get_battery.dir/build.make CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.s
+.PHONY : src/Get_Battery/get_battery.cpp.s
+
 src/exampler/example1_a.o: src/exampler/example1_a.cpp.o
 .PHONY : src/exampler/example1_a.o
 
@@ -625,6 +688,54 @@ src/exampler/example2_b.cpp.s:
 	$(MAKE) -f CMakeFiles/example2_b.dir/build.make CMakeFiles/example2_b.dir/src/exampler/example2_b.cpp.s
 .PHONY : src/exampler/example2_b.cpp.s
 
+src/exampler/example3_a.o: src/exampler/example3_a.cpp.o
+.PHONY : src/exampler/example3_a.o
+
+# target to build an object file
+src/exampler/example3_a.cpp.o:
+	$(MAKE) -f CMakeFiles/example3_a.dir/build.make CMakeFiles/example3_a.dir/src/exampler/example3_a.cpp.o
+.PHONY : src/exampler/example3_a.cpp.o
+
+src/exampler/example3_a.i: src/exampler/example3_a.cpp.i
+.PHONY : src/exampler/example3_a.i
+
+# target to preprocess a source file
+src/exampler/example3_a.cpp.i:
+	$(MAKE) -f CMakeFiles/example3_a.dir/build.make CMakeFiles/example3_a.dir/src/exampler/example3_a.cpp.i
+.PHONY : src/exampler/example3_a.cpp.i
+
+src/exampler/example3_a.s: src/exampler/example3_a.cpp.s
+.PHONY : src/exampler/example3_a.s
+
+# target to generate assembly for a file
+src/exampler/example3_a.cpp.s:
+	$(MAKE) -f CMakeFiles/example3_a.dir/build.make CMakeFiles/example3_a.dir/src/exampler/example3_a.cpp.s
+.PHONY : src/exampler/example3_a.cpp.s
+
+src/exampler/example3_b.o: src/exampler/example3_b.cpp.o
+.PHONY : src/exampler/example3_b.o
+
+# target to build an object file
+src/exampler/example3_b.cpp.o:
+	$(MAKE) -f CMakeFiles/example3_b.dir/build.make CMakeFiles/example3_b.dir/src/exampler/example3_b.cpp.o
+.PHONY : src/exampler/example3_b.cpp.o
+
+src/exampler/example3_b.i: src/exampler/example3_b.cpp.i
+.PHONY : src/exampler/example3_b.i
+
+# target to preprocess a source file
+src/exampler/example3_b.cpp.i:
+	$(MAKE) -f CMakeFiles/example3_b.dir/build.make CMakeFiles/example3_b.dir/src/exampler/example3_b.cpp.i
+.PHONY : src/exampler/example3_b.cpp.i
+
+src/exampler/example3_b.s: src/exampler/example3_b.cpp.s
+.PHONY : src/exampler/example3_b.s
+
+# target to generate assembly for a file
+src/exampler/example3_b.cpp.s:
+	$(MAKE) -f CMakeFiles/example3_b.dir/build.make CMakeFiles/example3_b.dir/src/exampler/example3_b.cpp.s
+.PHONY : src/exampler/example3_b.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -646,6 +757,9 @@ help:
 	@echo "... example1_b"
 	@echo "... example2_a"
 	@echo "... example2_b"
+	@echo "... example3_a"
+	@echo "... example3_b"
+	@echo "... get_battery"
 	@echo "... install"
 	@echo "... install/local"
 	@echo "... install/strip"
@@ -667,6 +781,9 @@ help:
 	@echo "... tests"
 	@echo "... gtest"
 	@echo "... gtest_main"
+	@echo "... src/Get_Battery/get_battery.o"
+	@echo "... src/Get_Battery/get_battery.i"
+	@echo "... src/Get_Battery/get_battery.s"
 	@echo "... src/exampler/example1_a.o"
 	@echo "... src/exampler/example1_a.i"
 	@echo "... src/exampler/example1_a.s"
@@ -679,6 +796,12 @@ help:
 	@echo "... src/exampler/example2_b.o"
 	@echo "... src/exampler/example2_b.i"
 	@echo "... src/exampler/example2_b.s"
+	@echo "... src/exampler/example3_a.o"
+	@echo "... src/exampler/example3_a.i"
+	@echo "... src/exampler/example3_a.s"
+	@echo "... src/exampler/example3_b.o"
+	@echo "... src/exampler/example3_b.i"
+	@echo "... src/exampler/example3_b.s"
 .PHONY : help
 
 

@@ -12,6 +12,9 @@
 /home/redfox/Desktop/CDIO/build/CMakeFiles/example1_b.dir
 /home/redfox/Desktop/CDIO/build/CMakeFiles/example2_a.dir
 /home/redfox/Desktop/CDIO/build/CMakeFiles/example2_b.dir
+/home/redfox/Desktop/CDIO/build/CMakeFiles/example3_a.dir
+/home/redfox/Desktop/CDIO/build/CMakeFiles/example3_b.dir
+/home/redfox/Desktop/CDIO/build/CMakeFiles/get_battery.dir
 /home/redfox/Desktop/CDIO/build/gtest/CMakeFiles/gtest.dir
 /home/redfox/Desktop/CDIO/build/gtest/CMakeFiles/gtest_main.dir
 /home/redfox/Desktop/CDIO/build/CMakeFiles/rosbuild_clean-test-results.dir

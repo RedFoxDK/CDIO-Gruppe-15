@@ -3,9 +3,12 @@
 54451afd946727ef84e38ecbb4fe6551 ../msg_gen/lisp/chapter2_msg1.lisp
 31ac90f561b08e28ac28abdeda0c5c45 ../src/CDIO/msg/__init__.py
 d061c5edb092352baee067535a7cf6b1 ../src/CDIO/msg/_chapter2_msg1.py
-f09c29009c2f10c2521f0b9fa7299108 ../src/CDIO/srv/__init__.py
+81f6d7e0fd81c3efd90b31af1e0b0f42 ../src/CDIO/srv/_Get_battery_srv.py
+293b99b26a155347e2845357928bf5ff ../src/CDIO/srv/__init__.py
 bd7481355d971a301e2db68e1e19d261 ../src/CDIO/srv/_chapter2_srv1.py
+a922bcfb442181074bb73ad3aa6bde99 ../srv_gen/cpp/include/CDIO/Get_battery_srv.h
 1f3a5157b8e8b3849554513f69cae421 ../srv_gen/cpp/include/CDIO/chapter2_srv1.h
+02f0fe6ecc9cf2ed94e31e9bd31278d1 ../srv_gen/lisp/Get_battery_srv.lisp
 80883fcaa1b7491b75d7e025fd43b6ce ../srv_gen/lisp/chapter2_srv1.lisp
 670b76feffe573515a245379eb3c2099 CMakeFiles/ROSBUILD_genmsg_cpp
 670b76feffe573515a245379eb3c2099 CMakeFiles/ROSBUILD_genmsg_lisp

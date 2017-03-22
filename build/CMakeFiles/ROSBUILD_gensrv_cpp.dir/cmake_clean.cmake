@@ -7,6 +7,7 @@ FILE(REMOVE_RECURSE
   "../src/CDIO/srv"
   "CMakeFiles/ROSBUILD_gensrv_cpp"
   "../srv_gen/cpp/include/CDIO/chapter2_srv1.h"
+  "../srv_gen/cpp/include/CDIO/Get_battery_srv.h"
 )
 
 # Per-language clean rules from dependency scanning.
