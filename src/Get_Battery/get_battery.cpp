@@ -16,7 +16,7 @@ int main(int argc, char **argv)
 
   ros::NodeHandle n;
   
-  battery_channel = n.resolveName("ardrone/navdata");
+  battery_channel = n.resolveName("ardrone/navdata"); // bruges ikke
   battery_sub = n.subscribe("ardrone/navdata", 1000, chatterCallback);
 
   
