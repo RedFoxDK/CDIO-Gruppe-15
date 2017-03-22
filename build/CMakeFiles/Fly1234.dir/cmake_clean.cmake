@@ -5,11 +5,12 @@ FILE(REMOVE_RECURSE
   "../srv_gen"
   "../src/CDIO/msg"
   "../src/CDIO/srv"
-  "CMakeFiles/ROSBUILD_gensrv_cpp"
-  "../srv_gen/cpp/include/CDIO/chapter2_srv1.h"
+  "CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.o"
+  "../bin/Fly1234.pdb"
+  "../bin/Fly1234"
 )
 
 # Per-language clean rules from dependency scanning.
-FOREACH(lang)
-  INCLUDE(CMakeFiles/ROSBUILD_gensrv_cpp.dir/cmake_clean_${lang}.cmake OPTIONAL)
+FOREACH(lang CXX)
+  INCLUDE(CMakeFiles/Fly1234.dir/cmake_clean_${lang}.cmake OPTIONAL)
 ENDFOREACH(lang)

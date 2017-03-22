@@ -46,7 +46,6 @@ CMAKE_BINARY_DIR = /home/redfox/Desktop/CDIO/build
 include CMakeFiles/ROSBUILD_gensrv_cpp.dir/progress.make
 
 CMakeFiles/ROSBUILD_gensrv_cpp: ../srv_gen/cpp/include/CDIO/chapter2_srv1.h
-CMakeFiles/ROSBUILD_gensrv_cpp: ../srv_gen/cpp/include/CDIO/Get_battery_srv.h
 
 ../srv_gen/cpp/include/CDIO/chapter2_srv1.h: ../srv/chapter2_srv1.srv
 ../srv_gen/cpp/include/CDIO/chapter2_srv1.h: /opt/ros/indigo/share/roscpp/rosbuild/scripts/gensrv_cpp.py
@@ -112,73 +111,8 @@ CMakeFiles/ROSBUILD_gensrv_cpp: ../srv_gen/cpp/include/CDIO/Get_battery_srv.h
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../srv_gen/cpp/include/CDIO/chapter2_srv1.h"
 	/opt/ros/indigo/share/roscpp/rosbuild/scripts/gensrv_cpp.py /home/redfox/Desktop/CDIO/srv/chapter2_srv1.srv
 
-../srv_gen/cpp/include/CDIO/Get_battery_srv.h: ../srv/Get_battery_srv.srv
-../srv_gen/cpp/include/CDIO/Get_battery_srv.h: /opt/ros/indigo/share/roscpp/rosbuild/scripts/gensrv_cpp.py
-../srv_gen/cpp/include/CDIO/Get_battery_srv.h: /opt/ros/indigo/share/roscpp/rosbuild/scripts/genmsg_cpp.py
-../srv_gen/cpp/include/CDIO/Get_battery_srv.h: /opt/ros/indigo/share/roslib/cmake/../../../lib/roslib/gendeps
-../srv_gen/cpp/include/CDIO/Get_battery_srv.h: ../manifest.xml
-../srv_gen/cpp/include/CDIO/Get_battery_srv.h: /opt/ros/indigo/share/cpp_common/package.xml
-../srv_gen/cpp/include/CDIO/Get_battery_srv.h: /opt/ros/indigo/share/rostime/package.xml
-../srv_gen/cpp/include/CDIO/Get_battery_srv.h: /opt/ros/indigo/share/roscpp_traits/package.xml
-../srv_gen/cpp/include/CDIO/Get_battery_srv.h: /opt/ros/indigo/share/roscpp_serialization/package.xml
-../srv_gen/cpp/include/CDIO/Get_battery_srv.h: /opt/ros/indigo/share/catkin/package.xml
-../srv_gen/cpp/include/CDIO/Get_battery_srv.h: /opt/ros/indigo/share/genmsg/package.xml
-../srv_gen/cpp/include/CDIO/Get_battery_srv.h: /opt/ros/indigo/share/genpy/package.xml
-../srv_gen/cpp/include/CDIO/Get_battery_srv.h: /opt/ros/indigo/share/message_runtime/package.xml
-../srv_gen/cpp/include/CDIO/Get_battery_srv.h: /opt/ros/indigo/share/std_msgs/package.xml
-../srv_gen/cpp/include/CDIO/Get_battery_srv.h: /opt/ros/indigo/share/gencpp/package.xml
-../srv_gen/cpp/include/CDIO/Get_battery_srv.h: /opt/ros/indigo/share/genlisp/package.xml
-../srv_gen/cpp/include/CDIO/Get_battery_srv.h: /opt/ros/indigo/share/message_generation/package.xml
-../srv_gen/cpp/include/CDIO/Get_battery_srv.h: /opt/ros/indigo/share/rosbuild/package.xml
-../srv_gen/cpp/include/CDIO/Get_battery_srv.h: /opt/ros/indigo/share/rosconsole/package.xml
-../srv_gen/cpp/include/CDIO/Get_battery_srv.h: /opt/ros/indigo/share/rosgraph_msgs/package.xml
-../srv_gen/cpp/include/CDIO/Get_battery_srv.h: /opt/ros/indigo/share/xmlrpcpp/package.xml
-../srv_gen/cpp/include/CDIO/Get_battery_srv.h: /opt/ros/indigo/share/roscpp/package.xml
-../srv_gen/cpp/include/CDIO/Get_battery_srv.h: /opt/ros/indigo/share/message_filters/package.xml
-../srv_gen/cpp/include/CDIO/Get_battery_srv.h: /opt/ros/indigo/share/class_loader/package.xml
-../srv_gen/cpp/include/CDIO/Get_battery_srv.h: /opt/ros/indigo/share/rospack/package.xml
-../srv_gen/cpp/include/CDIO/Get_battery_srv.h: /opt/ros/indigo/share/roslib/package.xml
-../srv_gen/cpp/include/CDIO/Get_battery_srv.h: /opt/ros/indigo/share/pluginlib/package.xml
-../srv_gen/cpp/include/CDIO/Get_battery_srv.h: /opt/ros/indigo/share/geometry_msgs/package.xml
-../srv_gen/cpp/include/CDIO/Get_battery_srv.h: /opt/ros/indigo/share/sensor_msgs/package.xml
-../srv_gen/cpp/include/CDIO/Get_battery_srv.h: /opt/ros/indigo/share/image_transport/package.xml
-../srv_gen/cpp/include/CDIO/Get_battery_srv.h: /opt/ros/indigo/share/std_srvs/package.xml
-../srv_gen/cpp/include/CDIO/Get_battery_srv.h: /opt/ros/indigo/share/rosgraph/package.xml
-../srv_gen/cpp/include/CDIO/Get_battery_srv.h: /opt/ros/indigo/share/rosclean/package.xml
-../srv_gen/cpp/include/CDIO/Get_battery_srv.h: /opt/ros/indigo/share/rosmaster/package.xml
-../srv_gen/cpp/include/CDIO/Get_battery_srv.h: /opt/ros/indigo/share/rosout/package.xml
-../srv_gen/cpp/include/CDIO/Get_battery_srv.h: /opt/ros/indigo/share/rosparam/package.xml
-../srv_gen/cpp/include/CDIO/Get_battery_srv.h: /opt/ros/indigo/share/rosunit/package.xml
-../srv_gen/cpp/include/CDIO/Get_battery_srv.h: /opt/ros/indigo/share/roslaunch/package.xml
-../srv_gen/cpp/include/CDIO/Get_battery_srv.h: /opt/ros/indigo/share/roslz4/package.xml
-../srv_gen/cpp/include/CDIO/Get_battery_srv.h: /opt/ros/indigo/share/rosbag_storage/package.xml
-../srv_gen/cpp/include/CDIO/Get_battery_srv.h: /opt/ros/indigo/share/rospy/package.xml
-../srv_gen/cpp/include/CDIO/Get_battery_srv.h: /opt/ros/indigo/share/topic_tools/package.xml
-../srv_gen/cpp/include/CDIO/Get_battery_srv.h: /opt/ros/indigo/share/rosbag/package.xml
-../srv_gen/cpp/include/CDIO/Get_battery_srv.h: /opt/ros/indigo/share/rostopic/package.xml
-../srv_gen/cpp/include/CDIO/Get_battery_srv.h: /opt/ros/indigo/share/rosnode/package.xml
-../srv_gen/cpp/include/CDIO/Get_battery_srv.h: /opt/ros/indigo/share/rosmsg/package.xml
-../srv_gen/cpp/include/CDIO/Get_battery_srv.h: /opt/ros/indigo/share/rosservice/package.xml
-../srv_gen/cpp/include/CDIO/Get_battery_srv.h: /opt/ros/indigo/share/roswtf/package.xml
-../srv_gen/cpp/include/CDIO/Get_battery_srv.h: /opt/ros/indigo/share/actionlib_msgs/package.xml
-../srv_gen/cpp/include/CDIO/Get_battery_srv.h: /opt/ros/indigo/share/tf2_msgs/package.xml
-../srv_gen/cpp/include/CDIO/Get_battery_srv.h: /opt/ros/indigo/share/tf2/package.xml
-../srv_gen/cpp/include/CDIO/Get_battery_srv.h: /opt/ros/indigo/share/rostest/package.xml
-../srv_gen/cpp/include/CDIO/Get_battery_srv.h: /opt/ros/indigo/share/actionlib/package.xml
-../srv_gen/cpp/include/CDIO/Get_battery_srv.h: /opt/ros/indigo/share/tf2_py/package.xml
-../srv_gen/cpp/include/CDIO/Get_battery_srv.h: /opt/ros/indigo/share/tf2_ros/package.xml
-../srv_gen/cpp/include/CDIO/Get_battery_srv.h: /opt/ros/indigo/share/tf/package.xml
-../srv_gen/cpp/include/CDIO/Get_battery_srv.h: /opt/ros/indigo/share/camera_calibration_parsers/package.xml
-../srv_gen/cpp/include/CDIO/Get_battery_srv.h: /opt/ros/indigo/share/camera_info_manager/package.xml
-../srv_gen/cpp/include/CDIO/Get_battery_srv.h: /opt/ros/indigo/share/nav_msgs/package.xml
-../srv_gen/cpp/include/CDIO/Get_battery_srv.h: /opt/ros/indigo/share/ardrone_autonomy/package.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/redfox/Desktop/CDIO/build/CMakeFiles $(CMAKE_PROGRESS_2)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../srv_gen/cpp/include/CDIO/Get_battery_srv.h"
-	/opt/ros/indigo/share/roscpp/rosbuild/scripts/gensrv_cpp.py /home/redfox/Desktop/CDIO/srv/Get_battery_srv.srv
-
 ROSBUILD_gensrv_cpp: CMakeFiles/ROSBUILD_gensrv_cpp
 ROSBUILD_gensrv_cpp: ../srv_gen/cpp/include/CDIO/chapter2_srv1.h
-ROSBUILD_gensrv_cpp: ../srv_gen/cpp/include/CDIO/Get_battery_srv.h
 ROSBUILD_gensrv_cpp: CMakeFiles/ROSBUILD_gensrv_cpp.dir/build.make
 .PHONY : ROSBUILD_gensrv_cpp
 

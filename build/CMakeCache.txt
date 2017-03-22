@@ -277,7 +277,7 @@ _CATKIN_GTEST_INCLUDE:FILEPATH=/usr/include/gtest/gtest.h
 _CATKIN_GTEST_SRC:FILEPATH=/usr/src/gtest/src/gtest.cc
 
 //Path to a file.
-_file_name:FILEPATH=/home/redfox/Desktop/CDIO/src/Get_Battery/get_battery.cpp
+_file_name:FILEPATH=/home/redfox/Desktop/CDIO/src/Fly/fly.cpp
 
 //The directory containing a CMake configuration file for catkin.
 catkin_DIR:PATH=/opt/ros/indigo/share/catkin/cmake

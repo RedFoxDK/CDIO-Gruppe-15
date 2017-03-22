@@ -6,11 +6,17 @@
 
 #IncludeRegexTransform: 
 
-/home/redfox/Desktop/CDIO/src/exampler/example1_b.cpp
+/home/redfox/Desktop/CDIO/src/Fly/fly.cpp
 ros/ros.h
-/home/redfox/Desktop/CDIO/src/exampler/ros/ros.h
+/home/redfox/Desktop/CDIO/src/Fly/ros/ros.h
+ardrone_autonomy/Navdata.h
+/home/redfox/Desktop/CDIO/src/Fly/ardrone_autonomy/Navdata.h
 std_msgs/String.h
-/home/redfox/Desktop/CDIO/src/exampler/std_msgs/String.h
+/home/redfox/Desktop/CDIO/src/Fly/std_msgs/String.h
+std_msgs/Empty.h
+/home/redfox/Desktop/CDIO/src/Fly/std_msgs/Empty.h
+cstdlib
+-
 
 /opt/ros/indigo/include/XmlRpcDecl.h
 ros/macros.h
@@ -26,6 +32,24 @@ string
 vector
 -
 time.h
+-
+
+/opt/ros/indigo/include/ardrone_autonomy/Navdata.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+std_msgs/Header.h
 -
 
 /opt/ros/indigo/include/ros/advertise_options.h
@@ -655,6 +679,38 @@ ros/forwards.h
 /opt/ros/indigo/include/ros/ros/forwards.h
 
 /opt/ros/indigo/include/rosconsole/macros_generated.h
+
+/opt/ros/indigo/include/std_msgs/Empty.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+
+/opt/ros/indigo/include/std_msgs/Header.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
 
 /opt/ros/indigo/include/std_msgs/String.h
 string

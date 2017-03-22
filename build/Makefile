@@ -140,6 +140,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named Fly1234
+
+# Build rule for target.
+Fly1234: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Fly1234
+.PHONY : Fly1234
+
+# fast build rule for target.
+Fly1234/fast:
+	$(MAKE) -f CMakeFiles/Fly1234.dir/build.make CMakeFiles/Fly1234.dir/build
+.PHONY : Fly1234/fast
+
+#=============================================================================
 # Target rules for targets named ROSBUILD_genmsg_cpp
 
 # Build rule for target.
@@ -568,6 +581,30 @@ gtest_main/fast:
 	$(MAKE) -f gtest/CMakeFiles/gtest_main.dir/build.make gtest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
 
+src/Fly/fly.o: src/Fly/fly.cpp.o
+.PHONY : src/Fly/fly.o
+
+# target to build an object file
+src/Fly/fly.cpp.o:
+	$(MAKE) -f CMakeFiles/Fly1234.dir/build.make CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.o
+.PHONY : src/Fly/fly.cpp.o
+
+src/Fly/fly.i: src/Fly/fly.cpp.i
+.PHONY : src/Fly/fly.i
+
+# target to preprocess a source file
+src/Fly/fly.cpp.i:
+	$(MAKE) -f CMakeFiles/Fly1234.dir/build.make CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.i
+.PHONY : src/Fly/fly.cpp.i
+
+src/Fly/fly.s: src/Fly/fly.cpp.s
+.PHONY : src/Fly/fly.s
+
+# target to generate assembly for a file
+src/Fly/fly.cpp.s:
+	$(MAKE) -f CMakeFiles/Fly1234.dir/build.make CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.s
+.PHONY : src/Fly/fly.cpp.s
+
 src/Get_Battery/get_battery.o: src/Get_Battery/get_battery.cpp.o
 .PHONY : src/Get_Battery/get_battery.o
 
@@ -742,6 +779,7 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... Fly1234"
 	@echo "... ROSBUILD_genmsg_cpp"
 	@echo "... ROSBUILD_genmsg_lisp"
 	@echo "... ROSBUILD_genmsg_py"
@@ -781,6 +819,9 @@ help:
 	@echo "... tests"
 	@echo "... gtest"
 	@echo "... gtest_main"
+	@echo "... src/Fly/fly.o"
+	@echo "... src/Fly/fly.i"
+	@echo "... src/Fly/fly.s"
 	@echo "... src/Get_Battery/get_battery.o"
 	@echo "... src/Get_Battery/get_battery.i"
 	@echo "... src/Get_Battery/get_battery.s"
