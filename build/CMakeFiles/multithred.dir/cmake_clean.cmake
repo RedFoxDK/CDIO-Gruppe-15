@@ -5,12 +5,12 @@ FILE(REMOVE_RECURSE
   "../srv_gen"
   "../src/CDIO/msg"
   "../src/CDIO/srv"
-  "CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o"
-  "../bin/Fly1234.pdb"
-  "../bin/Fly1234"
+  "CMakeFiles/multithred.dir/src/test/Multithred/multithred.cpp.o"
+  "../bin/multithred.pdb"
+  "../bin/multithred"
 )
 
 # Per-language clean rules from dependency scanning.
 FOREACH(lang CXX)
-  INCLUDE(CMakeFiles/Fly1234.dir/cmake_clean_${lang}.cmake OPTIONAL)
+  INCLUDE(CMakeFiles/multithred.dir/cmake_clean_${lang}.cmake OPTIONAL)
 ENDFOREACH(lang)

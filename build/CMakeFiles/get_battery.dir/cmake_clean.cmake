@@ -5,7 +5,7 @@ FILE(REMOVE_RECURSE
   "../srv_gen"
   "../src/CDIO/msg"
   "../src/CDIO/srv"
-  "CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.o"
+  "CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.o"
   "../bin/get_battery.pdb"
   "../bin/get_battery"
 )

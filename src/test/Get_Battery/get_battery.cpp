@@ -4,7 +4,10 @@
 #include <cstdlib>
 
 void chatterCallback(const ardrone_autonomy::Navdata::ConstPtr& msg) {
-  ROS_INFO("I heard: [%f]", msg->batteryPercent);
+  ROS_INFO("Battery: %f", msg->batteryPercent);
+  ROS_INFO("Temperature: %d", msg->temp);
+  ROS_INFO("pressure: %d", msg->pressure);
+  ROS_INFO("Altitude: %d", msg->altd);
 }
 
 int main(int argc, char **argv) 
@@ -18,6 +21,7 @@ int main(int argc, char **argv)
   
   battery_channel = n.resolveName("ardrone/navdata"); // bruges ikke
   battery_sub = n.subscribe("ardrone/navdata", 1000, chatterCallback);
+  
 
   
   ros::spin();

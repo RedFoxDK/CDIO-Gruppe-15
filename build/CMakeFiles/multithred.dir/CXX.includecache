@@ -6,13 +6,19 @@
 
 #IncludeRegexTransform: 
 
-/home/redfox/Desktop/CDIO/src/test/Get_Battery/get_battery.cpp
+/home/redfox/Desktop/CDIO/src/test/Multithred/multithred.cpp
+multithred.h
+/home/redfox/Desktop/CDIO/src/test/Multithred/multithred.h
+
+/home/redfox/Desktop/CDIO/src/test/Multithred/multithred.h
 ros/ros.h
-/home/redfox/Desktop/CDIO/src/test/Get_Battery/ros/ros.h
+/home/redfox/Desktop/CDIO/src/test/Multithred/ros/ros.h
 ardrone_autonomy/Navdata.h
-/home/redfox/Desktop/CDIO/src/test/Get_Battery/ardrone_autonomy/Navdata.h
+/home/redfox/Desktop/CDIO/src/test/Multithred/ardrone_autonomy/Navdata.h
 std_msgs/String.h
-/home/redfox/Desktop/CDIO/src/test/Get_Battery/std_msgs/String.h
+/home/redfox/Desktop/CDIO/src/test/Multithred/std_msgs/String.h
+std_msgs/Empty.h
+/home/redfox/Desktop/CDIO/src/test/Multithred/std_msgs/Empty.h
 cstdlib
 -
 
@@ -677,6 +683,22 @@ ros/forwards.h
 /opt/ros/indigo/include/ros/ros/forwards.h
 
 /opt/ros/indigo/include/rosconsole/macros_generated.h
+
+/opt/ros/indigo/include/std_msgs/Empty.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
 
 /opt/ros/indigo/include/std_msgs/Header.h
 string

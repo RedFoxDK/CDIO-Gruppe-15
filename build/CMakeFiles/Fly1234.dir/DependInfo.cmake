@@ -4,7 +4,7 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/home/redfox/Desktop/CDIO/src/Fly/fly.cpp" "/home/redfox/Desktop/CDIO/build/CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.o"
+  "/home/redfox/Desktop/CDIO/src/test/Fly/fly.cpp" "/home/redfox/Desktop/CDIO/build/CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 

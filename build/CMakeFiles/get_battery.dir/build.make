@@ -49,93 +49,93 @@ include CMakeFiles/get_battery.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/get_battery.dir/flags.make
 
-CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.o: CMakeFiles/get_battery.dir/flags.make
-CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.o: ../src/Get_Battery/get_battery.cpp
-CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.o: ../manifest.xml
-CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/cpp_common/package.xml
-CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/rostime/package.xml
-CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/roscpp_traits/package.xml
-CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/roscpp_serialization/package.xml
-CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/catkin/package.xml
-CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/genmsg/package.xml
-CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/genpy/package.xml
-CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/message_runtime/package.xml
-CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/std_msgs/package.xml
-CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/gencpp/package.xml
-CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/genlisp/package.xml
-CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/message_generation/package.xml
-CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/rosbuild/package.xml
-CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/rosconsole/package.xml
-CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/rosgraph_msgs/package.xml
-CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/xmlrpcpp/package.xml
-CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/roscpp/package.xml
-CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/message_filters/package.xml
-CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/class_loader/package.xml
-CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/rospack/package.xml
-CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/roslib/package.xml
-CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/pluginlib/package.xml
-CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/geometry_msgs/package.xml
-CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/sensor_msgs/package.xml
-CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/image_transport/package.xml
-CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/std_srvs/package.xml
-CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/rosgraph/package.xml
-CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/rosclean/package.xml
-CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/rosmaster/package.xml
-CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/rosout/package.xml
-CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/rosparam/package.xml
-CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/rosunit/package.xml
-CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/roslaunch/package.xml
-CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/roslz4/package.xml
-CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/rosbag_storage/package.xml
-CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/rospy/package.xml
-CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/topic_tools/package.xml
-CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/rosbag/package.xml
-CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/rostopic/package.xml
-CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/rosnode/package.xml
-CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/rosmsg/package.xml
-CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/rosservice/package.xml
-CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/roswtf/package.xml
-CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/actionlib_msgs/package.xml
-CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/tf2_msgs/package.xml
-CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/tf2/package.xml
-CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/rostest/package.xml
-CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/actionlib/package.xml
-CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/tf2_py/package.xml
-CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/tf2_ros/package.xml
-CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/tf/package.xml
-CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/camera_calibration_parsers/package.xml
-CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/camera_info_manager/package.xml
-CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/nav_msgs/package.xml
-CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/ardrone_autonomy/package.xml
+CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.o: CMakeFiles/get_battery.dir/flags.make
+CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.o: ../src/test/Get_Battery/get_battery.cpp
+CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.o: ../manifest.xml
+CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/cpp_common/package.xml
+CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/rostime/package.xml
+CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/roscpp_traits/package.xml
+CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/roscpp_serialization/package.xml
+CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/catkin/package.xml
+CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/genmsg/package.xml
+CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/genpy/package.xml
+CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/message_runtime/package.xml
+CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/std_msgs/package.xml
+CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/gencpp/package.xml
+CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/genlisp/package.xml
+CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/message_generation/package.xml
+CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/rosbuild/package.xml
+CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/rosconsole/package.xml
+CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/rosgraph_msgs/package.xml
+CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/xmlrpcpp/package.xml
+CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/roscpp/package.xml
+CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/message_filters/package.xml
+CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/class_loader/package.xml
+CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/rospack/package.xml
+CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/roslib/package.xml
+CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/pluginlib/package.xml
+CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/geometry_msgs/package.xml
+CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/sensor_msgs/package.xml
+CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/image_transport/package.xml
+CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/std_srvs/package.xml
+CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/rosgraph/package.xml
+CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/rosclean/package.xml
+CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/rosmaster/package.xml
+CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/rosout/package.xml
+CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/rosparam/package.xml
+CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/rosunit/package.xml
+CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/roslaunch/package.xml
+CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/roslz4/package.xml
+CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/rosbag_storage/package.xml
+CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/rospy/package.xml
+CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/topic_tools/package.xml
+CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/rosbag/package.xml
+CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/rostopic/package.xml
+CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/rosnode/package.xml
+CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/rosmsg/package.xml
+CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/rosservice/package.xml
+CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/roswtf/package.xml
+CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/actionlib_msgs/package.xml
+CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/tf2_msgs/package.xml
+CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/tf2/package.xml
+CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/rostest/package.xml
+CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/actionlib/package.xml
+CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/tf2_py/package.xml
+CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/tf2_ros/package.xml
+CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/tf/package.xml
+CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/camera_calibration_parsers/package.xml
+CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/camera_info_manager/package.xml
+CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/nav_msgs/package.xml
+CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.o: /opt/ros/indigo/share/ardrone_autonomy/package.xml
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/redfox/Desktop/CDIO/build/CMakeFiles $(CMAKE_PROGRESS_1)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.o -c /home/redfox/Desktop/CDIO/src/Get_Battery/get_battery.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.o -c /home/redfox/Desktop/CDIO/src/test/Get_Battery/get_battery.cpp
 
-CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/redfox/Desktop/CDIO/src/Get_Battery/get_battery.cpp > CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.i
+CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/redfox/Desktop/CDIO/src/test/Get_Battery/get_battery.cpp > CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.i
 
-CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/redfox/Desktop/CDIO/src/Get_Battery/get_battery.cpp -o CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.s
+CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/redfox/Desktop/CDIO/src/test/Get_Battery/get_battery.cpp -o CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.s
 
-CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.o.requires:
-.PHONY : CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.o.requires
+CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.o.requires:
+.PHONY : CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.o.requires
 
-CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.o.provides: CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.o.requires
-	$(MAKE) -f CMakeFiles/get_battery.dir/build.make CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.o.provides.build
-.PHONY : CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.o.provides
+CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.o.provides: CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.o.requires
+	$(MAKE) -f CMakeFiles/get_battery.dir/build.make CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.o.provides.build
+.PHONY : CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.o.provides
 
-CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.o.provides.build: CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.o
+CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.o.provides.build: CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.o
 
 # Object files for target get_battery
 get_battery_OBJECTS = \
-"CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.o"
+"CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.o"
 
 # External object files for target get_battery
 get_battery_EXTERNAL_OBJECTS =
 
-../bin/get_battery: CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.o
+../bin/get_battery: CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.o
 ../bin/get_battery: CMakeFiles/get_battery.dir/build.make
 ../bin/get_battery: /usr/lib/x86_64-linux-gnu/libtinyxml.so
 ../bin/get_battery: /usr/lib/libPocoFoundation.so
@@ -156,7 +156,7 @@ get_battery_EXTERNAL_OBJECTS =
 CMakeFiles/get_battery.dir/build: ../bin/get_battery
 .PHONY : CMakeFiles/get_battery.dir/build
 
-CMakeFiles/get_battery.dir/requires: CMakeFiles/get_battery.dir/src/Get_Battery/get_battery.cpp.o.requires
+CMakeFiles/get_battery.dir/requires: CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.o.requires
 .PHONY : CMakeFiles/get_battery.dir/requires
 
 CMakeFiles/get_battery.dir/clean:

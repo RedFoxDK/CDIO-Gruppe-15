@@ -49,93 +49,93 @@ include CMakeFiles/Fly1234.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Fly1234.dir/flags.make
 
-CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.o: CMakeFiles/Fly1234.dir/flags.make
-CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.o: ../src/Fly/fly.cpp
-CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.o: ../manifest.xml
-CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.o: /opt/ros/indigo/share/cpp_common/package.xml
-CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.o: /opt/ros/indigo/share/rostime/package.xml
-CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.o: /opt/ros/indigo/share/roscpp_traits/package.xml
-CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.o: /opt/ros/indigo/share/roscpp_serialization/package.xml
-CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.o: /opt/ros/indigo/share/catkin/package.xml
-CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.o: /opt/ros/indigo/share/genmsg/package.xml
-CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.o: /opt/ros/indigo/share/genpy/package.xml
-CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.o: /opt/ros/indigo/share/message_runtime/package.xml
-CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.o: /opt/ros/indigo/share/std_msgs/package.xml
-CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.o: /opt/ros/indigo/share/gencpp/package.xml
-CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.o: /opt/ros/indigo/share/genlisp/package.xml
-CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.o: /opt/ros/indigo/share/message_generation/package.xml
-CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.o: /opt/ros/indigo/share/rosbuild/package.xml
-CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.o: /opt/ros/indigo/share/rosconsole/package.xml
-CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.o: /opt/ros/indigo/share/rosgraph_msgs/package.xml
-CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.o: /opt/ros/indigo/share/xmlrpcpp/package.xml
-CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.o: /opt/ros/indigo/share/roscpp/package.xml
-CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.o: /opt/ros/indigo/share/message_filters/package.xml
-CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.o: /opt/ros/indigo/share/class_loader/package.xml
-CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.o: /opt/ros/indigo/share/rospack/package.xml
-CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.o: /opt/ros/indigo/share/roslib/package.xml
-CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.o: /opt/ros/indigo/share/pluginlib/package.xml
-CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.o: /opt/ros/indigo/share/geometry_msgs/package.xml
-CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.o: /opt/ros/indigo/share/sensor_msgs/package.xml
-CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.o: /opt/ros/indigo/share/image_transport/package.xml
-CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.o: /opt/ros/indigo/share/std_srvs/package.xml
-CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.o: /opt/ros/indigo/share/rosgraph/package.xml
-CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.o: /opt/ros/indigo/share/rosclean/package.xml
-CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.o: /opt/ros/indigo/share/rosmaster/package.xml
-CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.o: /opt/ros/indigo/share/rosout/package.xml
-CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.o: /opt/ros/indigo/share/rosparam/package.xml
-CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.o: /opt/ros/indigo/share/rosunit/package.xml
-CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.o: /opt/ros/indigo/share/roslaunch/package.xml
-CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.o: /opt/ros/indigo/share/roslz4/package.xml
-CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.o: /opt/ros/indigo/share/rosbag_storage/package.xml
-CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.o: /opt/ros/indigo/share/rospy/package.xml
-CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.o: /opt/ros/indigo/share/topic_tools/package.xml
-CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.o: /opt/ros/indigo/share/rosbag/package.xml
-CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.o: /opt/ros/indigo/share/rostopic/package.xml
-CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.o: /opt/ros/indigo/share/rosnode/package.xml
-CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.o: /opt/ros/indigo/share/rosmsg/package.xml
-CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.o: /opt/ros/indigo/share/rosservice/package.xml
-CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.o: /opt/ros/indigo/share/roswtf/package.xml
-CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.o: /opt/ros/indigo/share/actionlib_msgs/package.xml
-CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.o: /opt/ros/indigo/share/tf2_msgs/package.xml
-CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.o: /opt/ros/indigo/share/tf2/package.xml
-CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.o: /opt/ros/indigo/share/rostest/package.xml
-CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.o: /opt/ros/indigo/share/actionlib/package.xml
-CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.o: /opt/ros/indigo/share/tf2_py/package.xml
-CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.o: /opt/ros/indigo/share/tf2_ros/package.xml
-CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.o: /opt/ros/indigo/share/tf/package.xml
-CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.o: /opt/ros/indigo/share/camera_calibration_parsers/package.xml
-CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.o: /opt/ros/indigo/share/camera_info_manager/package.xml
-CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.o: /opt/ros/indigo/share/nav_msgs/package.xml
-CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.o: /opt/ros/indigo/share/ardrone_autonomy/package.xml
+CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o: CMakeFiles/Fly1234.dir/flags.make
+CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o: ../src/test/Fly/fly.cpp
+CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o: ../manifest.xml
+CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o: /opt/ros/indigo/share/cpp_common/package.xml
+CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o: /opt/ros/indigo/share/rostime/package.xml
+CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o: /opt/ros/indigo/share/roscpp_traits/package.xml
+CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o: /opt/ros/indigo/share/roscpp_serialization/package.xml
+CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o: /opt/ros/indigo/share/catkin/package.xml
+CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o: /opt/ros/indigo/share/genmsg/package.xml
+CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o: /opt/ros/indigo/share/genpy/package.xml
+CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o: /opt/ros/indigo/share/message_runtime/package.xml
+CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o: /opt/ros/indigo/share/std_msgs/package.xml
+CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o: /opt/ros/indigo/share/gencpp/package.xml
+CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o: /opt/ros/indigo/share/genlisp/package.xml
+CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o: /opt/ros/indigo/share/message_generation/package.xml
+CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o: /opt/ros/indigo/share/rosbuild/package.xml
+CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o: /opt/ros/indigo/share/rosconsole/package.xml
+CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o: /opt/ros/indigo/share/rosgraph_msgs/package.xml
+CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o: /opt/ros/indigo/share/xmlrpcpp/package.xml
+CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o: /opt/ros/indigo/share/roscpp/package.xml
+CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o: /opt/ros/indigo/share/message_filters/package.xml
+CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o: /opt/ros/indigo/share/class_loader/package.xml
+CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o: /opt/ros/indigo/share/rospack/package.xml
+CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o: /opt/ros/indigo/share/roslib/package.xml
+CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o: /opt/ros/indigo/share/pluginlib/package.xml
+CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o: /opt/ros/indigo/share/geometry_msgs/package.xml
+CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o: /opt/ros/indigo/share/sensor_msgs/package.xml
+CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o: /opt/ros/indigo/share/image_transport/package.xml
+CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o: /opt/ros/indigo/share/std_srvs/package.xml
+CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o: /opt/ros/indigo/share/rosgraph/package.xml
+CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o: /opt/ros/indigo/share/rosclean/package.xml
+CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o: /opt/ros/indigo/share/rosmaster/package.xml
+CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o: /opt/ros/indigo/share/rosout/package.xml
+CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o: /opt/ros/indigo/share/rosparam/package.xml
+CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o: /opt/ros/indigo/share/rosunit/package.xml
+CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o: /opt/ros/indigo/share/roslaunch/package.xml
+CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o: /opt/ros/indigo/share/roslz4/package.xml
+CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o: /opt/ros/indigo/share/rosbag_storage/package.xml
+CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o: /opt/ros/indigo/share/rospy/package.xml
+CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o: /opt/ros/indigo/share/topic_tools/package.xml
+CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o: /opt/ros/indigo/share/rosbag/package.xml
+CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o: /opt/ros/indigo/share/rostopic/package.xml
+CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o: /opt/ros/indigo/share/rosnode/package.xml
+CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o: /opt/ros/indigo/share/rosmsg/package.xml
+CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o: /opt/ros/indigo/share/rosservice/package.xml
+CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o: /opt/ros/indigo/share/roswtf/package.xml
+CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o: /opt/ros/indigo/share/actionlib_msgs/package.xml
+CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o: /opt/ros/indigo/share/tf2_msgs/package.xml
+CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o: /opt/ros/indigo/share/tf2/package.xml
+CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o: /opt/ros/indigo/share/rostest/package.xml
+CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o: /opt/ros/indigo/share/actionlib/package.xml
+CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o: /opt/ros/indigo/share/tf2_py/package.xml
+CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o: /opt/ros/indigo/share/tf2_ros/package.xml
+CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o: /opt/ros/indigo/share/tf/package.xml
+CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o: /opt/ros/indigo/share/camera_calibration_parsers/package.xml
+CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o: /opt/ros/indigo/share/camera_info_manager/package.xml
+CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o: /opt/ros/indigo/share/nav_msgs/package.xml
+CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o: /opt/ros/indigo/share/ardrone_autonomy/package.xml
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/redfox/Desktop/CDIO/build/CMakeFiles $(CMAKE_PROGRESS_1)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.o -c /home/redfox/Desktop/CDIO/src/Fly/fly.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o -c /home/redfox/Desktop/CDIO/src/test/Fly/fly.cpp
 
-CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/redfox/Desktop/CDIO/src/Fly/fly.cpp > CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.i
+CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/redfox/Desktop/CDIO/src/test/Fly/fly.cpp > CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.i
 
-CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/redfox/Desktop/CDIO/src/Fly/fly.cpp -o CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.s
+CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/redfox/Desktop/CDIO/src/test/Fly/fly.cpp -o CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.s
 
-CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.o.requires:
-.PHONY : CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.o.requires
+CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o.requires:
+.PHONY : CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o.requires
 
-CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.o.provides: CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.o.requires
-	$(MAKE) -f CMakeFiles/Fly1234.dir/build.make CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.o.provides.build
-.PHONY : CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.o.provides
+CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o.provides: CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Fly1234.dir/build.make CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o.provides.build
+.PHONY : CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o.provides
 
-CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.o.provides.build: CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.o
+CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o.provides.build: CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o
 
 # Object files for target Fly1234
 Fly1234_OBJECTS = \
-"CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.o"
+"CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o"
 
 # External object files for target Fly1234
 Fly1234_EXTERNAL_OBJECTS =
 
-../bin/Fly1234: CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.o
+../bin/Fly1234: CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o
 ../bin/Fly1234: CMakeFiles/Fly1234.dir/build.make
 ../bin/Fly1234: /usr/lib/x86_64-linux-gnu/libtinyxml.so
 ../bin/Fly1234: /usr/lib/libPocoFoundation.so
@@ -156,7 +156,7 @@ Fly1234_EXTERNAL_OBJECTS =
 CMakeFiles/Fly1234.dir/build: ../bin/Fly1234
 .PHONY : CMakeFiles/Fly1234.dir/build
 
-CMakeFiles/Fly1234.dir/requires: CMakeFiles/Fly1234.dir/src/Fly/fly.cpp.o.requires
+CMakeFiles/Fly1234.dir/requires: CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o.requires
 .PHONY : CMakeFiles/Fly1234.dir/requires
 
 CMakeFiles/Fly1234.dir/clean:

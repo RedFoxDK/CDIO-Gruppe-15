@@ -6,15 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/home/redfox/Desktop/CDIO/src/Fly/fly.cpp
+/home/redfox/Desktop/CDIO/src/test/Fly/fly.cpp
 ros/ros.h
-/home/redfox/Desktop/CDIO/src/Fly/ros/ros.h
+/home/redfox/Desktop/CDIO/src/test/Fly/ros/ros.h
 ardrone_autonomy/Navdata.h
-/home/redfox/Desktop/CDIO/src/Fly/ardrone_autonomy/Navdata.h
+/home/redfox/Desktop/CDIO/src/test/Fly/ardrone_autonomy/Navdata.h
 std_msgs/String.h
-/home/redfox/Desktop/CDIO/src/Fly/std_msgs/String.h
+/home/redfox/Desktop/CDIO/src/test/Fly/std_msgs/String.h
 std_msgs/Empty.h
-/home/redfox/Desktop/CDIO/src/Fly/std_msgs/Empty.h
+/home/redfox/Desktop/CDIO/src/test/Fly/std_msgs/Empty.h
 cstdlib
 -
 

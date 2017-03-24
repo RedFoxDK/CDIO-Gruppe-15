@@ -4,7 +4,7 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/home/redfox/Desktop/CDIO/src/test/Get_Battery/get_battery.cpp" "/home/redfox/Desktop/CDIO/build/CMakeFiles/get_battery.dir/src/test/Get_Battery/get_battery.cpp.o"
+  "/home/redfox/Desktop/CDIO/src/test/Multithred/multithred.cpp" "/home/redfox/Desktop/CDIO/build/CMakeFiles/multithred.dir/src/test/Multithred/multithred.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 
