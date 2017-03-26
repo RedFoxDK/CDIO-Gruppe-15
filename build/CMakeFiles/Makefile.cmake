@@ -144,6 +144,7 @@ SET(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 SET(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/ARDrone_manual_test.dir/DependInfo.cmake"
   "CMakeFiles/Fly1234.dir/DependInfo.cmake"
   "CMakeFiles/ROSBUILD_genmsg_cpp.dir/DependInfo.cmake"
   "CMakeFiles/ROSBUILD_genmsg_lisp.dir/DependInfo.cmake"
@@ -161,6 +162,8 @@ SET(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/example2_b.dir/DependInfo.cmake"
   "CMakeFiles/example3_a.dir/DependInfo.cmake"
   "CMakeFiles/example3_b.dir/DependInfo.cmake"
+  "CMakeFiles/flypath1.dir/DependInfo.cmake"
+  "CMakeFiles/flypath1_0.dir/DependInfo.cmake"
   "CMakeFiles/get_battery.dir/DependInfo.cmake"
   "CMakeFiles/multithred.dir/DependInfo.cmake"
   "CMakeFiles/rosbuild_clean-test-results.dir/DependInfo.cmake"

@@ -140,6 +140,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named ARDrone_manual_test
+
+# Build rule for target.
+ARDrone_manual_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ARDrone_manual_test
+.PHONY : ARDrone_manual_test
+
+# fast build rule for target.
+ARDrone_manual_test/fast:
+	$(MAKE) -f CMakeFiles/ARDrone_manual_test.dir/build.make CMakeFiles/ARDrone_manual_test.dir/build
+.PHONY : ARDrone_manual_test/fast
+
+#=============================================================================
 # Target rules for targets named Fly1234
 
 # Build rule for target.
@@ -359,6 +372,32 @@ example3_b: cmake_check_build_system
 example3_b/fast:
 	$(MAKE) -f CMakeFiles/example3_b.dir/build.make CMakeFiles/example3_b.dir/build
 .PHONY : example3_b/fast
+
+#=============================================================================
+# Target rules for targets named flypath1
+
+# Build rule for target.
+flypath1: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 flypath1
+.PHONY : flypath1
+
+# fast build rule for target.
+flypath1/fast:
+	$(MAKE) -f CMakeFiles/flypath1.dir/build.make CMakeFiles/flypath1.dir/build
+.PHONY : flypath1/fast
+
+#=============================================================================
+# Target rules for targets named flypath1_0
+
+# Build rule for target.
+flypath1_0: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 flypath1_0
+.PHONY : flypath1_0
+
+# fast build rule for target.
+flypath1_0/fast:
+	$(MAKE) -f CMakeFiles/flypath1_0.dir/build.make CMakeFiles/flypath1_0.dir/build
+.PHONY : flypath1_0/fast
 
 #=============================================================================
 # Target rules for targets named get_battery
@@ -762,6 +801,78 @@ src/test/Fly/fly.cpp.s:
 	$(MAKE) -f CMakeFiles/Fly1234.dir/build.make CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.s
 .PHONY : src/test/Fly/fly.cpp.s
 
+src/test/FlyPath/FlyPath1-0.o: src/test/FlyPath/FlyPath1-0.cpp.o
+.PHONY : src/test/FlyPath/FlyPath1-0.o
+
+# target to build an object file
+src/test/FlyPath/FlyPath1-0.cpp.o:
+	$(MAKE) -f CMakeFiles/flypath1_0.dir/build.make CMakeFiles/flypath1_0.dir/src/test/FlyPath/FlyPath1-0.cpp.o
+.PHONY : src/test/FlyPath/FlyPath1-0.cpp.o
+
+src/test/FlyPath/FlyPath1-0.i: src/test/FlyPath/FlyPath1-0.cpp.i
+.PHONY : src/test/FlyPath/FlyPath1-0.i
+
+# target to preprocess a source file
+src/test/FlyPath/FlyPath1-0.cpp.i:
+	$(MAKE) -f CMakeFiles/flypath1_0.dir/build.make CMakeFiles/flypath1_0.dir/src/test/FlyPath/FlyPath1-0.cpp.i
+.PHONY : src/test/FlyPath/FlyPath1-0.cpp.i
+
+src/test/FlyPath/FlyPath1-0.s: src/test/FlyPath/FlyPath1-0.cpp.s
+.PHONY : src/test/FlyPath/FlyPath1-0.s
+
+# target to generate assembly for a file
+src/test/FlyPath/FlyPath1-0.cpp.s:
+	$(MAKE) -f CMakeFiles/flypath1_0.dir/build.make CMakeFiles/flypath1_0.dir/src/test/FlyPath/FlyPath1-0.cpp.s
+.PHONY : src/test/FlyPath/FlyPath1-0.cpp.s
+
+src/test/FlyPath/FlyPath1.o: src/test/FlyPath/FlyPath1.cpp.o
+.PHONY : src/test/FlyPath/FlyPath1.o
+
+# target to build an object file
+src/test/FlyPath/FlyPath1.cpp.o:
+	$(MAKE) -f CMakeFiles/flypath1.dir/build.make CMakeFiles/flypath1.dir/src/test/FlyPath/FlyPath1.cpp.o
+.PHONY : src/test/FlyPath/FlyPath1.cpp.o
+
+src/test/FlyPath/FlyPath1.i: src/test/FlyPath/FlyPath1.cpp.i
+.PHONY : src/test/FlyPath/FlyPath1.i
+
+# target to preprocess a source file
+src/test/FlyPath/FlyPath1.cpp.i:
+	$(MAKE) -f CMakeFiles/flypath1.dir/build.make CMakeFiles/flypath1.dir/src/test/FlyPath/FlyPath1.cpp.i
+.PHONY : src/test/FlyPath/FlyPath1.cpp.i
+
+src/test/FlyPath/FlyPath1.s: src/test/FlyPath/FlyPath1.cpp.s
+.PHONY : src/test/FlyPath/FlyPath1.s
+
+# target to generate assembly for a file
+src/test/FlyPath/FlyPath1.cpp.s:
+	$(MAKE) -f CMakeFiles/flypath1.dir/build.make CMakeFiles/flypath1.dir/src/test/FlyPath/FlyPath1.cpp.s
+.PHONY : src/test/FlyPath/FlyPath1.cpp.s
+
+src/test/FromTheInternet/ARDrone_manual_test.o: src/test/FromTheInternet/ARDrone_manual_test.cpp.o
+.PHONY : src/test/FromTheInternet/ARDrone_manual_test.o
+
+# target to build an object file
+src/test/FromTheInternet/ARDrone_manual_test.cpp.o:
+	$(MAKE) -f CMakeFiles/ARDrone_manual_test.dir/build.make CMakeFiles/ARDrone_manual_test.dir/src/test/FromTheInternet/ARDrone_manual_test.cpp.o
+.PHONY : src/test/FromTheInternet/ARDrone_manual_test.cpp.o
+
+src/test/FromTheInternet/ARDrone_manual_test.i: src/test/FromTheInternet/ARDrone_manual_test.cpp.i
+.PHONY : src/test/FromTheInternet/ARDrone_manual_test.i
+
+# target to preprocess a source file
+src/test/FromTheInternet/ARDrone_manual_test.cpp.i:
+	$(MAKE) -f CMakeFiles/ARDrone_manual_test.dir/build.make CMakeFiles/ARDrone_manual_test.dir/src/test/FromTheInternet/ARDrone_manual_test.cpp.i
+.PHONY : src/test/FromTheInternet/ARDrone_manual_test.cpp.i
+
+src/test/FromTheInternet/ARDrone_manual_test.s: src/test/FromTheInternet/ARDrone_manual_test.cpp.s
+.PHONY : src/test/FromTheInternet/ARDrone_manual_test.s
+
+# target to generate assembly for a file
+src/test/FromTheInternet/ARDrone_manual_test.cpp.s:
+	$(MAKE) -f CMakeFiles/ARDrone_manual_test.dir/build.make CMakeFiles/ARDrone_manual_test.dir/src/test/FromTheInternet/ARDrone_manual_test.cpp.s
+.PHONY : src/test/FromTheInternet/ARDrone_manual_test.cpp.s
+
 src/test/Get_Battery/get_battery.o: src/test/Get_Battery/get_battery.cpp.o
 .PHONY : src/test/Get_Battery/get_battery.o
 
@@ -816,6 +927,7 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... ARDrone_manual_test"
 	@echo "... Fly1234"
 	@echo "... ROSBUILD_genmsg_cpp"
 	@echo "... ROSBUILD_genmsg_lisp"
@@ -834,6 +946,8 @@ help:
 	@echo "... example2_b"
 	@echo "... example3_a"
 	@echo "... example3_b"
+	@echo "... flypath1"
+	@echo "... flypath1_0"
 	@echo "... get_battery"
 	@echo "... install"
 	@echo "... install/local"
@@ -878,6 +992,15 @@ help:
 	@echo "... src/test/Fly/fly.o"
 	@echo "... src/test/Fly/fly.i"
 	@echo "... src/test/Fly/fly.s"
+	@echo "... src/test/FlyPath/FlyPath1-0.o"
+	@echo "... src/test/FlyPath/FlyPath1-0.i"
+	@echo "... src/test/FlyPath/FlyPath1-0.s"
+	@echo "... src/test/FlyPath/FlyPath1.o"
+	@echo "... src/test/FlyPath/FlyPath1.i"
+	@echo "... src/test/FlyPath/FlyPath1.s"
+	@echo "... src/test/FromTheInternet/ARDrone_manual_test.o"
+	@echo "... src/test/FromTheInternet/ARDrone_manual_test.i"
+	@echo "... src/test/FromTheInternet/ARDrone_manual_test.s"
 	@echo "... src/test/Get_Battery/get_battery.o"
 	@echo "... src/test/Get_Battery/get_battery.i"
 	@echo "... src/test/Get_Battery/get_battery.s"
