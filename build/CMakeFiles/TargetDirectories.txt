@@ -17,7 +17,7 @@
 /home/redfox/Desktop/CDIO/build/CMakeFiles/example3_a.dir
 /home/redfox/Desktop/CDIO/build/CMakeFiles/example3_b.dir
 /home/redfox/Desktop/CDIO/build/CMakeFiles/flypath1.dir
-/home/redfox/Desktop/CDIO/build/CMakeFiles/flypath1_0.dir
+/home/redfox/Desktop/CDIO/build/CMakeFiles/flypath2.dir
 /home/redfox/Desktop/CDIO/build/CMakeFiles/get_battery.dir
 /home/redfox/Desktop/CDIO/build/gtest/CMakeFiles/gtest.dir
 /home/redfox/Desktop/CDIO/build/gtest/CMakeFiles/gtest_main.dir

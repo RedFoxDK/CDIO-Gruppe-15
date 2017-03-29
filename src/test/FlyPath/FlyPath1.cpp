@@ -7,6 +7,7 @@
 double drone_x = 0.0;
 double drone_y = 0.0;
 double drone_z = 0.0;
+double battery = -1.0;
 
 float takeoff_time = 5.0;
 float fly_time = 2.5;
@@ -23,19 +24,21 @@ void nav_callback(const ardrone_autonomy::Navdata& msg_in)
 	drone_x = msg_in.vx*0.001;
 	drone_y = msg_in.vy*0.001;	
 	drone_z = msg_in.vz*0.001;
+	battery = msg_in.batteryPercent;
+//	ROS_INFO("altd: %d", msg_in.altd);
 }
 
 
-geometry_msgs::Twist control_drone(double vx,double vy,double vz,double K)
+geometry_msgs::Twist control_drone(double vx,double vy,double vz, double ax, double ay, double az,double K)
 {
 		geometry_msgs::Twist twist_msg_gen;
 	
 		twist_msg_gen.linear.x=K*(vx - drone_x);
 		twist_msg_gen.linear.y=K*(vy - drone_y); 
 		twist_msg_gen.linear.z=K*(vz - drone_z);
-		twist_msg_gen.angular.x=1.0; 
-		twist_msg_gen.angular.y=1.0;
-		twist_msg_gen.angular.z=0.0;
+		twist_msg_gen.angular.x=ax; 
+		twist_msg_gen.angular.y=ay;
+		twist_msg_gen.angular.z=az;
 		return twist_msg_gen;
 }
 
@@ -49,10 +52,12 @@ int main(int argc, char **argv)
 	ros::Publisher takeoff_pub;
 	ros::Publisher land_pub;
 	ros::Publisher fly_pub;
+	ros::Publisher reset_pub;
 	ros::Subscriber nav_sub;
 
 	takeoff_pub = n.advertise<std_msgs::Empty>("ardrone/takeoff",1);
   	land_pub = n.advertise<std_msgs::Empty>("ardrone/land",1);
+	reset_pub = n.advertise<std_msgs::Empty>("ardrone/reset",1);
 	fly_pub = n.advertise<geometry_msgs::Twist>("/cmd_vel", 1);
 	nav_sub = n.subscribe("/ardrone/navdata", 1, nav_callback);
 
@@ -76,11 +81,13 @@ int main(int argc, char **argv)
 
 	while(ros::ok()) {
 
+		if (battery > 1000) {
+
 		while ((double)ros::Time::now().toSec()< start_time+takeoff_time) //take off state
 		{
 			takeoff_pub.publish(std_msgs::Empty());
 			//fly_pub.publish(fly_path_hover);
-			ROS_INFO("Stat: Take off");
+			//ROS_INFO("Stat: Take off");
 			ros::spinOnce();
 			loop_rate.sleep();
 		}
@@ -88,7 +95,7 @@ int main(int argc, char **argv)
 		while (start_time+takeoff_time+fly_time+hover_time+spin_time < (double)ros::Time::now().toSec()) // landing and turn off state
 		{
 			fly_pub.publish(fly_path_hover);
-			ROS_INFO("Stat: Landing - Hover");
+			//ROS_INFO("Stat: Landing - Hover");
 			
 			if (start_time+takeoff_time+fly_time+hover_time+spin_time+land_time < (double)ros::Time::now().toSec())
 			{
@@ -102,8 +109,8 @@ int main(int argc, char **argv)
 		
 		while ((double)ros::Time::now().toSec() > start_time+takeoff_time && (double)ros::Time::now().toSec() < start_time+takeoff_time+fly_time)
 		{
-			fly_path = control_drone(x_des, 0.0, 0.0, K);
-			ROS_INFO("State: Flying");
+			fly_path = control_drone(x_des, 0.0, 0.0, 1.0, 1.0, 0.0, K);
+			//ROS_INFO("State: Flying");
 			fly_pub.publish(fly_path);
 
 			ros::spinOnce();
@@ -113,19 +120,23 @@ int main(int argc, char **argv)
 		while ((double)ros::Time::now().toSec() > start_time+takeoff_time+fly_time && (double)ros::Time::now().toSec() < start_time+takeoff_time+fly_time+hover_time)
 		{
 			fly_pub.publish(fly_path_hover);
-			ROS_INFO("State: Hover");
+			//ROS_INFO("State: Hover");
 			ros::spinOnce();
 			loop_rate.sleep();
 		}
 
 		while ((double)ros::Time::now().toSec() > start_time+takeoff_time+fly_time+hover_time && (double)ros::Time::now().toSec() < start_time+takeoff_time+fly_time+hover_time+spin_time)
 		{
-			fly_path = control_drone(0.0, 0.0, 0.5, K);
+			fly_path = control_drone(0.0, 0.0, 0.0, 0.0, 0.0, 0.0, K);
 			fly_pub.publish(fly_path);
-			ROS_INFO("State: Spinning");
+			//ROS_INFO("State: Spinning");
 			ros::spinOnce();
 			loop_rate.sleep();
 		}
+}else if (battery > 0){
+	ROS_INFO("Battery to Low! Battery at: %f", battery);
+	reset_pub.publish(std_msgs::Empty());
+}
 		
 		ros::spinOnce();
 		loop_rate.sleep();		

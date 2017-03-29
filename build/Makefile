@@ -387,17 +387,17 @@ flypath1/fast:
 .PHONY : flypath1/fast
 
 #=============================================================================
-# Target rules for targets named flypath1_0
+# Target rules for targets named flypath2
 
 # Build rule for target.
-flypath1_0: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 flypath1_0
-.PHONY : flypath1_0
+flypath2: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 flypath2
+.PHONY : flypath2
 
 # fast build rule for target.
-flypath1_0/fast:
-	$(MAKE) -f CMakeFiles/flypath1_0.dir/build.make CMakeFiles/flypath1_0.dir/build
-.PHONY : flypath1_0/fast
+flypath2/fast:
+	$(MAKE) -f CMakeFiles/flypath2.dir/build.make CMakeFiles/flypath2.dir/build
+.PHONY : flypath2/fast
 
 #=============================================================================
 # Target rules for targets named get_battery
@@ -801,30 +801,6 @@ src/test/Fly/fly.cpp.s:
 	$(MAKE) -f CMakeFiles/Fly1234.dir/build.make CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.s
 .PHONY : src/test/Fly/fly.cpp.s
 
-src/test/FlyPath/FlyPath1-0.o: src/test/FlyPath/FlyPath1-0.cpp.o
-.PHONY : src/test/FlyPath/FlyPath1-0.o
-
-# target to build an object file
-src/test/FlyPath/FlyPath1-0.cpp.o:
-	$(MAKE) -f CMakeFiles/flypath1_0.dir/build.make CMakeFiles/flypath1_0.dir/src/test/FlyPath/FlyPath1-0.cpp.o
-.PHONY : src/test/FlyPath/FlyPath1-0.cpp.o
-
-src/test/FlyPath/FlyPath1-0.i: src/test/FlyPath/FlyPath1-0.cpp.i
-.PHONY : src/test/FlyPath/FlyPath1-0.i
-
-# target to preprocess a source file
-src/test/FlyPath/FlyPath1-0.cpp.i:
-	$(MAKE) -f CMakeFiles/flypath1_0.dir/build.make CMakeFiles/flypath1_0.dir/src/test/FlyPath/FlyPath1-0.cpp.i
-.PHONY : src/test/FlyPath/FlyPath1-0.cpp.i
-
-src/test/FlyPath/FlyPath1-0.s: src/test/FlyPath/FlyPath1-0.cpp.s
-.PHONY : src/test/FlyPath/FlyPath1-0.s
-
-# target to generate assembly for a file
-src/test/FlyPath/FlyPath1-0.cpp.s:
-	$(MAKE) -f CMakeFiles/flypath1_0.dir/build.make CMakeFiles/flypath1_0.dir/src/test/FlyPath/FlyPath1-0.cpp.s
-.PHONY : src/test/FlyPath/FlyPath1-0.cpp.s
-
 src/test/FlyPath/FlyPath1.o: src/test/FlyPath/FlyPath1.cpp.o
 .PHONY : src/test/FlyPath/FlyPath1.o
 
@@ -848,6 +824,30 @@ src/test/FlyPath/FlyPath1.s: src/test/FlyPath/FlyPath1.cpp.s
 src/test/FlyPath/FlyPath1.cpp.s:
 	$(MAKE) -f CMakeFiles/flypath1.dir/build.make CMakeFiles/flypath1.dir/src/test/FlyPath/FlyPath1.cpp.s
 .PHONY : src/test/FlyPath/FlyPath1.cpp.s
+
+src/test/FlyPath/FlyPath2.o: src/test/FlyPath/FlyPath2.cpp.o
+.PHONY : src/test/FlyPath/FlyPath2.o
+
+# target to build an object file
+src/test/FlyPath/FlyPath2.cpp.o:
+	$(MAKE) -f CMakeFiles/flypath2.dir/build.make CMakeFiles/flypath2.dir/src/test/FlyPath/FlyPath2.cpp.o
+.PHONY : src/test/FlyPath/FlyPath2.cpp.o
+
+src/test/FlyPath/FlyPath2.i: src/test/FlyPath/FlyPath2.cpp.i
+.PHONY : src/test/FlyPath/FlyPath2.i
+
+# target to preprocess a source file
+src/test/FlyPath/FlyPath2.cpp.i:
+	$(MAKE) -f CMakeFiles/flypath2.dir/build.make CMakeFiles/flypath2.dir/src/test/FlyPath/FlyPath2.cpp.i
+.PHONY : src/test/FlyPath/FlyPath2.cpp.i
+
+src/test/FlyPath/FlyPath2.s: src/test/FlyPath/FlyPath2.cpp.s
+.PHONY : src/test/FlyPath/FlyPath2.s
+
+# target to generate assembly for a file
+src/test/FlyPath/FlyPath2.cpp.s:
+	$(MAKE) -f CMakeFiles/flypath2.dir/build.make CMakeFiles/flypath2.dir/src/test/FlyPath/FlyPath2.cpp.s
+.PHONY : src/test/FlyPath/FlyPath2.cpp.s
 
 src/test/FromTheInternet/ARDrone_manual_test.o: src/test/FromTheInternet/ARDrone_manual_test.cpp.o
 .PHONY : src/test/FromTheInternet/ARDrone_manual_test.o
@@ -947,7 +947,7 @@ help:
 	@echo "... example3_a"
 	@echo "... example3_b"
 	@echo "... flypath1"
-	@echo "... flypath1_0"
+	@echo "... flypath2"
 	@echo "... get_battery"
 	@echo "... install"
 	@echo "... install/local"
@@ -992,12 +992,12 @@ help:
 	@echo "... src/test/Fly/fly.o"
 	@echo "... src/test/Fly/fly.i"
 	@echo "... src/test/Fly/fly.s"
-	@echo "... src/test/FlyPath/FlyPath1-0.o"
-	@echo "... src/test/FlyPath/FlyPath1-0.i"
-	@echo "... src/test/FlyPath/FlyPath1-0.s"
 	@echo "... src/test/FlyPath/FlyPath1.o"
 	@echo "... src/test/FlyPath/FlyPath1.i"
 	@echo "... src/test/FlyPath/FlyPath1.s"
+	@echo "... src/test/FlyPath/FlyPath2.o"
+	@echo "... src/test/FlyPath/FlyPath2.i"
+	@echo "... src/test/FlyPath/FlyPath2.s"
 	@echo "... src/test/FromTheInternet/ARDrone_manual_test.o"
 	@echo "... src/test/FromTheInternet/ARDrone_manual_test.i"
 	@echo "... src/test/FromTheInternet/ARDrone_manual_test.s"
