@@ -32,7 +32,7 @@ void nav_callback(const ardrone_autonomy::Navdata& msg_in)
 geometry_msgs::Twist control_drone(double vx,double vy,double vz, double ax, double ay, double az,double K)
 {
 		geometry_msgs::Twist twist_msg_gen;
-	
+		// TEST: Skal vi bruge K værdien eller er den lige meget???
 		twist_msg_gen.linear.x=K*(vx - drone_x);
 		twist_msg_gen.linear.y=K*(vy - drone_y); 
 		twist_msg_gen.linear.z=K*(vz - drone_z);
