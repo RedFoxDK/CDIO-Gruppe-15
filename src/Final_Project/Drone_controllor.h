@@ -3,6 +3,7 @@
 #include <std_msgs/Empty.h>
 #include <geometry_msgs/Twist.h>
 #include <ardrone_autonomy/Navdata.h>
+#include <ros/package.h>
 
 class Drone_controllor {
 protected:
@@ -18,6 +19,10 @@ protected:
 	double drone_angular_x = 0.0;
 	double drone_angular_y = 0.0;
 	double drone_angular_z = 0.0;
+	
+	int log_time = 0;
 
 	ros::NodeHandle nh;
+	
+public:
 }
