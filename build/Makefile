@@ -153,6 +153,19 @@ ARDrone_manual_test/fast:
 .PHONY : ARDrone_manual_test/fast
 
 #=============================================================================
+# Target rules for targets named CDIO-Gruppe-15
+
+# Build rule for target.
+CDIO-Gruppe-15: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 CDIO-Gruppe-15
+.PHONY : CDIO-Gruppe-15
+
+# fast build rule for target.
+CDIO-Gruppe-15/fast:
+	$(MAKE) -f CMakeFiles/CDIO-Gruppe-15.dir/build.make CMakeFiles/CDIO-Gruppe-15.dir/build
+.PHONY : CDIO-Gruppe-15/fast
+
+#=============================================================================
 # Target rules for targets named Fly1234
 
 # Build rule for target.
@@ -633,6 +646,54 @@ gtest_main/fast:
 	$(MAKE) -f gtest/CMakeFiles/gtest_main.dir/build.make gtest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
 
+src/Final_Project/Drone_controllor.o: src/Final_Project/Drone_controllor.cpp.o
+.PHONY : src/Final_Project/Drone_controllor.o
+
+# target to build an object file
+src/Final_Project/Drone_controllor.cpp.o:
+	$(MAKE) -f CMakeFiles/CDIO-Gruppe-15.dir/build.make CMakeFiles/CDIO-Gruppe-15.dir/src/Final_Project/Drone_controllor.cpp.o
+.PHONY : src/Final_Project/Drone_controllor.cpp.o
+
+src/Final_Project/Drone_controllor.i: src/Final_Project/Drone_controllor.cpp.i
+.PHONY : src/Final_Project/Drone_controllor.i
+
+# target to preprocess a source file
+src/Final_Project/Drone_controllor.cpp.i:
+	$(MAKE) -f CMakeFiles/CDIO-Gruppe-15.dir/build.make CMakeFiles/CDIO-Gruppe-15.dir/src/Final_Project/Drone_controllor.cpp.i
+.PHONY : src/Final_Project/Drone_controllor.cpp.i
+
+src/Final_Project/Drone_controllor.s: src/Final_Project/Drone_controllor.cpp.s
+.PHONY : src/Final_Project/Drone_controllor.s
+
+# target to generate assembly for a file
+src/Final_Project/Drone_controllor.cpp.s:
+	$(MAKE) -f CMakeFiles/CDIO-Gruppe-15.dir/build.make CMakeFiles/CDIO-Gruppe-15.dir/src/Final_Project/Drone_controllor.cpp.s
+.PHONY : src/Final_Project/Drone_controllor.cpp.s
+
+src/Final_Project/main.o: src/Final_Project/main.cpp.o
+.PHONY : src/Final_Project/main.o
+
+# target to build an object file
+src/Final_Project/main.cpp.o:
+	$(MAKE) -f CMakeFiles/CDIO-Gruppe-15.dir/build.make CMakeFiles/CDIO-Gruppe-15.dir/src/Final_Project/main.cpp.o
+.PHONY : src/Final_Project/main.cpp.o
+
+src/Final_Project/main.i: src/Final_Project/main.cpp.i
+.PHONY : src/Final_Project/main.i
+
+# target to preprocess a source file
+src/Final_Project/main.cpp.i:
+	$(MAKE) -f CMakeFiles/CDIO-Gruppe-15.dir/build.make CMakeFiles/CDIO-Gruppe-15.dir/src/Final_Project/main.cpp.i
+.PHONY : src/Final_Project/main.cpp.i
+
+src/Final_Project/main.s: src/Final_Project/main.cpp.s
+.PHONY : src/Final_Project/main.s
+
+# target to generate assembly for a file
+src/Final_Project/main.cpp.s:
+	$(MAKE) -f CMakeFiles/CDIO-Gruppe-15.dir/build.make CMakeFiles/CDIO-Gruppe-15.dir/src/Final_Project/main.cpp.s
+.PHONY : src/Final_Project/main.cpp.s
+
 src/exampler/example1_a.o: src/exampler/example1_a.cpp.o
 .PHONY : src/exampler/example1_a.o
 
@@ -928,6 +989,7 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... ARDrone_manual_test"
+	@echo "... CDIO-Gruppe-15"
 	@echo "... Fly1234"
 	@echo "... ROSBUILD_genmsg_cpp"
 	@echo "... ROSBUILD_genmsg_lisp"
@@ -971,6 +1033,12 @@ help:
 	@echo "... tests"
 	@echo "... gtest"
 	@echo "... gtest_main"
+	@echo "... src/Final_Project/Drone_controllor.o"
+	@echo "... src/Final_Project/Drone_controllor.i"
+	@echo "... src/Final_Project/Drone_controllor.s"
+	@echo "... src/Final_Project/main.o"
+	@echo "... src/Final_Project/main.i"
+	@echo "... src/Final_Project/main.s"
 	@echo "... src/exampler/example1_a.o"
 	@echo "... src/exampler/example1_a.i"
 	@echo "... src/exampler/example1_a.s"

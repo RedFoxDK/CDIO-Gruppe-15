@@ -1,4 +1,5 @@
 /home/redfox/Desktop/CDIO/build/CMakeFiles/ARDrone_manual_test.dir
+/home/redfox/Desktop/CDIO/build/CMakeFiles/CDIO-Gruppe-15.dir
 /home/redfox/Desktop/CDIO/build/CMakeFiles/Fly1234.dir
 /home/redfox/Desktop/CDIO/build/CMakeFiles/ROSBUILD_genmsg_cpp.dir
 /home/redfox/Desktop/CDIO/build/CMakeFiles/ROSBUILD_genmsg_lisp.dir
