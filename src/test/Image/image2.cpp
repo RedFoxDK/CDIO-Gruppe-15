@@ -26,7 +26,7 @@ int main(int argc, char **argv)
   cv::namedWindow("view");
   cv::startWindowThread();
   image_transport::ImageTransport it(nh);
-  image_transport::Subscriber sub = it.subscribe("ardrone/image_ra", 1, imageCallback);
+  image_transport::Subscriber sub = it.subscribe("ardrone/image_raw", 1, imageCallback);
   ros::spin();
   cv::destroyWindow("view");
 }
