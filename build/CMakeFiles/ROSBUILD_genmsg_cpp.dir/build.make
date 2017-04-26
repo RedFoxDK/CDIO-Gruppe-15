@@ -106,6 +106,7 @@ CMakeFiles/ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/CDIO/chapter2_msg1.h
 ../msg_gen/cpp/include/CDIO/chapter2_msg1.h: /opt/ros/indigo/share/camera_info_manager/package.xml
 ../msg_gen/cpp/include/CDIO/chapter2_msg1.h: /opt/ros/indigo/share/nav_msgs/package.xml
 ../msg_gen/cpp/include/CDIO/chapter2_msg1.h: /opt/ros/indigo/share/ardrone_autonomy/package.xml
+../msg_gen/cpp/include/CDIO/chapter2_msg1.h: /opt/ros/indigo/share/cv_bridge/package.xml
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/redfox/Desktop/CDIO/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/cpp/include/CDIO/chapter2_msg1.h"
 	/opt/ros/indigo/share/roscpp/rosbuild/scripts/genmsg_cpp.py /home/redfox/Desktop/CDIO/msg/chapter2_msg1.msg

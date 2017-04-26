@@ -107,6 +107,7 @@ CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o: /opt/ros/indigo/share/camera_cali
 CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o: /opt/ros/indigo/share/camera_info_manager/package.xml
 CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o: /opt/ros/indigo/share/nav_msgs/package.xml
 CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o: /opt/ros/indigo/share/ardrone_autonomy/package.xml
+CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o: /opt/ros/indigo/share/cv_bridge/package.xml
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/redfox/Desktop/CDIO/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o -c /home/redfox/Desktop/CDIO/src/test/Fly/fly.cpp
@@ -137,12 +138,31 @@ Fly1234_EXTERNAL_OBJECTS =
 
 ../bin/Fly1234: CMakeFiles/Fly1234.dir/src/test/Fly/fly.cpp.o
 ../bin/Fly1234: CMakeFiles/Fly1234.dir/build.make
-../bin/Fly1234: /usr/lib/x86_64-linux-gnu/libtinyxml.so
-../bin/Fly1234: /usr/lib/libPocoFoundation.so
+../bin/Fly1234: /usr/lib/x86_64-linux-gnu/libopencv_videostab.so.2.4.8
+../bin/Fly1234: /usr/lib/x86_64-linux-gnu/libopencv_video.so.2.4.8
+../bin/Fly1234: /usr/lib/x86_64-linux-gnu/libopencv_superres.so.2.4.8
+../bin/Fly1234: /usr/lib/x86_64-linux-gnu/libopencv_stitching.so.2.4.8
+../bin/Fly1234: /usr/lib/x86_64-linux-gnu/libopencv_photo.so.2.4.8
+../bin/Fly1234: /usr/lib/x86_64-linux-gnu/libopencv_ocl.so.2.4.8
+../bin/Fly1234: /usr/lib/x86_64-linux-gnu/libopencv_objdetect.so.2.4.8
+../bin/Fly1234: /usr/lib/x86_64-linux-gnu/libopencv_ml.so.2.4.8
+../bin/Fly1234: /usr/lib/x86_64-linux-gnu/libopencv_legacy.so.2.4.8
+../bin/Fly1234: /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.2.4.8
+../bin/Fly1234: /usr/lib/x86_64-linux-gnu/libopencv_highgui.so.2.4.8
+../bin/Fly1234: /usr/lib/x86_64-linux-gnu/libopencv_gpu.so.2.4.8
+../bin/Fly1234: /usr/lib/x86_64-linux-gnu/libopencv_flann.so.2.4.8
+../bin/Fly1234: /usr/lib/x86_64-linux-gnu/libopencv_features2d.so.2.4.8
+../bin/Fly1234: /usr/lib/x86_64-linux-gnu/libopencv_core.so.2.4.8
+../bin/Fly1234: /usr/lib/x86_64-linux-gnu/libopencv_contrib.so.2.4.8
+../bin/Fly1234: /usr/lib/x86_64-linux-gnu/libopencv_calib3d.so.2.4.8
 ../bin/Fly1234: /usr/lib/x86_64-linux-gnu/libboost_signals.so
-../bin/Fly1234: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+../bin/Fly1234: /usr/lib/libPocoFoundation.so
 ../bin/Fly1234: /usr/lib/liblog4cxx.so
 ../bin/Fly1234: /usr/lib/x86_64-linux-gnu/libboost_regex.so
+../bin/Fly1234: /usr/lib/x86_64-linux-gnu/libpython2.7.so
+../bin/Fly1234: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+../bin/Fly1234: /usr/lib/x86_64-linux-gnu/libboost_program_options.so
+../bin/Fly1234: /usr/lib/x86_64-linux-gnu/libtinyxml.so
 ../bin/Fly1234: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
 ../bin/Fly1234: /usr/lib/x86_64-linux-gnu/libboost_system.so
 ../bin/Fly1234: /usr/lib/x86_64-linux-gnu/libboost_thread.so

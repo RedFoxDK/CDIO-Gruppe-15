@@ -108,6 +108,7 @@ CMakeFiles/ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package_chapter2_srv1.lisp
 ../srv_gen/lisp/chapter2_srv1.lisp: /opt/ros/indigo/share/camera_info_manager/package.xml
 ../srv_gen/lisp/chapter2_srv1.lisp: /opt/ros/indigo/share/nav_msgs/package.xml
 ../srv_gen/lisp/chapter2_srv1.lisp: /opt/ros/indigo/share/ardrone_autonomy/package.xml
+../srv_gen/lisp/chapter2_srv1.lisp: /opt/ros/indigo/share/cv_bridge/package.xml
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/redfox/Desktop/CDIO/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../srv_gen/lisp/chapter2_srv1.lisp, ../srv_gen/lisp/_package.lisp, ../srv_gen/lisp/_package_chapter2_srv1.lisp"
 	/opt/ros/indigo/share/roslisp/rosbuild/scripts/genmsg_lisp.py /home/redfox/Desktop/CDIO/srv/chapter2_srv1.srv

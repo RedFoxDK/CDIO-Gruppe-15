@@ -107,6 +107,7 @@ CMakeFiles/ARDrone_manual_test.dir/src/test/FromTheInternet/ARDrone_manual_test.
 CMakeFiles/ARDrone_manual_test.dir/src/test/FromTheInternet/ARDrone_manual_test.cpp.o: /opt/ros/indigo/share/camera_info_manager/package.xml
 CMakeFiles/ARDrone_manual_test.dir/src/test/FromTheInternet/ARDrone_manual_test.cpp.o: /opt/ros/indigo/share/nav_msgs/package.xml
 CMakeFiles/ARDrone_manual_test.dir/src/test/FromTheInternet/ARDrone_manual_test.cpp.o: /opt/ros/indigo/share/ardrone_autonomy/package.xml
+CMakeFiles/ARDrone_manual_test.dir/src/test/FromTheInternet/ARDrone_manual_test.cpp.o: /opt/ros/indigo/share/cv_bridge/package.xml
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/redfox/Desktop/CDIO/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/ARDrone_manual_test.dir/src/test/FromTheInternet/ARDrone_manual_test.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ARDrone_manual_test.dir/src/test/FromTheInternet/ARDrone_manual_test.cpp.o -c /home/redfox/Desktop/CDIO/src/test/FromTheInternet/ARDrone_manual_test.cpp
@@ -137,12 +138,31 @@ ARDrone_manual_test_EXTERNAL_OBJECTS =
 
 ../bin/ARDrone_manual_test: CMakeFiles/ARDrone_manual_test.dir/src/test/FromTheInternet/ARDrone_manual_test.cpp.o
 ../bin/ARDrone_manual_test: CMakeFiles/ARDrone_manual_test.dir/build.make
-../bin/ARDrone_manual_test: /usr/lib/x86_64-linux-gnu/libtinyxml.so
-../bin/ARDrone_manual_test: /usr/lib/libPocoFoundation.so
+../bin/ARDrone_manual_test: /usr/lib/x86_64-linux-gnu/libopencv_videostab.so.2.4.8
+../bin/ARDrone_manual_test: /usr/lib/x86_64-linux-gnu/libopencv_video.so.2.4.8
+../bin/ARDrone_manual_test: /usr/lib/x86_64-linux-gnu/libopencv_superres.so.2.4.8
+../bin/ARDrone_manual_test: /usr/lib/x86_64-linux-gnu/libopencv_stitching.so.2.4.8
+../bin/ARDrone_manual_test: /usr/lib/x86_64-linux-gnu/libopencv_photo.so.2.4.8
+../bin/ARDrone_manual_test: /usr/lib/x86_64-linux-gnu/libopencv_ocl.so.2.4.8
+../bin/ARDrone_manual_test: /usr/lib/x86_64-linux-gnu/libopencv_objdetect.so.2.4.8
+../bin/ARDrone_manual_test: /usr/lib/x86_64-linux-gnu/libopencv_ml.so.2.4.8
+../bin/ARDrone_manual_test: /usr/lib/x86_64-linux-gnu/libopencv_legacy.so.2.4.8
+../bin/ARDrone_manual_test: /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.2.4.8
+../bin/ARDrone_manual_test: /usr/lib/x86_64-linux-gnu/libopencv_highgui.so.2.4.8
+../bin/ARDrone_manual_test: /usr/lib/x86_64-linux-gnu/libopencv_gpu.so.2.4.8
+../bin/ARDrone_manual_test: /usr/lib/x86_64-linux-gnu/libopencv_flann.so.2.4.8
+../bin/ARDrone_manual_test: /usr/lib/x86_64-linux-gnu/libopencv_features2d.so.2.4.8
+../bin/ARDrone_manual_test: /usr/lib/x86_64-linux-gnu/libopencv_core.so.2.4.8
+../bin/ARDrone_manual_test: /usr/lib/x86_64-linux-gnu/libopencv_contrib.so.2.4.8
+../bin/ARDrone_manual_test: /usr/lib/x86_64-linux-gnu/libopencv_calib3d.so.2.4.8
 ../bin/ARDrone_manual_test: /usr/lib/x86_64-linux-gnu/libboost_signals.so
-../bin/ARDrone_manual_test: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+../bin/ARDrone_manual_test: /usr/lib/libPocoFoundation.so
 ../bin/ARDrone_manual_test: /usr/lib/liblog4cxx.so
 ../bin/ARDrone_manual_test: /usr/lib/x86_64-linux-gnu/libboost_regex.so
+../bin/ARDrone_manual_test: /usr/lib/x86_64-linux-gnu/libpython2.7.so
+../bin/ARDrone_manual_test: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+../bin/ARDrone_manual_test: /usr/lib/x86_64-linux-gnu/libboost_program_options.so
+../bin/ARDrone_manual_test: /usr/lib/x86_64-linux-gnu/libtinyxml.so
 ../bin/ARDrone_manual_test: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
 ../bin/ARDrone_manual_test: /usr/lib/x86_64-linux-gnu/libboost_system.so
 ../bin/ARDrone_manual_test: /usr/lib/x86_64-linux-gnu/libboost_thread.so

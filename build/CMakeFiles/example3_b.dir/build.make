@@ -107,6 +107,7 @@ CMakeFiles/example3_b.dir/src/exampler/example3_b.cpp.o: /opt/ros/indigo/share/c
 CMakeFiles/example3_b.dir/src/exampler/example3_b.cpp.o: /opt/ros/indigo/share/camera_info_manager/package.xml
 CMakeFiles/example3_b.dir/src/exampler/example3_b.cpp.o: /opt/ros/indigo/share/nav_msgs/package.xml
 CMakeFiles/example3_b.dir/src/exampler/example3_b.cpp.o: /opt/ros/indigo/share/ardrone_autonomy/package.xml
+CMakeFiles/example3_b.dir/src/exampler/example3_b.cpp.o: /opt/ros/indigo/share/cv_bridge/package.xml
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/redfox/Desktop/CDIO/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/example3_b.dir/src/exampler/example3_b.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/example3_b.dir/src/exampler/example3_b.cpp.o -c /home/redfox/Desktop/CDIO/src/exampler/example3_b.cpp
@@ -137,12 +138,31 @@ example3_b_EXTERNAL_OBJECTS =
 
 ../bin/example3_b: CMakeFiles/example3_b.dir/src/exampler/example3_b.cpp.o
 ../bin/example3_b: CMakeFiles/example3_b.dir/build.make
-../bin/example3_b: /usr/lib/x86_64-linux-gnu/libtinyxml.so
-../bin/example3_b: /usr/lib/libPocoFoundation.so
+../bin/example3_b: /usr/lib/x86_64-linux-gnu/libopencv_videostab.so.2.4.8
+../bin/example3_b: /usr/lib/x86_64-linux-gnu/libopencv_video.so.2.4.8
+../bin/example3_b: /usr/lib/x86_64-linux-gnu/libopencv_superres.so.2.4.8
+../bin/example3_b: /usr/lib/x86_64-linux-gnu/libopencv_stitching.so.2.4.8
+../bin/example3_b: /usr/lib/x86_64-linux-gnu/libopencv_photo.so.2.4.8
+../bin/example3_b: /usr/lib/x86_64-linux-gnu/libopencv_ocl.so.2.4.8
+../bin/example3_b: /usr/lib/x86_64-linux-gnu/libopencv_objdetect.so.2.4.8
+../bin/example3_b: /usr/lib/x86_64-linux-gnu/libopencv_ml.so.2.4.8
+../bin/example3_b: /usr/lib/x86_64-linux-gnu/libopencv_legacy.so.2.4.8
+../bin/example3_b: /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.2.4.8
+../bin/example3_b: /usr/lib/x86_64-linux-gnu/libopencv_highgui.so.2.4.8
+../bin/example3_b: /usr/lib/x86_64-linux-gnu/libopencv_gpu.so.2.4.8
+../bin/example3_b: /usr/lib/x86_64-linux-gnu/libopencv_flann.so.2.4.8
+../bin/example3_b: /usr/lib/x86_64-linux-gnu/libopencv_features2d.so.2.4.8
+../bin/example3_b: /usr/lib/x86_64-linux-gnu/libopencv_core.so.2.4.8
+../bin/example3_b: /usr/lib/x86_64-linux-gnu/libopencv_contrib.so.2.4.8
+../bin/example3_b: /usr/lib/x86_64-linux-gnu/libopencv_calib3d.so.2.4.8
 ../bin/example3_b: /usr/lib/x86_64-linux-gnu/libboost_signals.so
-../bin/example3_b: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+../bin/example3_b: /usr/lib/libPocoFoundation.so
 ../bin/example3_b: /usr/lib/liblog4cxx.so
 ../bin/example3_b: /usr/lib/x86_64-linux-gnu/libboost_regex.so
+../bin/example3_b: /usr/lib/x86_64-linux-gnu/libpython2.7.so
+../bin/example3_b: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+../bin/example3_b: /usr/lib/x86_64-linux-gnu/libboost_program_options.so
+../bin/example3_b: /usr/lib/x86_64-linux-gnu/libtinyxml.so
 ../bin/example3_b: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
 ../bin/example3_b: /usr/lib/x86_64-linux-gnu/libboost_system.so
 ../bin/example3_b: /usr/lib/x86_64-linux-gnu/libboost_thread.so

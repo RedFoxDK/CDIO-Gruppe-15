@@ -1,4 +1,5 @@
 cmake_minimum_required(VERSION 2.4.6)
+find_package(OpenCV 3.2.0 REQUIRED) 
 include($ENV{ROS_ROOT}/core/rosbuild/rosbuild.cmake)
 
 # Set the build type.  Options are:
@@ -41,3 +42,5 @@ rosbuild_add_executable(flypath1 src/test/FlyPath/FlyPath1.cpp)
 rosbuild_add_executable(ARDrone_manual_test src/test/FromTheInternet/ARDrone_manual_test.cpp)
 rosbuild_add_executable(flypath2 src/test/FlyPath/FlyPath2.cpp)
 rosbuild_add_executable(CDIO-Gruppe-15 src/Final_Project/main.cpp src/Final_Project/Drone_controllor.cpp)
+#rosbuild_add_executable(Display_Images src/test/Image/image.cpp)
+rosbuild_add_executable(image_converter src/test_cv.cpp)

@@ -426,6 +426,19 @@ get_battery/fast:
 .PHONY : get_battery/fast
 
 #=============================================================================
+# Target rules for targets named image_converter
+
+# Build rule for target.
+image_converter: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 image_converter
+.PHONY : image_converter
+
+# fast build rule for target.
+image_converter/fast:
+	$(MAKE) -f CMakeFiles/image_converter.dir/build.make CMakeFiles/image_converter.dir/build
+.PHONY : image_converter/fast
+
+#=============================================================================
 # Target rules for targets named multithred
 
 # Build rule for target.
@@ -982,6 +995,30 @@ src/test/Multithred/multithred.cpp.s:
 	$(MAKE) -f CMakeFiles/multithred.dir/build.make CMakeFiles/multithred.dir/src/test/Multithred/multithred.cpp.s
 .PHONY : src/test/Multithred/multithred.cpp.s
 
+src/test_cv.o: src/test_cv.cpp.o
+.PHONY : src/test_cv.o
+
+# target to build an object file
+src/test_cv.cpp.o:
+	$(MAKE) -f CMakeFiles/image_converter.dir/build.make CMakeFiles/image_converter.dir/src/test_cv.cpp.o
+.PHONY : src/test_cv.cpp.o
+
+src/test_cv.i: src/test_cv.cpp.i
+.PHONY : src/test_cv.i
+
+# target to preprocess a source file
+src/test_cv.cpp.i:
+	$(MAKE) -f CMakeFiles/image_converter.dir/build.make CMakeFiles/image_converter.dir/src/test_cv.cpp.i
+.PHONY : src/test_cv.cpp.i
+
+src/test_cv.s: src/test_cv.cpp.s
+.PHONY : src/test_cv.s
+
+# target to generate assembly for a file
+src/test_cv.cpp.s:
+	$(MAKE) -f CMakeFiles/image_converter.dir/build.make CMakeFiles/image_converter.dir/src/test_cv.cpp.s
+.PHONY : src/test_cv.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1011,6 +1048,7 @@ help:
 	@echo "... flypath1"
 	@echo "... flypath2"
 	@echo "... get_battery"
+	@echo "... image_converter"
 	@echo "... install"
 	@echo "... install/local"
 	@echo "... install/strip"
@@ -1075,6 +1113,9 @@ help:
 	@echo "... src/test/Multithred/multithred.o"
 	@echo "... src/test/Multithred/multithred.i"
 	@echo "... src/test/Multithred/multithred.s"
+	@echo "... src/test_cv.o"
+	@echo "... src/test_cv.i"
+	@echo "... src/test_cv.s"
 .PHONY : help
 
 

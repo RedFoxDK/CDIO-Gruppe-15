@@ -22,6 +22,7 @@
 /home/redfox/Desktop/CDIO/build/CMakeFiles/get_battery.dir
 /home/redfox/Desktop/CDIO/build/gtest/CMakeFiles/gtest.dir
 /home/redfox/Desktop/CDIO/build/gtest/CMakeFiles/gtest_main.dir
+/home/redfox/Desktop/CDIO/build/CMakeFiles/image_converter.dir
 /home/redfox/Desktop/CDIO/build/CMakeFiles/multithred.dir
 /home/redfox/Desktop/CDIO/build/CMakeFiles/rosbuild_clean-test-results.dir
 /home/redfox/Desktop/CDIO/build/CMakeFiles/rosbuild_precompile.dir
