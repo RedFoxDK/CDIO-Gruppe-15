@@ -74,4 +74,7 @@ CMakeFiles/image_listener.dir/src/test/Image/image2.cpp.o: /opt/ros/indigo/inclu
 CMakeFiles/image_listener.dir/src/test/Image/image2.cpp.o: /opt/ros/indigo/include/sensor_msgs/RegionOfInterest.h
 CMakeFiles/image_listener.dir/src/test/Image/image2.cpp.o: /opt/ros/indigo/include/sensor_msgs/image_encodings.h
 CMakeFiles/image_listener.dir/src/test/Image/image2.cpp.o: /opt/ros/indigo/include/std_msgs/Header.h
+CMakeFiles/image_listener.dir/src/test/Image/image2.cpp.o: /opt/ros/indigo/include/std_srvs/Empty.h
+CMakeFiles/image_listener.dir/src/test/Image/image2.cpp.o: /opt/ros/indigo/include/std_srvs/EmptyRequest.h
+CMakeFiles/image_listener.dir/src/test/Image/image2.cpp.o: /opt/ros/indigo/include/std_srvs/EmptyResponse.h
 
