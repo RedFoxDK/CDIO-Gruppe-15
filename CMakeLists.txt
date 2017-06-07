@@ -29,8 +29,14 @@ rosbuild_gensrv()
 #rosbuild_add_executable(example examples/example.cpp)
 #target_link_libraries(example ${PROJECT_NAME})
 #rosbuild_add_executable(Display_Images src/test/Image/image.cpp)
+<<<<<<< HEAD
 
 rosbuild_add_executable(qr_reader src/openCV/qr_reader.cpp)
 target_link_libraries(qr_reader ${catkin_LIBRARIES} -lzbar)
 
 rosbuild_add_executable(drone_fly src/test/Get_Battery/get_battery.cpp)
+=======
+rosbuild_add_executable(qr_reader src/final_project/qr_reader.cpp)
+target_link_libraries(qr_reader ${catkin_LIBRARIES} -lzbar)
+rosbuild_add_executable(drone_fly src/final_project/drone_fly.cpp)
+>>>>>>> 9623bd78e3e715e519906b812bebac5257db5b43
