@@ -81,7 +81,7 @@ int main(int argc, char **argv)
 
 	while(ros::ok()) {
 
-		if (battery > 1000) {
+		if (battery > 20) {
 
 		while ((double)ros::Time::now().toSec()< start_time+takeoff_time) //take off state
 		{
