@@ -3,7 +3,6 @@
 #include <geometry_msgs/Twist.h>
 #include <ardrone_autonomy/Navdata.h>
 
-
 double drone_x = 0.0;
 double drone_y = 0.0;
 double drone_z = 0.0;
@@ -75,6 +74,7 @@ int main(int argc, char **argv)
 	fly_path_hover.angular.z=0.0;  
 
 	start_time = (double)ros::Time::now().toSec();
+
 
 
 
