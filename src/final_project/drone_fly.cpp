@@ -31,7 +31,7 @@ int main(int argc, char **argv)
   battery_channel = n.resolveName("ardrone/navdata"); // bruges ikke
   battery_sub = n.subscribe("ardrone/navdata", 1000, chatterCallback);
   
-
+  
   
   ros::spin();
   return 0;
