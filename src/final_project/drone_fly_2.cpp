@@ -10,6 +10,8 @@ bool isTakeOff = false;
 bool isRunning = false;
 bool isLanded = false;
 
+uint state;
+
 float batteryLevel;
 float x = 0, y = 0, z = 0, altitude = 0;
 float vx = 0, vy = 0, vz = 0;
@@ -45,6 +47,11 @@ void navdata_callback(const ardrone_autonomy::Navdata::ConstPtr& msg) {
   vz = msg->vz;
   altitude = msg->altd;
   wait_for_navdata = false;
+  if (msg->state != state) {
+  	ROS_INFO("State is: %u", state);
+  	state = msg->state;
+  }
+  
 
   //ROS_INFO("Battery: %f", msg->batteryPercent);
   //ROS_INFO("Temperature: %d", msg->temp);
@@ -70,11 +77,12 @@ int main(int argc, char **argv) {
   ros::Subscriber nav_sub = n.subscribe("ardrone/navdata", 10, navdata_callback);
   ros::Publisher takeoff_pub = n.advertise<std_msgs::Empty>("ardrone/takeoff", 1);
   ros::Publisher land_pub = n.advertise<std_msgs::Empty>("ardrone/land", 1);
-  ros::Publisher fly_pub = n.advertise<geometry_msgs::Twist>("/cmd_vel", 1);
-
+  ros::Publisher fly_pub = n.advertise<geometry_msgs::Twist>("/cmd_vel", 100);
+  
   while(wait_for_navdata) {
   	ros::spinOnce();
   }
+  fly_pub.publish(drone_vector(0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0));
 
   // Begin main loop
   while (ros::ok()) {
@@ -107,7 +115,7 @@ void takeoff(ros::Publisher takeoff_pub, ros::Rate loop_rate) {
 		ROS_INFO("Has started taking off");
 		actionStart = ros::Time::now().toSec();
 	}
-	if (actionStart + 5.0 < ros::Time::now().toSec()) {
+	if (actionStart + 8.0 < ros::Time::now().toSec()) {
 		ROS_INFO("Has finished taking off");
 		isTakeOff = true;
 		isRunning = true;
@@ -131,7 +139,7 @@ void increaseAltitude(ros::Publisher publisher, ros::Rate loop_rate) {
 		isRunning = false;
 		actionStart = NULL;
 	}                            //vx,  vy,  vz,  ax,  ay,  az,  k
-	publisher.publish(drone_vector(0.0, 0.05, 0.0, 0.0, 0.0, 0.0, 0.0));
+	publisher.publish(drone_vector(0.0, 0.0, 0.4, 0.0, 0.0, 0.0, 0.0));
   	loop_rate.sleep();
   	if (altitude > 0) {
   	  //ROS_INFO("x: %f, y: %f, a: %f", x,y, a);
