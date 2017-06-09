@@ -1,3 +1,3 @@
-int32 centerX
-int32 centerY
-int32 radius
+float64 centerX
+float64 centerY
+float64 radius
