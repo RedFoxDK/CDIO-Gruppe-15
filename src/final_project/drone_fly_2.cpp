@@ -12,15 +12,13 @@ bool isLanded = false;
 
 uint state;
 
+
 float batteryLevel;
 float x = 0, y = 0, z = 0, altitude = 0;
 float vx = 0, vy = 0, vz = 0;
+float max_altitude = 0;
 
 double actionStart = NULL;
-double drone_linear_x = 0.0;
-double drone_linear_y = 0.0;
-double drone_linear_z = 0.0;
-double drone_angular_z = 0.0;
 
 void takeoff(ros::Publisher takeoff_pub, ros::Rate loop_rate);
 void increaseAltitude(ros::Publisher takeoff_pub, ros::Rate loop_rate);
@@ -36,6 +34,17 @@ geometry_msgs::Twist drone_vector(double new_vx, double new_vy, double new_vz,
   twist_msg.angular.x += new_ax;
   twist_msg.angular.y += new_ay;
   twist_msg.angular.z += new_az;
+  return twist_msg;
+}
+
+geometry_msgs::Twist reset_vector() {
+  geometry_msgs::Twist twist_msg;
+  twist_msg.linear.x = 0;
+  twist_msg.linear.y = 0;
+  twist_msg.linear.z = 0;
+  twist_msg.angular.x = 0;
+  twist_msg.angular.y = 0;
+  twist_msg.angular.z = 0;
   return twist_msg;
 }
 
@@ -92,20 +101,31 @@ int main(int argc, char **argv) {
       // landingProcedure()
       exit(0);
     }
+
     // Drone hasn't taken off and is attempting too
     if (!isTakeOff) {
       takeoff(takeoff_pub, loop_rate);
     }
     // Drone has taken off and is checking if it is still running
-    //else if (isRunning){
-      //increaseAltitude(fly_pub, loop_rate);
-    //}
+    else if (isRunning){
+      increaseAltitude(fly_pub, loop_rate);
+    }
     else if (!isLanded) {
       land(land_pub);
     }
     x += vx;
     y += vy;
     z += vz;
+    if (altitude > max_altitude) {
+    	max_altitude = altitude;
+    }
+    if ((actionStart != NULL && actionStart + 15.0 < ros::Time::now().toSec()) 
+    	|| state == 8) {
+    	ROS_INFO("Terminating drone due to inactivity");
+    	isTakeOff = true;
+    	isRunning = false;
+    	isLanded = false;
+    }
     ros::spinOnce();
   }
 }
@@ -115,7 +135,7 @@ void takeoff(ros::Publisher takeoff_pub, ros::Rate loop_rate) {
 		ROS_INFO("Has started taking off");
 		actionStart = ros::Time::now().toSec();
 	}
-	if (actionStart + 8.0 < ros::Time::now().toSec()) {
+	if (altitude > 750) {
 		ROS_INFO("Has finished taking off");
 		isTakeOff = true;
 		isRunning = true;
@@ -133,12 +153,12 @@ void increaseAltitude(ros::Publisher publisher, ros::Rate loop_rate) {
 		ROS_INFO("Is increasing Altitude");
 		actionStart = ros::Time::now().toSec();
 	}
-	if (actionStart + 2.0 < ros::Time::now().toSec()) {
+	if (altitude > 1500) {
 		ROS_INFO("Has finsihed increasing Altitude");
-		publisher.publish(drone_vector(0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0));
+		publisher.publish(reset_vector());
 		isRunning = false;
 		actionStart = NULL;
-	}                            //vx,  vy,  vz,  ax,  ay,  az,  k
+	}                            // vx,  vy,  vz,  ax,  ay,  az,   k
 	publisher.publish(drone_vector(0.0, 0.0, 0.4, 0.0, 0.0, 0.0, 0.0));
   	loop_rate.sleep();
   	if (altitude > 0) {
@@ -151,10 +171,11 @@ void land(ros::Publisher land_pub) {
   	ROS_INFO("Has started landing");
     actionStart = ros::Time::now().toSec();
   }
-  if (actionStart + 5.0 < ros::Time::now().toSec()) {
+  if (altitude < 20) {
   	ROS_INFO("Has finished landing");
     isLanded = true;
     actionStart = NULL;
+    ROS_INFO("Highest altitude is %f", max_altitude);
     exit(0);
   }
   if (altitude > 0) {
