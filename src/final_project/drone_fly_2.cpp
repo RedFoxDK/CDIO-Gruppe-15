@@ -142,7 +142,7 @@ void takeoff(ros::Publisher takeoff_pub, ros::Rate loop_rate) {
 		actionStart = NULL;
 	}
   	takeoff_pub.publish(std_msgs::Empty());
-  	loop_rate.sleep();
+  	//loop_rate.sleep();
   	if (altitude > 0) {
   	  //ROS_INFO("x: %f, y: %f, a: %f", x, y, a);
   	}
@@ -160,7 +160,7 @@ void increaseAltitude(ros::Publisher publisher, ros::Rate loop_rate) {
 		actionStart = NULL;
 	}                            // vx,  vy,  vz,  ax,  ay,  az,   k
 	publisher.publish(drone_vector(0.0, 0.0, 0.4, 0.0, 0.0, 0.0, 0.0));
-  	loop_rate.sleep();
+  	//loop_rate.sleep();
   	if (altitude > 0) {
   	  //ROS_INFO("x: %f, y: %f, a: %f", x,y, a);
   	}
