@@ -92,14 +92,14 @@ int main(int argc, char **argv) {
       // landingProcedure()
       exit(0);
     }
-    // Drone hasn't taken off an is attempting too
+    // Drone hasn't taken off and is attempting too
     if (!isTakeOff) {
       takeoff(takeoff_pub, loop_rate);
     }
     // Drone has taken off and is checking if it is still running
-    else if (isRunning){
-      increaseAltitude(fly_pub, loop_rate);
-    }
+    //else if (isRunning){
+      //increaseAltitude(fly_pub, loop_rate);
+    //}
     else if (!isLanded) {
       land(land_pub);
     }
