@@ -140,7 +140,7 @@ void imageCallback(const sensor_msgs::ImageConstPtr& msg)
 
 
 int main(int argc, char **argv) {
-    ros::init(argc, argv, "square_finder");
+    ros::init(argc, argv, "sqaure_finder");
     ros::NodeHandle nh;
     cv::namedWindow(window_name);
     cv::startWindowThread();
