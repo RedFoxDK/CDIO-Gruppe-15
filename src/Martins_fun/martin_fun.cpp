@@ -10,6 +10,7 @@ bool wait_for_navdata = true;
 bool isTakeOff = false;
 bool isRunning = false;
 bool isPath = false;
+bool isflight = false;
 bool isLanded = false;
 
 bool hasFly = false;
@@ -20,7 +21,7 @@ double Xcenter = 0.0;
 double Ycenter = 0.0;
 
 float batteryLevel;
-float x = 0, y = 0, z = 0, altitude = 0;
+float x = 0, y = 0, z = 0, altitude = 0, altitude_before = 0;
 float vx = 0, vy = 0, vz = 0;
 float max_altitude = 0;
 
@@ -30,6 +31,7 @@ void takeoff(ros::Publisher takeoff_pub, ros::Rate loop_rate);
 void increaseAltitude(ros::Publisher takeoff_pub, ros::Rate loop_rate);
 void land(ros::Publisher land_pub);
 void path(ros::Publisher publisher, ros::Rate loop_rate);
+void flight(ros::Publisher publisher, ros::Rate loop_rate);
 
  //vx, vy, vz, az = bewteen -1 and 1 (nothing- more)
 geometry_msgs::Twist drone_vector(double new_vx, double new_vy, double new_vz, 
@@ -62,7 +64,7 @@ void circle_callback(const CDIO::circle_msg::ConstPtr& msg) {
 }
 
 void navdata_callback(const ardrone_autonomy::Navdata::ConstPtr& msg) {
- 	
+ 	altitude_before = altitude;
   batteryLevel = msg->batteryPercent;
   vx = msg->vx;
   vy = msg->vy;
@@ -127,6 +129,9 @@ int main(int argc, char **argv) {
     else if (isPath) {
       path(fly_pub, loop_rate);
     }
+    else if (isflight) {
+      flight(fly_pub, loop_rate);
+    }
     else if (!isLanded) {
       land(land_pub);
     }
@@ -139,9 +144,11 @@ int main(int argc, char **argv) {
     if ((actionStart != NULL && actionStart + 15.0 < ros::Time::now().toSec()) 
     	|| state == 8) {
     	ROS_INFO("Terminating drone due to inactivity");
+      fly_pub.publish(reset_vector());
     	isTakeOff = true;
     	isRunning = false;
     	isLanded = false;
+      land_pub.publish(std_msgs::Empty());
     }
     ros::spinOnce();
   }
@@ -178,6 +185,7 @@ void increaseAltitude(ros::Publisher publisher, ros::Rate loop_rate) {
 		isRunning = false;
     isPath = true;
 		actionStart = NULL;
+    hasFly = false;
 	}
 
   if (altitude >= 2500) {
@@ -200,19 +208,20 @@ void path(ros::Publisher publisher, ros::Rate loop_rate) {
   if (actionStart == NULL) {
     ROS_INFO("Getting ready for inpact");
     actionStart = ros::Time::now().toSec();
-
   }
 
   if (Xcenter >= 315 && Xcenter <= 335) {
-    ROS_INFO("READY FOR INPACT");
+    ROS_INFO("READY FOR IMPACT");
     publisher.publish(reset_vector());
     ros::Duration(3).sleep();
     int cake = 2;
     isPath = false;
+    isflight = true;
     actionStart = NULL;
+    hasFly = false;
   }
 
-  if (Xcenter < 315) {
+  if (Xcenter < 315 && Xcenter > 0) {
     publisher.publish(drone_vector(0.0, 0.1, 0.0, 0.0, 0.0, 0.0, 0.0));
     int cake = 2;
     actionStart = NULL;
@@ -228,6 +237,31 @@ void path(ros::Publisher publisher, ros::Rate loop_rate) {
 
   publisher.publish(reset_vector());
   ros::Duration(0.5).sleep();
+
+}
+
+void flight(ros::Publisher publisher, ros::Rate loop_rate) {
+  if (actionStart == NULL) {
+    ROS_INFO("Wish me good luck!");
+    actionStart = ros::Time::now().toSec();
+  }
+    std::cout << altitude << " : " << altitude_before << std::endl;
+  if (altitude < altitude_before*0.7) {
+    ROS_INFO("I did it!");
+    actionStart = NULL;
+    ros::Duration(0.5).sleep();
+    publisher.publish(reset_vector());
+    ros::Duration(0.5).sleep();
+    isflight = false;
+  }
+
+  if (!hasFly) {
+    ROS_INFO("Im fliyng!");
+    publisher.publish(drone_vector(0.3, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0));
+    int cake = 2;
+    actionStart = NULL;
+    hasFly = true;
+  }
 
 }
 
