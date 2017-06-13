@@ -80,7 +80,7 @@ static void findSquares( const Mat& image, vector<vector<Point> >& squares )
                 // area may be positive or negative - in accordance with the
                 // contour orientation
                 if( approx.size() == 4 &&
-                    fabs(contourArea(Mat(approx))) > 300 &&
+                    fabs(contourArea(Mat(approx))) > 700 &&
 		    fabs(contourArea(Mat(approx))) < 10000 &&
                     isContourConvex(Mat(approx)) )
                 {

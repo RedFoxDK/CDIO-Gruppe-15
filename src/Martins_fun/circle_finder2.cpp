@@ -2,12 +2,19 @@
 #include <image_transport/image_transport.h>
 #include <opencv2/highgui/highgui.hpp>
 #include <cv_bridge/cv_bridge.h>
+#include <CDIO/circle_msg.h>
 //#include <math.h>
 
 
 
 using namespace cv;
 using namespace std;
+
+
+ros::Publisher pub;
+
+double X = 0.0;
+double Y = 0.0;
 
 static string window_name = "view";
 
@@ -25,11 +32,11 @@ Point find_circel(Mat img) {
     center = Point(cvRound(circles[i][0]), cvRound(circles[i][1]));    
     int radius = cvRound(circles[i][2]);
     // draw the circle center
-    circle( img, center, 3, Scalar(0,255,0), -1, 8, 0 );
+    //circle( img, center, 3, Scalar(0,255,0), -1, 8, 0 );
     // draw the circle outline
-    circle( img, center, radius, Scalar(0,0,255), 3, 8, 0 );
+    //circle( img, center, radius, Scalar(0,0,255), 3, 8, 0 );
   }
-  imshow(window_name, img);
+  //imshow(window_name, img);
   return center;
 }
 
@@ -42,6 +49,14 @@ void imageCallback(const sensor_msgs::ImageConstPtr& msg)
     Point center = find_circel(cv_bridge::toCvShare(msg, "bgr8")->image);
     //ROS_INFO("X coord: %f, Y coord: %f", center.x, center.y);
     cout << center << endl;
+
+    CDIO::circle_msg msg;
+    msg.centerX = center.x;
+    msg.centerY = center.y;
+    pub.publish(msg);
+
+    /*X = center.x;
+    Y = center.y;*/
     cv::waitKey(30);
   }
   catch (cv_bridge::Exception& e)
@@ -51,12 +66,16 @@ void imageCallback(const sensor_msgs::ImageConstPtr& msg)
 }
 
 int main(int argc, char **argv) {
-  ros::init(argc, argv, "circle_finder");
+  ros::init(argc, argv, "circle_finder_Martin");
   ros::NodeHandle nh;
-  cv::namedWindow(window_name);
-  cv::startWindowThread();
+  pub = nh.advertise<CDIO::circle_msg>("CDIO/circle_finder", 1000);
+  //cv::namedWindow(window_name);
+  //cv::startWindowThread();
   image_transport::ImageTransport it(nh);
-  image_transport::Subscriber sub = it.subscribe("ardrone/image_raw", 1, imageCallback);  
-  ros::spin();
-  cv::destroyWindow(window_name);
+  image_transport::Subscriber sub = it.subscribe("ardrone/image_raw", 1, imageCallback);
+
+  while (ros::ok()) {
+    ros::spin();
+  }  
+  //cv::destroyWindow(window_name);
 }

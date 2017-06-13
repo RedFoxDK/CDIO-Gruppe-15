@@ -4,6 +4,7 @@
 #include <std_msgs/String.h>
 #include <std_msgs/Empty.h>
 #include <cstdlib>
+#include "CDIO/circle_msg.h"
 
 bool wait_for_navdata = true;
 bool isTakeOff = false;
@@ -12,6 +13,8 @@ bool isLanded = false;
 
 uint state;
 
+double Xcenter = 0.0;
+double Ycenter = 0.0;
 
 float batteryLevel;
 float x = 0, y = 0, z = 0, altitude = 0;
@@ -48,6 +51,12 @@ geometry_msgs::Twist reset_vector() {
   return twist_msg;
 }
 
+void circle_callback(const CDIO::circle_msg::ConstPtr& msg) {
+	Xcenter = msg->centerX;
+	Ycenter = msg->centerY;
+  //std::cout << Xcenter << " : " << Ycenter << std::endl;
+}
+
 void navdata_callback(const ardrone_autonomy::Navdata::ConstPtr& msg) {
  	
   batteryLevel = msg->batteryPercent;
@@ -80,13 +89,14 @@ void navdata_callback(const ardrone_autonomy::Navdata::ConstPtr& msg) {
 
 int main(int argc, char **argv) {
 
-  ros::init(argc, argv, "drone_fly_2");
+  ros::init(argc, argv, "martin_fun");
   ros::NodeHandle n;
   ros::Rate loop_rate(50);
-  ros::Subscriber nav_sub = n.subscribe("ardrone/navdata", 1000, navdata_callback);
+  ros::Subscriber nav_sub = n.subscribe("ardrone/navdata", 10, navdata_callback);
   ros::Publisher takeoff_pub = n.advertise<std_msgs::Empty>("ardrone/takeoff", 1);
   ros::Publisher land_pub = n.advertise<std_msgs::Empty>("ardrone/land", 1);
   ros::Publisher fly_pub = n.advertise<geometry_msgs::Twist>("/cmd_vel", 100);
+  ros::Subscriber circle_sub = n.subscribe("CDIO/circle_finder", 10, circle_callback);
   
   while(wait_for_navdata) {
   	ros::spinOnce();
@@ -119,9 +129,9 @@ int main(int argc, char **argv) {
     if (altitude > max_altitude) {
     	max_altitude = altitude;
     }
-    if ((actionStart != NULL && actionStart + 15.0 < ros::Time::now().toSec()) 
+    if ((actionStart != NULL && actionStart + 12.0 < ros::Time::now().toSec()) 
     	|| state == 8) {
-    	ROS_INFO("Terminating drone due to inactivity");
+    	//ROS_INFO("Terminating drone due to inactivity");
     	isTakeOff = true;
     	isRunning = false;
     	isLanded = false;
@@ -153,16 +163,25 @@ void increaseAltitude(ros::Publisher publisher, ros::Rate loop_rate) {
 		ROS_INFO("Is increasing Altitude");
 		actionStart = ros::Time::now().toSec();
 	}
-	if (altitude >= 1000) {
-		ROS_INFO("Has finsihed increasing Altitude");
+	//if (altitude > 1500) {
+	if (Ycenter >= 150 && Ycenter <= 300) {
+		ROS_INFO("Circle fund");
 		publisher.publish(reset_vector());
 		isRunning = false;
 		actionStart = NULL;
-	}                            // vx,  vy,  vz,  ax,  ay,  az,   k
-	publisher.publish(drone_vector(0.0, 0.0, 0.4, 0.0, 0.0, 0.0, 0.0));
-  	int cake = 2;
-    //std::cout << "test3" << std::endl;
-    //loop_rate.sleep();
+	}
+  int cake;
+  if (altitude < 2000) {
+    cake = 2;
+                              // vx,  vy,  vz,  ax,  ay,  az,   k
+	 publisher.publish(drone_vector(-0.00, 0.0, 0.2, 0.0, 0.0, 0.0, 0.0));
+  }else{
+    ROS_INFO("2000 mm");
+    publisher.publish(drone_vector(0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0));
+    cake = 2;
+  }
+    
+  	//loop_rate.sleep();
   	if (altitude > 0) {
   	  //ROS_INFO("x: %f, y: %f, a: %f", x,y, a);
   	}
