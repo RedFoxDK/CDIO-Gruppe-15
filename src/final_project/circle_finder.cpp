@@ -41,6 +41,7 @@ void imageCallback(const sensor_msgs::ImageConstPtr& msg)
   {
     Point center = find_circel(cv_bridge::toCvShare(msg, "bgr8")->image);
     ROS_INFO("X coord: %f, Y coord: %f", center.x, center.y);
+    //cout << center << endl;
     cv::waitKey(30);
   }
   catch (cv_bridge::Exception& e)
@@ -50,7 +51,7 @@ void imageCallback(const sensor_msgs::ImageConstPtr& msg)
 }
 
 int main(int argc, char **argv) {
-  ros::init(argc, argv, "circel_finder");
+  ros::init(argc, argv, "circle_finder");
   ros::NodeHandle nh;
   cv::namedWindow(window_name);
   cv::startWindowThread();
