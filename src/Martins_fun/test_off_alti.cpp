@@ -81,6 +81,7 @@ void navdata_callback(const ardrone_autonomy::Navdata::ConstPtr& msg) {
   //ROS_INFO("Temperature: %d", msg->temp);
   //ROS_INFO("pressure: %d", msg->pressure);
   //ROS_INFO("Altitude: %d", msg->altd);
+  //ROS_INFO("Altitude before: %d", altitude_before);
   //ROS_INFO("left/right tilt (rotX): %f", msg->rotX);
   //ROS_INFO("forward/backward tilt (rotY): %f", msg->rotY);
   //ROS_INFO("rotation (rotZ): %f", msg->rotZ);
@@ -95,13 +96,13 @@ void navdata_callback(const ardrone_autonomy::Navdata::ConstPtr& msg) {
 
 int main(int argc, char **argv) {
 
-  ros::init(argc, argv, "martin_fun");
+  ros::init(argc, argv, "test_off_alti");
   ros::NodeHandle n;
   ros::Rate loop_rate(50);
   ros::Subscriber nav_sub = n.subscribe("ardrone/navdata", 100, navdata_callback);
   ros::Publisher takeoff_pub = n.advertise<std_msgs::Empty>("ardrone/takeoff", 1);
   ros::Publisher land_pub = n.advertise<std_msgs::Empty>("ardrone/land", 1);
-  ros::Publisher fly_pub = n.advertise<geometry_msgs::Twist>("/cmd_vel", 100);
+  ros::Publisher fly_pub = n.advertise<geometry_msgs::Twist>("/cmd_vel", 1);
   ros::Subscriber circle_sub = n.subscribe("CDIO/circle_finder", 1000, circle_callback);
   
   while(wait_for_navdata) {
@@ -124,13 +125,13 @@ int main(int argc, char **argv) {
     }
     // Drone has taken off and is checking if it is still running
     else if (isRunning){
-      increaseAltitude(fly_pub, loop_rate);
-    }
-    else if (isPath) {
-      path(fly_pub, loop_rate);
-    }
-    else if (isflight) {
-      flight(fly_pub, loop_rate);
+      //increaseAltitude(fly_pub, loop_rate);
+      if (actionStart == NULL) {
+        ROS_INFO("Is increasing Altitude");
+        actionStart = ros::Time::now().toSec();
+      }
+      ROS_INFO("Altitude: %f", altitude);
+      //ROS_INFO("Altitude before: %f", altitude_before);
     }
     else if (!isLanded) {
       land(land_pub);
@@ -143,7 +144,7 @@ int main(int argc, char **argv) {
     }
     if ((actionStart != NULL && actionStart + 15.0 < ros::Time::now().toSec()) 
     	|| state == 8) {
-    	ROS_INFO("Terminating drone due to inactivity");
+    	//ROS_INFO("Terminating drone due to inactivity");
       fly_pub.publish(reset_vector());
     	isTakeOff = true;
     	isRunning = false;
