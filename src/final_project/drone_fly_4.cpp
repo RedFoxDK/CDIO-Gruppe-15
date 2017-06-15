@@ -174,12 +174,12 @@ int main(int argc, char **argv) {
       {
         updatePosition();
 
-        if (pos.x >= 3000)
-        {
-          isEmergencyLanding = true;
-          fly_pub.publish(drone_vector(0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0));
-          continue;
-        }
+        //if (pos.x >= 3000)
+        //{
+          //isEmergencyLanding = true;
+          //fly_pub.publish(drone_vector(0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0));
+          //continue;
+        //}
 
         moveDrone(fly_pub, loop_rate);
       }
