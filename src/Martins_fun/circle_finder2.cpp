@@ -15,6 +15,7 @@ ros::Publisher pub;
 
 double X = 0.0;
 double Y = 0.0;
+int radius = 0;
 int q = 0;
 
 static string window_name = "view";
@@ -30,8 +31,9 @@ Point find_circel(Mat img) {
   HoughCircles(gray, circles, CV_HOUGH_GRADIENT, 2, gray.rows/4, 50, 250 );
   for( size_t i = 0; i < circles.size(); i++ )
   {
+    radius = 0;
     center = Point(cvRound(circles[i][0]), cvRound(circles[i][1]));    
-    int radius = cvRound(circles[i][2]);
+    radius = cvRound(circles[i][2]);
     // draw the circle center
     circle( img, center, 3, Scalar(0,255,0), -1, 8, 0 );
     // draw the circle outline
@@ -49,10 +51,11 @@ void imageCallback(const sensor_msgs::ImageConstPtr& msg)
   {
     Point center = find_circel(cv_bridge::toCvShare(msg, "bgr8")->image);
     //ROS_INFO("X coord: %f, Y coord: %f", center.x, center.y);
-    cout << center << ":" << q << endl;
+    cout << center << ":" << radius << ":" << q << endl;
     CDIO::circle_msg msg;
     msg.centerX = center.x;
     msg.centerY = center.y;
+    msg.radius = radius;
     q++;
     pub.publish(msg);
 

@@ -7,14 +7,15 @@ import struct
 
 
 class circle_msg(genpy.Message):
-  _md5sum = "b28d7e6fe6bf4c2cda9d06343dd83f7c"
+  _md5sum = "0b999b3bc2ae701b533430a967d74b94"
   _type = "CDIO/circle_msg"
   _has_header = False #flag to mark the presence of a Header object
   _full_text = """float64 centerX
 float64 centerY
+int32 radius
 """
-  __slots__ = ['centerX','centerY']
-  _slot_types = ['float64','float64']
+  __slots__ = ['centerX','centerY','radius']
+  _slot_types = ['float64','float64','int32']
 
   def __init__(self, *args, **kwds):
     """
@@ -24,7 +25,7 @@ float64 centerY
     changes.  You cannot mix in-order arguments and keyword arguments.
 
     The available fields are:
-       centerX,centerY
+       centerX,centerY,radius
 
     :param args: complete set of field values, in .msg order
     :param kwds: use keyword arguments corresponding to message field names
@@ -37,9 +38,12 @@ float64 centerY
         self.centerX = 0.
       if self.centerY is None:
         self.centerY = 0.
+      if self.radius is None:
+        self.radius = 0
     else:
       self.centerX = 0.
       self.centerY = 0.
+      self.radius = 0
 
   def _get_types(self):
     """
@@ -54,7 +58,7 @@ float64 centerY
     """
     try:
       _x = self
-      buff.write(_struct_2d.pack(_x.centerX, _x.centerY))
+      buff.write(_struct_2di.pack(_x.centerX, _x.centerY, _x.radius))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -67,8 +71,8 @@ float64 centerY
       end = 0
       _x = self
       start = end
-      end += 16
-      (_x.centerX, _x.centerY,) = _struct_2d.unpack(str[start:end])
+      end += 20
+      (_x.centerX, _x.centerY, _x.radius,) = _struct_2di.unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e) #most likely buffer underfill
@@ -82,7 +86,7 @@ float64 centerY
     """
     try:
       _x = self
-      buff.write(_struct_2d.pack(_x.centerX, _x.centerY))
+      buff.write(_struct_2di.pack(_x.centerX, _x.centerY, _x.radius))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -96,11 +100,11 @@ float64 centerY
       end = 0
       _x = self
       start = end
-      end += 16
-      (_x.centerX, _x.centerY,) = _struct_2d.unpack(str[start:end])
+      end += 20
+      (_x.centerX, _x.centerY, _x.radius,) = _struct_2di.unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e) #most likely buffer underfill
 
 _struct_I = genpy.struct_I
-_struct_2d = struct.Struct("<2d")
+_struct_2di = struct.Struct("<2di")

@@ -24,12 +24,14 @@ struct circle_msg_ {
   circle_msg_()
   : centerX(0.0)
   , centerY(0.0)
+  , radius(0)
   {
   }
 
   circle_msg_(const ContainerAllocator& _alloc)
   : centerX(0.0)
   , centerY(0.0)
+  , radius(0)
   {
   }
 
@@ -38,6 +40,9 @@ struct circle_msg_ {
 
   typedef double _centerY_type;
   double centerY;
+
+  typedef int32_t _radius_type;
+  int32_t radius;
 
 
   typedef boost::shared_ptr< ::CDIO::circle_msg_<ContainerAllocator> > Ptr;
@@ -67,12 +72,12 @@ template<class ContainerAllocator>
 struct MD5Sum< ::CDIO::circle_msg_<ContainerAllocator> > {
   static const char* value() 
   {
-    return "b28d7e6fe6bf4c2cda9d06343dd83f7c";
+    return "0b999b3bc2ae701b533430a967d74b94";
   }
 
   static const char* value(const  ::CDIO::circle_msg_<ContainerAllocator> &) { return value(); } 
-  static const uint64_t static_value1 = 0xb28d7e6fe6bf4c2cULL;
-  static const uint64_t static_value2 = 0xda9d06343dd83f7cULL;
+  static const uint64_t static_value1 = 0x0b999b3bc2ae701bULL;
+  static const uint64_t static_value2 = 0x533430a967d74b94ULL;
 };
 
 template<class ContainerAllocator>
@@ -91,6 +96,7 @@ struct Definition< ::CDIO::circle_msg_<ContainerAllocator> > {
   {
     return "float64 centerX\n\
 float64 centerY\n\
+int32 radius\n\
 \n\
 ";
   }
@@ -113,6 +119,7 @@ template<class ContainerAllocator> struct Serializer< ::CDIO::circle_msg_<Contai
   {
     stream.next(m.centerX);
     stream.next(m.centerY);
+    stream.next(m.radius);
   }
 
   ROS_DECLARE_ALLINONE_SERIALIZER;
@@ -134,6 +141,8 @@ struct Printer< ::CDIO::circle_msg_<ContainerAllocator> >
     Printer<double>::stream(s, indent + "  ", v.centerX);
     s << indent << "centerY: ";
     Printer<double>::stream(s, indent + "  ", v.centerY);
+    s << indent << "radius: ";
+    Printer<int32_t>::stream(s, indent + "  ", v.radius);
   }
 };
 

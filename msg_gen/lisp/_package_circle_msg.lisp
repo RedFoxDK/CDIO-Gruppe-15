@@ -3,4 +3,6 @@
           CENTERX
           CENTERY-VAL
           CENTERY
+          RADIUS-VAL
+          RADIUS
 ))
