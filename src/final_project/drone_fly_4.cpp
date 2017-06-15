@@ -3,6 +3,7 @@
 #include <geometry_msgs/Twist.h>
 #include <std_msgs/String.h>
 #include <std_msgs/Empty.h>
+#include <math.h>
 #include <cstdlib>
 #include <pthread.h>
 
@@ -16,6 +17,7 @@ int altitude = 0;
 uint state;
 float batteryLevel;
 float vx = 0, vy = 0, vz = 0;
+float rotz = 0;
 
  //vx, vy, vz, az = bewteen -1 and 1 (nothing- more)
 geometry_msgs::Twist drone_vector(double new_vx, double new_vy, double new_vz, 
@@ -46,6 +48,7 @@ void navdata_callback(const ardrone_autonomy::Navdata::ConstPtr& msg) {
   vx = msg->vx;
   vy = msg->vy;
   vz = msg->vz;
+  rotz = msg->rotZ;
   altitude = msg->altd;
   wait_for_navdata = false;
   if (msg->state != state) {
@@ -55,28 +58,44 @@ void navdata_callback(const ardrone_autonomy::Navdata::ConstPtr& msg) {
 }
 
 typedef struct _POSITION {
-  int x;
-  int y;
-  int z;
+  _POSITION() : x(0.0), y(0.0) {}
+
+  double x;
+  double y;
 } POSITION;
 
-POSITION pos = { 0 };
+POSITION pos;
+
+#define cosd(x) (cos(fmod((x),360) * M_PI / 180))
+
+void calculatePosition(double dist)
+{
+  double dx = cosd(rotz) * dist;
+  double dy = (rotz >= 0 ? 1 : -1) * sqrt(pow(dist, 2) - pow(dx, 2));
+
+  std::cout << "dist: " << dist << std::endl;
+  std::cout << "dx: " << dx << std::endl;
+  std::cout << "dy: " << dy << std::endl;
+
+  pos.x += dx;
+  pos.y += dy;
+}
 
 void updatePosition() {
-  static uint64_t first_tick = ros::Time::now().toNSec(); 
+  static uint64_t first_tick = (ros::Time::now().toNSec() / 1000000); 
   static uint64_t last_tick = first_tick;
 
-  uint64_t tick_now = ros::Time::now().toNSec();  // T in nanoseconds (10^9)
-  uint64_t dt = (tick_now - last_tick);           // delta T in nanoseconds
+  uint64_t tick_now = (ros::Time::now().toNSec() / 1000000);  // T in milliseconds (10^3)
+  uint64_t dt = (tick_now - last_tick);           // delta T
 
-  pos.x += static_cast<int>(static_cast<double>(dt / 1000000.0) * static_cast<double>(vx * / 1000.0));
-  pos.y += static_cast<int>(static_cast<double>(dt / 1000000.0) * static_cast<double>(vy * / 1000.0));
-  pos.z += static_cast<int>(static_cast<double>(dt / 1000000.0) * static_cast<double>(vz * / 1000.0));
+  double dist = static_cast<double>(dt / 1000.0) * vx;
 
-  std::cout << "Position: " << pos.x << ", " << pos.y << ", " << pos.z << std::endl;
-  std::cout << "Velocities: " << vx << ", " << vy << ", " << vz << std::endl;
-  std::cout << "Tick: " << last_tick << ", " << dt << std::endl;
-  std::cout << "Since first: " << ((tick_now - first_tick) / 1000.0) << std::endl;
+  calculatePosition(dist);
+  
+  std::cout << "Position: " << pos.x << ", " << pos.y << std::endl;
+  std::cout << "Rotation: " << rotz << std::endl;
+  std::cout << "Velocities: " << vx << ", " << vy << std::endl;
+  std::cout << "Since first: " << ((tick_now - first_tick) / 1000.0) << std::endl << std::endl;
 
   last_tick = (ros::Time::now().toNSec() / 1000000);
 }
@@ -112,7 +131,7 @@ int main(int argc, char **argv) {
   ros::Subscriber nav_sub = n.subscribe("ardrone/navdata", 10, navdata_callback);
   ros::Publisher takeoff_pub = n.advertise<std_msgs::Empty>("ardrone/takeoff", 1);
   ros::Publisher land_pub = n.advertise<std_msgs::Empty>("ardrone/land", 1);
-  ros::Publisher fly_pub = n.advertise<geometry_msgs::Twist>("/cmd_vel", 100);
+  ros::Publisher fly_pub = n.advertise<geometry_msgs::Twist>("/cmd_vel", 1);
   
   while(wait_for_navdata) {
     ros::spinOnce();
@@ -139,6 +158,14 @@ int main(int argc, char **argv) {
     }
     else if (isLanding || isEmergencyLanding)
     {
+      static bool reset = false;
+
+      if (!reset)
+      {
+        fly_pub.publish(drone_vector(0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0));
+        reset = true;
+      }
+
       land(land_pub);
     }
     else
@@ -146,6 +173,14 @@ int main(int argc, char **argv) {
       if (altitude > 750) 
       {
         updatePosition();
+
+        if (pos.x >= 3000)
+        {
+          isEmergencyLanding = true;
+          fly_pub.publish(drone_vector(0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0));
+          continue;
+        }
+
         moveDrone(fly_pub, loop_rate);
       }
       else
@@ -156,6 +191,7 @@ int main(int argc, char **argv) {
   
     pthread_mutex_unlock(&key_mutex);
 
+    loop_rate.sleep();
     ros::spinOnce();
   }
 
@@ -174,7 +210,6 @@ void takeoff(ros::Publisher takeoff_pub, ros::Rate loop_rate) {
   }
   
   takeoff_pub.publish(std_msgs::Empty());
-  //loop_rate.sleep();
 }
 
 void increaseAltitude(ros::Publisher publisher, ros::Rate loop_rate) {
@@ -184,7 +219,6 @@ void increaseAltitude(ros::Publisher publisher, ros::Rate loop_rate) {
   }                            // vx,  vy,  vz,  ax,  ay,  az,   k
   
   publisher.publish(drone_vector(0.0, 0.0, 0.5, 0.0, 0.0, 0.0, 0.0));
-  //loop_rate.sleep();
 }
 
 void land(ros::Publisher land_pub) {
@@ -201,5 +235,5 @@ void moveDrone(ros::Publisher publisher, ros::Rate loop_rate)
 {
   std::cout << "Is moving forward" << std::endl;
                                // vx,  vy,  vz,  ax,  ay,  az,   k
-  publisher.publish(drone_vector(0.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0));
+  publisher.publish(drone_vector(0.1, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0));
 }
