@@ -21,18 +21,17 @@ rosbuild_genmsg()
 #uncomment if you have defined services
 rosbuild_gensrv()
 
+include_directories(include ${catkin_INCLUDE_DIRS})
+
+set(DRONE_LIB_SOURCES
+	src/final_project/drone_main.cpp
+	src/final_project/qr_reader.cpp)
+
 #common commands for building c++ executables and libraries
-#rosbuild_add_library(${PROJECT_NAME} src/example.cpp)
-#target_link_libraries(${PROJECT_NAME} another_library)
-#rosbuild_add_boost_directories()
-#rosbuild_link_boost(${PROJECT_NAME} thread)
-#rosbuild_add_executable(example examples/example.cpp)
-#target_link_libraries(example ${PROJECT_NAME})
-#rosbuild_add_executable(Display_Images src/test/Image/image.cpp)
-rosbuild_add_executable(qr_reader src/final_project/qr_reader.cpp)
+rosbuild_add_executable(qr_reader ${DRONE_LIB_SOURCES})
 target_link_libraries(qr_reader ${catkin_LIBRARIES} -lzbar)
-#rosbuild_add_executable(drone_fly src/final_project/drone_fly.cpp)
-#rosbuild_add_executable(flypath1 src/test/FlyPath/FlyPath1.cpp)
+
+
 rosbuild_add_executable(drone_fly_2 src/final_project/drone_fly_2.cpp)
 rosbuild_add_executable(drone_fly_4 src/final_project/drone_fly_4.cpp)
 rosbuild_add_executable(circle_finder src/final_project/circle_finder.cpp)

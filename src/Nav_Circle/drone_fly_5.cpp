@@ -12,6 +12,7 @@ void takeoff(ros::Publisher takeoff_pub, ros::Rate loop_rate);
 void increaseAltitude(ros::Publisher publisher, ros::Rate loop_rate);
 void land(ros::Publisher land_pub);
 void moveDrone(ros::Publisher publisher, ros::Rate loop_rate);
+
 double calCircleDist();
 void ringAltitude(ros::Publisher publisher);
 void alingeWithCenter (ros::Publisher publisher);
@@ -200,12 +201,21 @@ int main(int argc, char **argv) {
       {
         updatePosition();
 
-        //if (pos.x >= 3000)
-        //{
-          //isEmergencyLanding = true;
-          //fly_pub.publish(drone_vector(0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0));
-          //continue;
-        //}
+
+        if (Ycenter > 0 && Ycenter > 160 && Ycenter < 350)
+        {
+          //align
+        }else 
+        {
+          increaseAltitude(fly_pub, loop_rate);
+        }
+        // Increase height until finding the center of the circle
+        // Place drone accordingly, until the camera is in the center of the circle
+        // Calculate distance from drone to circle
+        // Fly that distance + buffer forward in order to clear the ring.
+        // Land / fly to start.
+
+        
 
         moveDrone(fly_pub, loop_rate);
       }
@@ -244,7 +254,7 @@ void increaseAltitude(ros::Publisher publisher, ros::Rate loop_rate) {
     publisher.publish(reset_vector());
   }                            // vx,  vy,  vz,  ax,  ay,  az,   k
   
-  publisher.publish(drone_vector(0.0, 0.0, 0.5, 0.0, 0.0, 0.0, 0.0));
+  publisher.publish(drone_vector(0.0, 0.0, 0.1, 0.0, 0.0, 0.0, 0.0));
 }
 
 void land(ros::Publisher land_pub) {
@@ -271,7 +281,7 @@ void ringAltitude(ros::Publisher publisher) {
   }
 
   if (!fly_once) {
-    ROS_INFO("Increasing to same heigh as the circles center");
+    std::cout << "Increasing to same heigh as the circles center" << std::endl;
     publisher.publish(drone_vector(0.0, 0.0, 0.1, 0.0, 0.0, 0.0, 0.0));
     fly_once = true;
   }
@@ -279,7 +289,7 @@ void ringAltitude(ros::Publisher publisher) {
 
 void alingeWithCenter (ros::Publisher publisher) {
   if (Xcenter >= 315 && Xcenter <= 335) {
-    ROS_INFO("Ready to fly though");
+    std::cout << "Ready to fly though" << std::endl;
     publisher.publish(reset_vector());
     ros::Duration(3).sleep();
   }

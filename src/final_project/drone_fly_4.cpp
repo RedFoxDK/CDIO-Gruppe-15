@@ -12,6 +12,7 @@ void increaseAltitude(ros::Publisher publisher, ros::Rate loop_rate);
 void land(ros::Publisher land_pub);
 void moveDrone(ros::Publisher publisher, ros::Rate loop_rate);
 
+
 bool wait_for_navdata = true;
 int altitude = 0;
 uint state;
