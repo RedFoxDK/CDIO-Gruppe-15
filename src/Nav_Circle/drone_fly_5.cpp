@@ -13,6 +13,8 @@ void increaseAltitude(ros::Publisher publisher, ros::Rate loop_rate);
 void land(ros::Publisher land_pub);
 void moveDrone(ros::Publisher publisher, ros::Rate loop_rate);
 double calCircleDist();
+void ringAltitude(ros::Publisher publisher);
+void alingeWithCenter (ros::Publisher publisher);
 
 bool wait_for_navdata = true;
 int altitude = 0;
@@ -288,6 +290,9 @@ void alingeWithCenter (ros::Publisher publisher) {
 
   if (Xcenter > 335) {
     publisher.publish(drone_vector(0.0, -0.1, 0.0, 0.0, 0.0, 0.0, 0.0));
+  }
+  if (Xcenter == 0) {
+
   }
   ros::Duration(0.2).sleep();
 
