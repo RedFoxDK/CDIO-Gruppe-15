@@ -21,7 +21,7 @@ double Xcenter = 0.0;
 double Ycenter = 0.0;
 
 float batteryLevel;
-float x = 0, y = 0, z = 0, altitude = 0, altitude_before = 0;
+float x = 0, y = 0, z = 0, altitude = 0;
 float vx = 0, vy = 0, vz = 0;
 float max_altitude = 0;
 
@@ -64,7 +64,6 @@ void circle_callback(const CDIO::circle_msg::ConstPtr& msg) {
 }
 
 void navdata_callback(const ardrone_autonomy::Navdata::ConstPtr& msg) {
- 	altitude_before = altitude;
   batteryLevel = msg->batteryPercent;
   vx = msg->vx;
   vy = msg->vy;
@@ -114,7 +113,7 @@ int main(int argc, char **argv) {
   	if (batteryLevel < 20) {
   	  // Begin landing procedure drone doesn't crash and burn due to lacking battery
   	  ROS_INFO("Battery level is too low, %f", batteryLevel);
-      // landingProcedure()
+      land(land_pub);
       exit(0);
     }
 
@@ -245,8 +244,8 @@ void flight(ros::Publisher publisher, ros::Rate loop_rate) {
     ROS_INFO("Wish me good luck!");
     actionStart = ros::Time::now().toSec();
   }
-    std::cout << altitude << " : " << altitude_before << std::endl;
-  if (altitude < altitude_before*0.7) {
+    
+  if (false) {
     ROS_INFO("I did it!");
     actionStart = NULL;
     ros::Duration(0.5).sleep();
