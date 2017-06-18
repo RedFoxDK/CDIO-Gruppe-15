@@ -87,7 +87,7 @@ POSITION pos;
 
 double calCircleDist() {
   int ring_radius = 50 //cm - from ring 1 and 2
-  double forcus_l = 503.24;
+  double focus_l = 503.24;
 
   double d = (ring_radius * forcus_l) / radius;
 

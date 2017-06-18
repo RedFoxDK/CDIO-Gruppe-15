@@ -28,8 +28,8 @@ set(DRONE_LIB_SOURCES
 	src/final_project/qr_reader.cpp)
 
 #common commands for building c++ executables and libraries
-rosbuild_add_executable(qr_reader ${DRONE_LIB_SOURCES})
-target_link_libraries(qr_reader ${catkin_LIBRARIES} -lzbar)
+rosbuild_add_executable(drone_main ${DRONE_LIB_SOURCES})
+target_link_libraries(drone_main ${catkin_LIBRARIES} -lzbar)
 
 
 rosbuild_add_executable(drone_fly_2 src/final_project/drone_fly_2.cpp)
