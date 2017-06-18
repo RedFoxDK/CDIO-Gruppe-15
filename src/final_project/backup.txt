@@ -1,0 +1,32 @@
+
+void calculatePosition(double dist)
+{
+  double dx = cosd(rotz) * dist;
+  double dy = (rotz >= 0 ? 1 : -1) * sqrt(pow(dist, 2) - pow(dx, 2));
+
+  std::cout << "dist: " << dist << std::endl;
+  std::cout << "dx: " << dx << std::endl;
+  std::cout << "dy: " << dy << std::endl;
+
+  pos.x += dx;
+  pos.y += dy;
+}
+
+void updatePosition() {
+  static uint64_t first_tick = (ros::Time::now().toNSec() / 1000000); 
+  static uint64_t last_tick = first_tick;
+
+  uint64_t tick_now = (ros::Time::now().toNSec() / 1000000);  // T in milliseconds (10^3)
+  uint64_t dt = (tick_now - last_tick);           // delta T
+
+  double dist = static_cast<double>(dt / 1000.0) * vx;
+
+  calculatePosition(dist);
+  
+  std::cout << "Position: " << pos.x << ", " << pos.y << std::endl;
+  std::cout << "Rotation: " << rotz << std::endl;
+  std::cout << "Velocities: " << vx << ", " << vy << std::endl;
+  std::cout << "Since first: " << ((tick_now - first_tick) / 1000.0) << std::endl << std::endl;
+
+  last_tick = (ros::Time::now().toNSec() / 1000000);
+}

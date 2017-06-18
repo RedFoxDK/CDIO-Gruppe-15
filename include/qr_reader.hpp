@@ -17,7 +17,7 @@ enum MOVE_DIRECTION : unsigned char
 class qr_code
 {
 public:
-	static bool find_qr_code(uint8_t* raw, int width, int height, std::vector<qr_code>& qr_codes);
+	static bool find_qr_codes(uint8_t* raw, int width, int height, std::vector<qr_code>& qr_codes);
 
 	MOVE_DIRECTION get_direction();
 	std::string get_data();

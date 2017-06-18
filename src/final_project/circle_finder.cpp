@@ -1,62 +1,63 @@
-#include <ros/ros.h>
-#include <image_transport/image_transport.h>
-#include <opencv2/highgui/highgui.hpp>
-#include <cv_bridge/cv_bridge.h>
-//#include <math.h>
+#include "circle_finder.hpp"
 
-
-
-using namespace cv;
-using namespace std;
-
-static string window_name = "view";
-
-Point find_circel(Mat img) {
-  Mat gray;
-  Point center;
-
-  cvtColor(img, gray, CV_BGR2GRAY);
-  // smooth it, otherwise a lot of false circles may be detected
-  GaussianBlur( gray, gray, Size(9, 9), 2, 2 );
-  vector<Vec3f> circles;
-  HoughCircles(gray, circles, CV_HOUGH_GRADIENT, 2, gray.rows/4, 30, 300 );
-  for( size_t i = 0; i < circles.size(); i++ )
-  {
-    center = Point(cvRound(circles[i][0]), cvRound(circles[i][1]));    
-    int radius = cvRound(circles[i][2]);
-    // draw the circle center
-    circle( img, center, 3, Scalar(0,255,0), -1, 8, 0 );
-    // draw the circle outline
-    circle( img, center, radius, Scalar(0,0,255), 3, 8, 0 );
-  }
-  imshow(window_name, img);
-  return center;
-}
-
-using namespace cv_bridge;
-
-void imageCallback(const sensor_msgs::ImageConstPtr& msg)
+bool ring_circle::find_circles(cv::Mat& image, cv::Mat gray, std::vector<ring_circle>& circles)
 {
-  try
-  {
-    Point center = find_circel(cv_bridge::toCvShare(msg, "bgr8")->image);
-    //ROS_INFO("X coord: %f, Y coord: %f", center.x, center.y);
-    cout << center << endl;
-    cv::waitKey(30);
-  }
-  catch (cv_bridge::Exception& e)
-  {
-    ROS_ERROR("Could not convert from '%s' to 'bgr8'.", msg->encoding.c_str());
-  }
+	cv::GaussianBlur(gray, gray, cv::Size(9, 9), 2, 2);
+
+	std::vector<cv::Vec3f> circle_vectors;
+	cv::HoughCircles(gray, circle_vectors, CV_HOUGH_GRADIENT, 2, gray.rows / 4, 30, 300);
+
+	for (std::size_t i = 0; i < circle_vectors.size(); i++)
+	{
+		ring_circle ring(cvRound(circle_vectors[i][0]), cvRound(circle_vectors[i][1]), cvRound(circle_vectors[i][2]));
+
+		ring.draw_circle(image);
+
+		circles.push_back(ring);
+	}
+
+	return (circle_vectors.size() > 0);
 }
 
-int main(int argc, char **argv) {
-  ros::init(argc, argv, "circle_finder");
-  ros::NodeHandle nh;
-  cv::namedWindow(window_name);
-  cv::startWindowThread();
-  image_transport::ImageTransport it(nh);
-  image_transport::Subscriber sub = it.subscribe("ardrone/image_raw", 1, imageCallback);  
-  ros::spin();
-  cv::destroyWindow(window_name);
+double ring_circle::get_distance(int ring_index)
+{
+	static int ring_diameters[] = { 100, 100, 90, 90, 80, 80 };
+
+	double ring_radius = ring_diameters[ring_index] / 2.0;
+	double focus_length = 503.24;
+
+ 	return ((ring_radius * focus_length) / this->radius);
+}
+
+int ring_circle::get_x()
+{
+	return this->center.x;
+}
+
+int ring_circle::get_y()
+{
+	return this->center.y;
+}
+
+int ring_circle::get_radius()
+{
+	return this->radius;
+}
+
+ring_circle::ring_circle(int cx, int cy, int radius)
+	: center(cx, cy), radius(radius)
+{
+
+}
+
+void ring_circle::draw_circle(cv::Mat& image)
+{
+	if (this->radius > 0)
+	{
+		/* Draw the circle's center */
+		cv::circle(image, this->center, 3, cv::Scalar(0, 255, 0), -1, 8, 0);
+
+		/* Draw the circle's outline */
+		cv::circle(image, this->center, this->radius, cv::Scalar(0, 0, 255), 3, 8, 0);
+	}
 }

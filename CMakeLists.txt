@@ -25,17 +25,9 @@ include_directories(include ${catkin_INCLUDE_DIRS})
 
 set(DRONE_LIB_SOURCES
 	src/final_project/drone_main.cpp
-	src/final_project/qr_reader.cpp)
+	src/final_project/qr_reader.cpp
+	src/final_project/circle_finder.cpp)
 
 #common commands for building c++ executables and libraries
 rosbuild_add_executable(drone_main ${DRONE_LIB_SOURCES})
 target_link_libraries(drone_main ${catkin_LIBRARIES} -lzbar)
-
-
-rosbuild_add_executable(drone_fly_2 src/final_project/drone_fly_2.cpp)
-rosbuild_add_executable(drone_fly_4 src/final_project/drone_fly_4.cpp)
-rosbuild_add_executable(circle_finder src/final_project/circle_finder.cpp)
-#rosbuild_add_executable(square_finder src/final_project/square_finder.cpp)
-rosbuild_add_executable(circle_finder_Martin src/Martins_fun/circle_finder2.cpp)
-rosbuild_add_executable(martin_fun src/Martins_fun/martin_fun.cpp)
-rosbuild_add_executable(test_off_alti src/Martins_fun/test_off_alti.cpp)

@@ -4,7 +4,7 @@
 
 #include <iostream>
 
-bool qr_code::find_qr_code(uint8_t* raw, int width, int height, std::vector<qr_code>& qr_codes)
+bool qr_code::find_qr_codes(uint8_t* raw, int width, int height, std::vector<qr_code>& qr_codes)
 {
   zbar::ImageScanner scanner;  
   scanner.set_config(zbar::ZBAR_NONE, zbar::ZBAR_CFG_ENABLE, 1);
@@ -13,22 +13,17 @@ bool qr_code::find_qr_code(uint8_t* raw, int width, int height, std::vector<qr_c
    
   int symbol_count = scanner.scan(qr_image);  
   
-  if (symbol_count > 0)
-  {
-    for (zbar::Image::SymbolIterator symbol = qr_image.symbol_begin(); symbol != qr_image.symbol_end(); ++symbol) 
-    { 
-      qr_code code(symbol->get_data());
+  for (zbar::Image::SymbolIterator symbol = qr_image.symbol_begin(); symbol != qr_image.symbol_end(); ++symbol) 
+  { 
+    qr_code code(symbol->get_data());
 
-      for (int i = 0, size = symbol->get_location_size(); i < size; i++)
-        code.add_point(symbol->get_location_x(i), symbol->get_location_y(i));
+    for (int i = 0, size = symbol->get_location_size(); i < size; i++)
+      code.add_point(symbol->get_location_x(i), symbol->get_location_y(i));
 
-      qr_codes.push_back(code);
-    }  
+    qr_codes.push_back(code);
+  }  
 
-    return true;
-  }
-
-  return false;
+  return (symbol_count > 0);
 }
 
 MOVE_DIRECTION qr_code::get_direction()
