@@ -245,7 +245,8 @@ void flight(ros::Publisher publisher, ros::Rate loop_rate) {
     actionStart = ros::Time::now().toSec();
   }
     
-  if (false) {
+  if (false
+    ) {
     ROS_INFO("I did it!");
     actionStart = NULL;
     ros::Duration(0.5).sleep();

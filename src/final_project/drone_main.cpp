@@ -26,11 +26,14 @@ enum DRONE_STATE : unsigned char
 	STATE_LANDING,
 	STATE_WAIT_FOR_LANDING,
 
+  STATE_PREPARE_FIND_QR,
 	STATE_FIND_QR,
 
 	STATE_PREPARE_FIND_CIRCLE,
 	STATE_FIND_CIRCLE
 };
+
+float qr_start_rotz = 0.0;
 
 int ring_index = 0;
 double ring_distance = 0.0;
@@ -38,11 +41,11 @@ double ring_distance = 0.0;
 DRONE_STATE state = STATE_WAIT_FOR_NAVDATA;
 
 float batteryLevel;
-float vx = 0;
-float vy = 0;
-float vz = 0;
-float rotz = 0;
-int altitude = 0;
+float vx = 0.0;
+float vy = 0.0;
+float vz = 0.0;
+float rotz = 0.0;
+int altitude = 0.0;
 
 pthread_mutex_t input_mutex;
 
@@ -89,12 +92,12 @@ void imageCallback(const sensor_msgs::ImageConstPtr& msg)
 			{
 				static int last_qr_find = 0;
 
+        bool valid_qr_code = false;
+
 				std::vector<qr_code> qr_codes;
 
-				if (qr_code::find_qr_codes(reinterpret_cast<uint8_t*>(gray.data), image.cols, image.rows, qr_codes))
+				if (qr_code::find_qr_codes(image, reinterpret_cast<uint8_t*>(gray.data), image.cols, image.rows, qr_codes))
 				{
-					last_qr_find = ros::Time::now().toSec();
-
 					for (std::size_t i = 0; i < qr_codes.size(); i++)
 					{
 						qr_code& qr = qr_codes.at(i);
@@ -102,36 +105,64 @@ void imageCallback(const sensor_msgs::ImageConstPtr& msg)
 						char qr_index[16];
 						sprintf(qr_index, "P.%02d", ring_index);
 
-						if (qr.get_data().at(0) != 'W')
-						//if (!qr.get_data().compare(qr_index))
+						if (qr.get_data().at(0) == 'P')
 						{
+              valid_qr_code = true;
+              last_qr_find = ros::Time::now().toSec();
+
 							MOVE_DIRECTION direction = qr.get_direction();
+              cv::Point center = qr.get_center();
 
 							printf("Found QR code: %s -> %d.\n", qr_codes.at(i).get_data().c_str(), direction);
+
+              float temp_vy = 0.0;
+              float temp_rotz = 0.0;
+
+              float dx = (image.cols / 2) - center.x;
+              float dy = (image.rows / 2) - center.y;
+
+              float deviant = 45.0;
+
+              if (abs(dx) > deviant)
+              {
+                if (dx < 0) // center too far right
+                  temp_rotz = -0.1;
+                else if (dx > 0) // center too far left
+                  temp_rotz = 0.1;
+              }
 
 							switch (direction)
 							{
 							case DIRECTION_LEFT:
-								fly_publisher.publish(drone_vector(0.0, 0.05, 0.0, 0.0, 0.0, -0.05));
+                temp_vy = 0.05;
 								break;
 
 							case DIRECTION_RIGHT:
-								fly_publisher.publish(drone_vector(0.0, -0.05, 0.0, 0.0, 0.0, 0.05));
+								temp_vy = -0.05;
 								break;
 
 							case DIRECTION_NONE:
-							default:
-								fly_publisher.publish(drone_vector(0.0, 0.0, 0.0, 0.0, 0.0, 0.0));
-								state = STATE_PREPARE_FIND_CIRCLE;
+                if (temp_rotz == 0.0)
+                {
+                  printf(".... Centered to QR .....\n");
+                  state = STATE_PREPARE_FIND_CIRCLE;
+                }
+
+                break;
+
+              default:
 								break;
 							}
+
+              fly_publisher.publish(drone_vector(0.0, temp_vy, 0.0, 0.0, 0.0, temp_rotz));
 						}
 					}
-
-					printf("\n");
 				}
-				else if (ros::Time::now().toSec() - last_qr_find >= 5)
-					fly_publisher.publish(drone_vector(0.0, 0.0, 0.0, 0.0, 0.0, -0.1));
+        else
+          fly_publisher.publish(reset_vector());
+				
+        if (!valid_qr_code && ros::Time::now().toSec() - last_qr_find >= 5)
+          fly_publisher.publish(drone_vector(0.0, 0.0, 0.0, 0.0, 0.0, -0.05));
 
 				imshow ("QR Image", image);
 			}
@@ -140,73 +171,108 @@ void imageCallback(const sensor_msgs::ImageConstPtr& msg)
 
 		case STATE_FIND_CIRCLE:
 			{
-				float temp_vx = 0.0;
-				float temp_vy = 0.0;
-				float temp_vz = 0.0;
+        static bool rotating = false;
 
-				std::vector<ring_circle> circles;
+        float start_rotz = (qr_start_rotz < 0 ? 360 + qr_start_rotz : qr_start_rotz);
+        float current_rotz = (rotz < 0 ? 360 + rotz : rotz);
 
-				if (ring_circle::find_circles(image, gray, circles))
-				{
-					ring_circle* closest_ring = 0;
+        float drotz_linear = current_rotz - start_rotz;
+        float drotz_repeat = 360 + start_rotz - current_rotz;
 
-					for (std::size_t i = 0; i < circles.size(); i++)
-					{
-						ring_circle& ring = circles.at(i);
+        float drotz = min(drotz_linear, drotz_repeat);
 
-						if (closest_ring == 0 || ring.get_distance(0) < closest_ring->get_distance(0))
-							closest_ring = &ring;
-					}
+        if (abs(drotz) > 10)
+        {
+          printf("Counter-rotation..\n");
+          fly_publisher.publish(drone_vector(0.0, 0.0, 0.0, 0.0, 0.0, 0.1));
+          rotating = true;
+        } 
+        else if (rotating)
+        {
+          fly_publisher.publish(reset_vector());
+          rotating = false;
+        }
+        else
+        {
+          static int last_circle_find = 0;
 
-					ring_distance = closest_ring->get_distance(ring_index);
+  				std::vector<ring_circle> circles;
 
-					float dx = (image.cols / 2) - closest_ring->get_x();
-					float dy = (image.rows / 2) - closest_ring->get_y();
+  				if (ring_circle::find_circles(image, gray, circles))
+  				{
+  					ring_circle* closest_ring = 0;
 
-					float abs_dx = abs(dx);
-					float abs_dy = abs(dy);
+  					for (std::size_t i = 0; i < circles.size(); i++)
+  					{
+  						ring_circle& ring = circles.at(i);
 
-					float deviant = 50.0;
+  						if ((closest_ring == 0 || ring.get_distance(0) < closest_ring->get_distance(0)) && (ring_distance == 0.0 || abs(ring.get_distance(0) - ring_distance) < 50))
+  							closest_ring = &ring;
+  					}
 
-					if (abs_dx <= deviant && abs_dy <= deviant && ring_distance < 180)
-					{
-						printf(".... Moving forward .....\n");
-						temp_vx = 0.25;
-						printf("... Done moving forward...\n");
-					}
-					else
-					{
-						if (dx < 0) // center too far right
-							temp_vy = -0.01;
-						else if (dx > 0) // center too far left
-							temp_vy = 0.01;
+            if (closest_ring != 0)
+            {
+              last_circle_find = ros::Time::now().toSec();
+    					ring_distance = closest_ring->get_distance(ring_index);
 
-						if (dy < 0) // center too low
-							temp_vz = -0.025;
-						else if (dy > 0) // center too high
-							temp_vz = 0.025;
+    					float dx = (image.cols / 2) - closest_ring->get_x();
+    					float dy = (image.rows / 2) - closest_ring->get_y();
 
-						if (ring_distance > 150 && (temp_vy != 0.0 || temp_vz != 0.0))
-							temp_vx = 0.025;
-					}
+              float temp_vx = 0.0;
+              float temp_vy = 0.0;
+              float temp_vz = 0.0;
 
-					printf("Distance: %f\n", ring_distance);
-				}
-				else if (ring_distance != 0.0 && ring_distance < 110)
-					temp_vx = -0.1;
+    					float deviant = 45.0;
 
-				if (temp_vx != 0.0 || temp_vy != 0.0 || temp_vz != 0.0)
-					fly_publisher.publish(drone_vector(temp_vx, temp_vy, temp_vz, 0.0, 0.0, 0.0));
+    					if (abs(dx) <= deviant && abs(dy) <= deviant && ring_distance < 150)
+    					{
+    						printf(".... Charging .....\n");
+    						temp_vx = 0.25;
+    					}
+    					else
+    					{
+    						if (dx < 0) // center too far right
+    							temp_vy = -0.02;
+    						else if (dx > 0) // center too far left
+    							temp_vy = 0.02;
 
-				imshow("Circle Image", image);
+    						if (dy < 0) // center too low
+    							temp_vz = -0.05;
+    						else if (dy > 0) // center too high
+    							temp_vz = 0.05;
 
-				if (temp_vx == 0.25)
-				{
-					ros::Duration(ring_distance / 100.0 + 0.5).sleep();
-					fly_publisher.publish(reset_vector());
-					state = STATE_FIND_QR;
-				}
-			}
+    						if (ring_distance > 150 && (temp_vy != 0.0 || temp_vz != 0.0))
+    							temp_vx = 0.025;
+    					}
+
+    					printf("Distance: %f\n", ring_distance);
+
+              if (temp_vx != 0.0 || temp_vy != 0.0 || temp_vz != 0.0)
+                fly_publisher.publish(drone_vector(temp_vx, temp_vy, temp_vz, 0.0, 0.0, 0.0));
+
+              imshow("Circle Image", image);
+
+              if (temp_vx == 0.25)
+              {
+                ros::Duration((ring_distance / 125.0) + 0.35).sleep();
+                fly_publisher.publish(reset_vector());
+
+                last_circle_find = 0;
+                state = STATE_PREPARE_FIND_QR;
+              
+                ring_index++;
+              }
+            }
+  				}
+  				else if (ring_distance != 0.0 && ring_distance < 110)
+            fly_publisher.publish(drone_vector(-0.1, 0.0, 0.0, 0.0, 0.0, 0.0));
+          else if (last_circle_find != 0 && ros::Time::now().toSec() - last_circle_find >= 10)
+          {
+            last_circle_find = 0;
+            state = STATE_PREPARE_FIND_QR;	
+          }
+        }
+      }
 
 			break;
 
@@ -267,7 +333,7 @@ int main(int argc, char **argv)
 	image_transport::Subscriber sub = it.subscribe("ardrone/image_raw", 1, imageCallback);
 
 	ros::Subscriber nav_sub = nh.subscribe("ardrone/navdata", 10, navdata_callback);
-	ros::Publisher flat_trim_publisher = nh.advertise<std_msgs::Empty>("ardrone/flatTrim",1);
+	ros::Publisher flat_trim_publisher = nh.advertise<std_msgs::Empty>("ardrone/flattrim",1);
 	ros::Publisher takeoff_publisher = nh.advertise<std_msgs::Empty>("ardrone/takeoff", 1);
 	ros::Publisher land_publisher = nh.advertise<std_msgs::Empty>("ardrone/land", 1);
 
@@ -314,7 +380,7 @@ int main(int argc, char **argv)
 		case STATE_WAIT_FOR_TAKEOFF:
 			{
 				if (ros::Time::now().toSec() - start_take_off >= 5)
-					state = STATE_FIND_QR;
+					state = STATE_PREPARE_FIND_QR;
 			}
 
 			break;
@@ -336,10 +402,19 @@ int main(int argc, char **argv)
 
 			break;
 
-		case STATE_FIND_QR:
+		case STATE_PREPARE_FIND_QR:
 			{
-				fly_publisher.publish(drone_vector(0.0, 0.0, 0.5 * (altitude < 900 ? 1 : -1), 0.0, 0.0, 0.0));
-			}
+        if (altitude < 900)
+          fly_publisher.publish(drone_vector(0.0, 0.0, 0.5, 0.0, 0.0, 0.0));
+        else if (altitude >= 950)
+          fly_publisher.publish(drone_vector(0.0, 0.0, -0.5, 0.0, 0.0, 0.0));
+        else
+        {
+          qr_start_rotz = rotz;
+          fly_publisher.publish(reset_vector());
+          state = STATE_FIND_QR;
+        }
+      }
 
 			break;
 
@@ -350,14 +425,9 @@ int main(int argc, char **argv)
 				else
 				{
 					fly_publisher.publish(reset_vector());
-					state = STATE_FIND_CIRCLE;
+					ring_distance = 0.0;
+          state = STATE_FIND_CIRCLE;
 				}
-			}
-
-			break;
-
-		case STATE_FIND_CIRCLE:
-			{
 			}
 
 			break;

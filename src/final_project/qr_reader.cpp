@@ -4,7 +4,7 @@
 
 #include <iostream>
 
-bool qr_code::find_qr_codes(uint8_t* raw, int width, int height, std::vector<qr_code>& qr_codes)
+bool qr_code::find_qr_codes(cv::Mat& image, uint8_t* raw, int width, int height, std::vector<qr_code>& qr_codes)
 {
   zbar::ImageScanner scanner;  
   scanner.set_config(zbar::ZBAR_NONE, zbar::ZBAR_CFG_ENABLE, 1);
@@ -20,10 +20,20 @@ bool qr_code::find_qr_codes(uint8_t* raw, int width, int height, std::vector<qr_
     for (int i = 0, size = symbol->get_location_size(); i < size; i++)
       code.add_point(symbol->get_location_x(i), symbol->get_location_y(i));
 
+    code.draw_square(image);
+    
     qr_codes.push_back(code);
   }  
 
   return (symbol_count > 0);
+}
+
+cv::Point qr_code::get_center()
+{
+  int cx = ((this->points[0].x + this->points[1].x + this->points[2].x + this->points[3].x) / 4);
+  int cy = ((this->points[0].y + this->points[1].y + this->points[2].y + this->points[3].y) / 4);
+  
+  return cv::Point(cx, cy);
 }
 
 MOVE_DIRECTION qr_code::get_direction()
