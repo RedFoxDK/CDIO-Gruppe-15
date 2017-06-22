@@ -5,7 +5,7 @@
 #include <iostream>
 
 /*
-	Author: Valdemar Carøe, Andreas Andersen
+	Author: Valdemar Carøe, Andreas Andersen, Oliver Skov Celest
 */
 
 bool qr_code::find_qr_codes(cv::Mat& image, uint8_t* raw, int width, int height, std::vector<qr_code>& qr_codes)
