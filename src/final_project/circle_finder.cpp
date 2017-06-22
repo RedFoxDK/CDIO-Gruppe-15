@@ -1,5 +1,9 @@
 #include "circle_finder.hpp"
 
+/*
+	Author: Martin L. Djurhuus
+*/
+
 bool ring_circle::find_circles(cv::Mat& image, cv::Mat gray, std::vector<ring_circle>& circles)
 {
 	cv::GaussianBlur(gray, gray, cv::Size(9, 9), 2, 2);
