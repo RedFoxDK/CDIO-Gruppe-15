@@ -16,7 +16,7 @@ using namespace cv;
 using namespace cv_bridge;
 
 /*
-	Author: Valdemar Carøe, Andreas Andersen
+	Author: Valdemar Carøe, Andreas Andersen, Oliver Skov Celest
 */
 
 enum DRONE_STATE : unsigned char
