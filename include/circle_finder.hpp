@@ -1,6 +1,10 @@
 #ifndef CIRCLE_FINDER_HPP_
 #define CIRCLE_FINDER_HPP_
 
+/*
+	Author: Valdemar Carøe, Andreas Andersen
+*/
+
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
 
