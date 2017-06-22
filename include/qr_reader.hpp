@@ -2,7 +2,7 @@
 #define QR_READER_HPP_
 
 /*
-	Author: Valdemar Carøe, Andreas Andersen
+	Author: Valdemar Carøe, Andreas Andersen, Oliver Skov Celest
 */
 
 #include <opencv2/highgui/highgui.hpp>
