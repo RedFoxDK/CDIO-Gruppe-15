@@ -4,6 +4,10 @@
 
 #include <iostream>
 
+/*
+	Author: Valdemar Carøe, Andreas Andersen
+*/
+
 bool qr_code::find_qr_codes(cv::Mat& image, uint8_t* raw, int width, int height, std::vector<qr_code>& qr_codes)
 {
   zbar::ImageScanner scanner;  
