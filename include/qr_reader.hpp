@@ -1,6 +1,10 @@
 #ifndef QR_READER_HPP_
 #define QR_READER_HPP_
 
+/*
+	Author: Valdemar Carøe, Andreas Andersen
+*/
+
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
 
