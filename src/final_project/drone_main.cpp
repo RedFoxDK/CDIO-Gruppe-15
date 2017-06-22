@@ -15,6 +15,10 @@
 using namespace cv;
 using namespace cv_bridge;
 
+/*
+	Author: Valdemar Carøe, Andreas Andersen
+*/
+
 enum DRONE_STATE : unsigned char
 {
 	STATE_UNKNOWN = 0,
