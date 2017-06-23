@@ -1,7 +1,7 @@
 #include "circle_finder.hpp"
 
 /*
-	Author: Martin L. Djurhuus
+	Author: Martin og Patrick 
 */
 
 bool ring_circle::find_circles(cv::Mat& image, cv::Mat gray, std::vector<ring_circle>& circles)
